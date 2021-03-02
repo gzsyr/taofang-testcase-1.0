@@ -1,0 +1,5 @@
+# 点击相册上面的“查看更多”
+goto_photo:
+  - by: xpath
+    locator: '//*[@text="查看更多"]'
+    action: click

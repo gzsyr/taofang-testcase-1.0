@@ -1,0 +1,8 @@
+# 点击楼盘列表的第一个楼盘
+goto_newhouse_detail:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_img'    #"com.house365.newhouse:id/content"
+    action: click
+#  - by: xpath
+#    locator: '//*[@text="西江瑞府"]'
+#    action: click

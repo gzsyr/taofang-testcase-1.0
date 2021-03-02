@@ -1,0 +1,5 @@
+# 点击新房icon
+goto_newhouse:
+  - by: xpath
+    locator: '//*[@text="新房"]'
+    action: click
