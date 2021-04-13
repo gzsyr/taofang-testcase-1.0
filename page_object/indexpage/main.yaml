@@ -1,5 +1,28 @@
+
+#以下是功能入口
 # 点击新房icon
-goto_newhouse:
+goto_func_entrance_newhouse:
   - by: xpath
     locator: '//*[@text="新房"]'
     action: click
+
+goto_func_entrance_esf:
+  - by: xpath
+    locator: '//*[@text="二手房"]'
+    action: click
+
+goto_func_entrance_zf:
+  - by: xpath
+    locator: '//*[@text="租房"]'
+    action: click
+
+goto_func_entrance_spbg:
+  - by: xpath
+    locator: '//*[@text="商铺办公"]'
+    action: click
+
+goto_func_entrance_fyfb:
+  - by: xpath
+    locator: '//*[@text="房源发布"]'
+    action: click
+
