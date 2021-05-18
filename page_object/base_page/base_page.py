@@ -96,6 +96,18 @@ class BasePage:
 
         return self
 
+    def swipe_to_left(self, o_x, o_y):
+        """
+        根据传入的x、y坐标，向左滑动3/4的屏幕
+        :param o_x:
+        :param o_y:
+        :return:
+        """
+        device_size = self._driver.get_window_size()
+        d_x = o_x - device_size['width'] * 0.75
+        self._driver.swipe(o_x, o_y, d_x, o_y)
+        return self
+
     def steps(self, path, name=None, replace=False):
         """
         测试步骤 驱动
@@ -154,6 +166,12 @@ class BasePage:
                     eles = self.finds(step["by"], step["locator"])
                     if len(eles) > 0:
                         eles[pos].click()
+                if "swipe_left" == action:
+                    # 作为功能入口的左滑操作，传入为点击哪个元素开始左滑
+                    ele_loc = self.find(step["by"], step["locator"]).location
+                    x = ele_loc['x']
+                    y = ele_loc['y']
+                    self.swipe_to_left(x, y)
 
 
     def back(self, c_name=None):
