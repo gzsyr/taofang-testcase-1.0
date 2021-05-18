@@ -1,6 +1,7 @@
 import pytest
 
 from page_object.indexpage.login import Login
+from page_object.indexpage.main import Main
 
 
 @pytest.fixture()
@@ -19,6 +20,19 @@ def logoutf():
         return Login(driver).logout()
 
     return _logout
+
+
+@pytest.fixture()
+def cancel_adv():
+    """
+    关闭首页大屏广告的弹框
+    :return:
+    """
+    def _cancel_adv(driver):
+        return Main(driver).cancel_index_adv()
+
+    return _cancel_adv
+
 
 # # @fixture(scope="session", autouse=True)
 # def setup_module():
