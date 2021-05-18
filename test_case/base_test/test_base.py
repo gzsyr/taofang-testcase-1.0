@@ -11,7 +11,7 @@ class TestBase:
         if self.app is None:
             self.app = App()
 
-            self.shouye = self.app.openapp().main()  # self.app.start().main()
+            #self.shouye = self.app.openapp().main()  # self.app.start().main()
             print('&&&&&&&' + inspect.stack()[1].filename)
             print(self.shouye)
         else:
@@ -23,7 +23,7 @@ class TestBase:
         print("teardown_class")
 
     def setup_method(self):
-        self.app.openapp()
+        self.shouye = self.app.openapp().main()
         print("setup_method")
 
     def teardown_method(self):
