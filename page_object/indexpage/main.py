@@ -27,9 +27,7 @@ class Main(BasePage):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
         return self
-
-
-    #以下是功能入口
+    # 以下是功能入口
     def goto_func_entrance_newhouse(self):
         """
         点击:功能入口-新房
@@ -128,6 +126,186 @@ class Main(BasePage):
         with allure.step("点击功能入口的找小区icon"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
+        return
+
+    def goto_func_entrance_news(self):
+        """
+        点击:功能入口-房产资讯
+        :return:
+        """
+        with allure.step("点击功能入口的房产资讯icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_group_house(self):
+        """
+        点击:功能入口-看房团
+        :return:
+        """
+        with allure.step("点击功能入口的看房团icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_live(self):
+        """
+        点击:功能入口-直播
+        :return:
+        """
+        with allure.step("点击功能入口的直播icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_video_house(self):
+        """
+        点击:功能入口-视频说房
+        :return:
+        """
+        with allure.step("点击功能入口的视频说房icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_online_shop(self):
+        """
+        点击:功能入口-签到
+        :return:
+        """
+        with allure.step("点击功能入口的签到icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_trade_process(self):
+        """
+        点击:功能入口-买房流程
+        :return:
+        """
+        with allure.step("点击功能入口的买房流程icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_doctor(self):
+        """
+        点击:功能入口-房博士
+        :return:
+        """
+        with allure.step("点击功能入口的房博士icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_calculator(self):
+        """
+        点击:功能入口-计算器
+        :return:
+        """
+        with allure.step("点击功能入口的计算器icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_zhimai_list(self):
+        """
+        点击:功能入口-365直卖
+        :return:
+        """
+        with allure.step("点击功能入口的365直卖icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_home_improvement(self):
+        """
+        点击:功能入口-家居
+        :return:
+        """
+        with allure.step("点击功能入口的家居icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_want_buy(self):
+        """
+        点击:功能入口-求购
+        :return:
+        """
+        with allure.step("点击功能入口的求购icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_publish_sell(self):
+        """
+        点击:功能入口-我要卖房
+        :return:
+        """
+        with allure.step("点击功能入口的我要卖房icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_financial_service(self):
+        """
+        点击:功能入口-金融服务
+        :return:
+        """
+        with allure.step("点击功能入口的金融服务icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_VR_list(self):
+        """
+        点击:功能入口-VR看房
+        :return:
+        """
+        with allure.step("点击功能入口的VR看房icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_pension_channel(self):
+        """
+        点击:功能入口-养老频道
+        :return:
+        """
+        with allure.step("点击功能入口的养老频道icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_find_house(self):
+        """
+        点击:功能入口-求租
+        :return:
+        """
+        with allure.step("点击功能入口的求租icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_publish_rent(self):
+        """
+        点击:功能入口-我要出租
+        :return:
+        """
+        with allure.step("点击功能入口的我要出租icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_lottery_query(self):
+        """
+        点击:功能入口-摇号查询
+        :return:
+        """
+        with allure.step("点击功能入口的摇号查询icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
         return self
 
     def goto_func_entrance_trade_process(self):
@@ -150,7 +328,7 @@ class Main(BasePage):
         self.tsleep(2)
         return self
 
-    def func_entrance_swape_left(self, pos_text=None):
+    def func_entrance_swipe_left(self, pos_text=None):
         """
         作为功能入口的左滑，滑到下一屏
         :param text: 起点位置的文字
