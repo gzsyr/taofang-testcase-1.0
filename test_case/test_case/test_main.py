@@ -15,8 +15,19 @@ class TestMain(TestBase):
         self.shouye.goto_func_entrance_newhouse().screenshot()
 
     @allure.description("点击功能入口“二手房”tab，进入二手房列表页面")
-    def test_click_newhouse(self):
-        self.shouye.goto_func_entrance_esf().back().goto_func_entrance_newhouse().back()
+    def test_click_sellhouse(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.goto_func_entrance_esf().screenshot()
+
+    @allure.description("下滑点击淘房头条更多")
+    def test_goto_news_more(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_entrance_swipe("com.house365.newhouse:id/m_title").goto_news_more()
+
+    @allure.description("点击功能入口“消息”tab，进入消息列表页面")
+    def test_click_message(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.goto_message().screenshot()
 
     @allure.description("点击功能入口第二屏的“买房流程”")
     def test_click_trade_process(self, cancel_adv):
@@ -133,12 +144,10 @@ class TestMain(TestBase):
         cancel_adv(self.app._driver)
         self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_pension_channel().screenshot()
 
-
     @allure.description("点击“我要出租”功能入口，进入发布租房页面")
     def test_click_publish_rent(self, cancel_adv):
         cancel_adv(self.app._driver)
         self.shouye.func_entrance_swipe_left("找小区").func_entrance_swipe_left("家居").goto_func_entrance_publish_rent().screenshot()
-
 
     @allure.description("点击“房产资讯”功能入口，进入资讯列表页面")
     def test_click_news(self, cancel_adv):

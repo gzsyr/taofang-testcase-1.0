@@ -141,11 +141,25 @@ func_entrance_swipe_left:
     by: xpath
     locator: '//*[@text="${pos_text}"]'
 
-func_swipe_down:
+func_entrance_swipe:
   - action: swipe
     value: '${pos_text}'
 
-goto_news_live:
+goto_news_more:
   - by: xpath
-    locator: '//*[contains(@resource-id, "com.house365.newhouse:id/m_title")]'
+    locator: '//*[@text="更多"]'
     action: click
+
+goto_news_live:
+  - by: id
+    locator:
+
+
+goto_message:
+  - by: xpath
+    locator: '//*[@text="消息"]'
+    action: click
+
+func_swipe_down:
+  - action: swipe
+    value: '${pos_text}'

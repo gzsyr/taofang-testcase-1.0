@@ -340,7 +340,7 @@ class Main(BasePage):
         self.tsleep(2)
         return self
 
-    def func_swipe_down(self, pos_text=None):
+    def func_entrance_swipe(self, pos_text=None):
         """
         滑动到pos_text的位置
         :param pos_text: 1、写入页面存在的元素
@@ -348,17 +348,28 @@ class Main(BasePage):
         :return:
         """
         self._params["pos_text"] = pos_text
-        with allure.step("滑动到 " + self._params["pos_text"]):
+        with allure.step(self._params["pos_text"] + "com.house365.newhouse:id/m_title"):
             self.steps("../../page_object/indexpage/main.yaml", replace=True)
         self.tsleep(2)
         return self
 
-    def goto_news_live(self):
+    def goto_news_more(self):
         """
-        点击淘房头条下的，大新闻
-        :return:
+        点击淘房头条更多
         """
-        with allure.step("点击淘房头条下的，大新闻"):
+        with allure.step("点击淘房头条更多"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
         return self
+
+
+    def goto_message(self):
+        """
+        点击：首页-消息
+        """
+        with allure.step("点击首页消息"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+
