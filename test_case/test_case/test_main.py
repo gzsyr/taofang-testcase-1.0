@@ -24,6 +24,11 @@ class TestMain(TestBase):
         cancel_adv(self.app._driver)
         self.shouye.func_entrance_swipe("com.house365.newhouse:id/m_title").goto_news_more()
 
+    @allure.description("下滑点击淘房头条大新闻")
+    def test_goto_news_live(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_entrance_swipe("com.house365.newhouse:id/m_title").goto_news_live()
+
     @allure.description("点击功能入口“消息”tab，进入消息列表页面")
     def test_click_message(self, cancel_adv):
         cancel_adv(self.app._driver)

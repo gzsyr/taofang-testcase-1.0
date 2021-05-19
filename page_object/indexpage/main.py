@@ -362,6 +362,14 @@ class Main(BasePage):
         self.tsleep(2)
         return self
 
+    def goto_news_live(self):
+        """
+        点击淘房头条更多
+        """
+        with allure.step("点击淘房头条更多"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
 
     def goto_message(self):
         """

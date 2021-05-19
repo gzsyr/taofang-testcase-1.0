@@ -10,7 +10,6 @@ cancel_index_adv:
     action: click
 
 #以下是功能入口
-# 点击新房icon
 goto_func_entrance_gfgj:
   - by: xpath
     locator: '//*[@text="购房工具"]'
@@ -140,14 +139,6 @@ goto_news_more:
     locator: '//*[@text="更多"]'
     action: click
 
-goto_news_live:
-  - by: xpath
-    locator: '//*[contains(@resource-id, "com.house365.newhouse:id/m_title")]'
-    action: click
-
-
-
-#点击城市
 goto_city:
   - by: id
     locator: 'com.house365.newhouse:id/tv_city'
@@ -159,6 +150,7 @@ goto_search:
   - by: id
     locator: 'com.house365.newhouse:id/srl_classics_update'
     action: click
+
 
 #点击扫一扫
 goto_scan:
@@ -220,4 +212,9 @@ goto_zmlp:
 goto_jqkp:
   - by: xpath
     locator: '//*[@text="近期开盘"]'
+    action: click
+
+goto_message:
+  - by: xpath
+    locator: '//*[@text="消息"]'
     action: click
