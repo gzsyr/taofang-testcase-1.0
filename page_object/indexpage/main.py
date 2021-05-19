@@ -373,3 +373,75 @@ class Main(BasePage):
         return self
 
 
+
+
+
+
+    def goto_city(self):
+        """
+        点击城市
+        """
+        with allure.step("点击城市"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_search(self):
+        """
+        点击搜索框
+        """
+        with allure.step("点击搜索框"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_scan(self):
+        """
+        点击扫一扫
+        """
+        with allure.step("点击扫一扫"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_map(self):
+        """
+        点击地图
+        """
+        with allure.step("点击地图"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+
+
+
+    def goto_lpdt(self):
+        """
+        点击楼盘动态
+        """
+        with allure.step("点击楼盘动态"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_zmlp(self):
+        """
+        点击直卖楼盘
+        """
+        with allure.step("点击直卖楼盘"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+
+    def goto_jqkp(self):
+        """
+        点击近期开盘
+        """
+        with allure.step("点击近期开盘"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+

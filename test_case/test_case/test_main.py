@@ -99,6 +99,56 @@ class TestMain(TestBase):
         self.shouye.goto_func_entrance_online_shop().screenshot()
 
 
+    @allure.description("点击“新房”tab，进入新房列表页面")
+    def test_click_func_newhouse(self):
+        self.shouye.goto_func_entrance_newhouse().screenshot()
+
+    @allure.description("点击城市")
+    def test_click_city(self):
+        self.shouye.goto_city().screenshot()
+
+
+    @allure.description("点击首页搜索框")
+    def test_click_search(self):
+        self.shouye.goto_search().screenshot()
+
+    @allure.description("点击首页扫一扫")
+    def test_click_scan(self):
+        self.shouye.goto_scan().screenshot()
+
+    @allure.description("点击首页地图")
+    def test_click_map(self):
+        self.shouye.goto_map().screenshot()
+
+    @allure.description("点击首页二手房icon")
+    def test_click_func_sellhouse(self):
+        self.shouye.goto_func_entrance_esf().screenshot()
+
+    @allure.description("点击首页租房icon")
+    def test_click_func_rent(self):
+        self.shouye.goto_func_entrance_zf().screenshot()
+
+    @allure.description("点击首页商铺办公icon")
+    def test_click_func_spbg(self):
+        self.shouye.goto_func_entrance_spbg().screenshot()
+
+    @allure.description("点击首页发布房源icon")
+    def test_click_func_fbfy(self):
+        self.shouye.goto_func_entrance_fyfb().screenshot()
+
+    @allure.description("点击首页楼盘动态")
+    def test_click_lpdt(self):
+        self.shouye.goto_lpdt().screenshot()
+
+    @allure.description("点击首页直卖楼盘")
+    def test_click_zmlp(self):
+        self.shouye.goto_zmlp().screenshot()
+
+    @allure.description("点击首页近期开盘")
+    def test_click_jqkp(self):
+        self.shouye.goto_jqkp().screenshot()
+
+
     @allure.description("点击“房博士”功能入口，进入房博士首页")
     def test_click_doctor(self, cancel_adv):
         cancel_adv(self.app._driver)
