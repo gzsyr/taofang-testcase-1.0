@@ -140,3 +140,12 @@ func_entrance_swipe_left:
   - action: swipe_left
     by: xpath
     locator: '//*[@text="${pos_text}"]'
+
+func_swipe_down:
+  - action: swipe
+    value: '${pos_text}'
+
+goto_news_live:
+  - by: xpath
+    locator: '//*[contains(@resource-id, "com.house365.newhouse:id/m_title")]'
+    action: click
