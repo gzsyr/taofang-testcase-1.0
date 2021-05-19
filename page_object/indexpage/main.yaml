@@ -1,4 +1,14 @@
 
+cancel_update:
+  - by: id
+    locator: 'android:id/button2'
+    action: click
+
+cancel_index_adv:
+  - by: id
+    locator: 'com.house365.newhouse:id/close'
+    action: click
+
 #以下是功能入口
 # 点击新房icon
 goto_func_entrance_newhouse:
@@ -26,3 +36,17 @@ goto_func_entrance_fyfb:
     locator: '//*[@text="房源发布"]'
     action: click
 
+goto_func_entrance_trade_process:
+  - by: xpath
+    locator: '//*[@text="买房流程"]'
+    action: click
+
+goto_func_entrance_find_house:
+  - by: xpath
+    locator: '//*[@text="求租"]'
+    action: click
+
+func_entrance_swape_left:
+  - action: swipe_left
+    by: xpath
+    locator: '//*[@text="${pos_text}"]'

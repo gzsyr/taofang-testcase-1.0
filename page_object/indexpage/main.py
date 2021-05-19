@@ -8,7 +8,25 @@ class Main(BasePage):
     """
     首页，各点击入口
     """
+    def cancel_update(self):
+        """
+        取消更新的提示框
+        :return:
+        """
+        with allure.step("更新弹框的按钮，点击取消更新"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
 
+    def cancel_index_adv(self):
+        """
+        取消首页大屏广告
+        :return:
+        """
+        with allure.step("关闭首页大屏广告"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
 
 
     #以下是功能入口
@@ -109,5 +127,37 @@ class Main(BasePage):
         """
         with allure.step("点击功能入口的找小区icon"):
             self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_trade_process(self):
+        """
+        点击：功能入口-第二屏-买房流程
+        :return:
+        """
+        with allure.step("点击功能入口的买房流程icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_func_entrance_find_house(self):
+        """
+        点击：功能入口-第三屏-求租
+        :return:
+        """
+        with allure.step("点击功能入口的求租icon"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def func_entrance_swape_left(self, pos_text=None):
+        """
+        作为功能入口的左滑，滑到下一屏
+        :param text:
+        :return:
+        """
+        self._params["pos_text"] = pos_text
+        with allure.step("点住" + self._params["pos_text"] + "向左滑动到下一屏"):
+            self.steps("../../page_object/indexpage/main.yaml", replace=True)
         self.tsleep(2)
         return self
