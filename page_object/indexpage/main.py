@@ -153,7 +153,7 @@ class Main(BasePage):
     def func_entrance_swape_left(self, pos_text=None):
         """
         作为功能入口的左滑，滑到下一屏
-        :param text:
+        :param text: 起点位置的文字
         :return:
         """
         self._params["pos_text"] = pos_text
@@ -161,3 +161,4 @@ class Main(BasePage):
             self.steps("../../page_object/indexpage/main.yaml", replace=True)
         self.tsleep(2)
         return self
+
