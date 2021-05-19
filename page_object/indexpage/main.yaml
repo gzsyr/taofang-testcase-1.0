@@ -11,16 +11,6 @@ cancel_index_adv:
 
 #以下是功能入口
 # 点击新房icon
-goto_func_entrance_newhouse:
-  - by: xpath
-    locator: '//*[@text="新房"]'
-    action: click
-
-goto_func_entrance_esf:
-  - by: xpath
-    locator: '//*[@text="二手房"]'
-    action: click
-
 goto_func_entrance_gfgj:
   - by: xpath
     locator: '//*[@text="购房工具"]'
@@ -151,15 +141,83 @@ goto_news_more:
     action: click
 
 goto_news_live:
-  - by: id
-    locator:
-
-
-goto_message:
   - by: xpath
-    locator: '//*[@text="消息"]'
+    locator: '//*[contains(@resource-id, "com.house365.newhouse:id/m_title")]'
     action: click
 
-func_swipe_down:
-  - action: swipe
-    value: '${pos_text}'
+
+
+#点击城市
+goto_city:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_city'
+    action: click
+
+
+#点击搜索框
+goto_search:
+  - by: id
+    locator: 'com.house365.newhouse:id/srl_classics_update'
+    action: click
+
+#点击扫一扫
+goto_scan:
+  - by: id
+    locator: 'com.house365.newhouse:id/img_scan'
+    action: click
+
+#点击地图
+goto_map:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_map'
+    action: click
+
+#点击新房icon
+goto_func_entrance_newhouse:
+  - by: xpath
+    locator: '//*[@text="新房"]'
+    action: click
+
+#点击二手房icon
+goto_func_entrance_esf:
+  - by: xpath
+    locator: '//*[@text="二手房"]'
+    action: click
+
+
+#点击租房icon
+goto_func_entrance_zf:
+  - by: xpath
+    locator: '//*[@text="租房"]'
+    action: click
+
+#点击商铺办公icon
+goto_func_entrance_spbg:
+  - by: xpath
+    locator: '//*[@text="商铺办公"]'
+    action: click
+
+
+#点击房源发布icon
+goto_func_entrance_fyfb:
+  - by: xpath
+    locator: '//*[@text="房源发布"]'
+    action: click
+
+#点击楼盘动态
+goto_lpdt:
+  - by: xpath
+    locator: '//*[@text="楼盘动态"]'
+    action: click
+
+#点击直卖楼盘
+goto_zmlp:
+  - by: xpath
+    locator: '//*[@text="直卖楼盘"]'
+    action: click
+
+#点击近期开盘
+goto_jqkp:
+  - by: xpath
+    locator: '//*[@text="近期开盘"]'
+    action: click
