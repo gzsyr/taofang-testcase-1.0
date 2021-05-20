@@ -29,13 +29,18 @@ class App(BasePage):
             # caps["platformVersion"] = "10"
             #
             # # huawei
-            caps["deviceName"] = "JTK5T20318000225"
-            caps["platformVersion"] = "10.0.0"
+            #caps["deviceName"] = "JTK5T20318000225"
+            #caps["platformVersion"] = "10.0.0"
 
             # xiaomi  4C
             # caps["deviceName"] = "2e72982d"
             # caps["platformVersion"] = "7"
             # caps["automationName"] = "UiAutomator1"
+
+            # huaiwei mate9
+            caps["deviceName"] = "3HX0217302003038"
+            caps["platformVersion"] = "9.0"
+            caps["automationName"] = "UiAutomator1"
 
             caps["appPackage"] = self._package
             caps["appActivity"] = self._activity
