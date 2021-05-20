@@ -380,11 +380,6 @@ class Main(BasePage):
         self.tsleep(2)
         return self
 
-
-
-
-
-
     def goto_city(self):
         """
         点击城市
@@ -421,9 +416,6 @@ class Main(BasePage):
         self.tsleep(2)
         return self
 
-
-
-
     def goto_lpdt(self):
         """
         点击楼盘动态
@@ -441,7 +433,6 @@ class Main(BasePage):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
         return self
-
 
     def goto_jqkp(self):
         """
