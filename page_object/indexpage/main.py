@@ -342,7 +342,7 @@ class Main(BasePage):
 
     def func_entrance_swipe(self, pos_text=None):
         """
-        滑动到pos_text的位置
+        滑动到pos_text的位置，淘房头条大新闻
         :param pos_text: 1、写入页面存在的元素
                          2、如果写pos_text=buttom，则滑动到页面底部
         :return:
@@ -452,4 +452,106 @@ class Main(BasePage):
         self.tsleep(2)
         return self
 
+    def func_swipe(self, pos_text=None):
+        """
+        滑动到pos_text的位置，马上找房
+        :param pos_text: 1、写入页面存在的元素
+                         2、如果写pos_text=buttom，则滑动到页面底部
+        :return:
+        """
+        self._params["pos_text"] = pos_text
+        with allure.step(self._params["pos_text"] + "马上找房"):
+            self.steps("../../page_object/indexpage/main.yaml", replace=True)
+        self.tsleep(2)
+        return self
+
+    def goto_find_newhouse_tab(self):
+        """
+        点击找新房
+        """
+        with allure.step("点击找新房"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_find_newhouse(self):
+        """
+        点击找新房马上找房
+        """
+        with allure.step("点击找新房马上找房"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_find_second_tab(self):
+        """
+        点击找二手房tab
+        """
+        with allure.step("点击二手房tab"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_find_second(self):
+        """
+        点击找二手房马上找房
+        """
+        with allure.step("点击找二手房马上找房"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_find_rent_tab(self):
+        """
+        点击找租房tab
+        """
+        with allure.step("点击找租房tab"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_find_rent(self):
+        """
+        点击找租房马上找房
+        """
+        with allure.step("点击找租房马上找房"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_my_house_tab(self):
+        """
+        点击我的房子tab
+        """
+        with allure.step("点击我的房子tab"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_my_house(self):
+        """
+        点击我的房子tab
+        """
+        with allure.step("点击我的房子tab房子"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_sell_house_tab(self):
+        """
+        点击帮你卖房
+        """
+        with allure.step("点击帮你卖房tab"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_release_house(self):
+        """
+        点击帮你卖房发布房源
+        """
+        with allure.step("点击帮你卖房tab发布房源"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
 

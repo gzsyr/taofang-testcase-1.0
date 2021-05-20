@@ -130,10 +130,12 @@ func_entrance_swipe_left:
     by: xpath
     locator: '//*[@text="${pos_text}"]'
 
+#滑动到淘房头条大新闻
 func_entrance_swipe:
   - action: swipe
     value: '${pos_text}'
 
+#点击淘房头条更多
 goto_news_more:
   - by: xpath
     locator: '//*[@text="更多"]'
@@ -218,3 +220,78 @@ goto_message:
   - by: xpath
     locator: '//*[@text="消息"]'
     action: click
+
+#点击淘房头条大新闻
+goto_news_live:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_title'
+    action: click
+
+#滑动到马上找房
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'
+
+#点击找新房tab
+goto_find_newhouse_tab:
+  - by: id
+    locator: 'com.house365.newhouse:id/rb_new_house'
+    action: click
+
+#点击找新房马上找房
+goto_find_newhouse:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_btn'
+    action: click
+
+#点击找二手房tab
+goto_find_second_tab:
+  - by: xpath
+    locator: '//*[@text="找二手房"]'
+    action: click
+
+#点击找二手房马上找房
+goto_find_second:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_btn'
+    action: click
+
+#点击找租房tab
+goto_find_rent_tab:
+  - by: xpath
+    locator: '//*[@text="找租房"]'
+    action: click
+
+#点击找租房马上找房
+goto_find_rent:
+  - by: xpath
+    locator: '//*[@text="马上找房"]'
+    action: click
+
+#点击我的房子tab
+goto_my_house_tab:
+  - by: xpath
+    locator: '//*[@text="我的房子"]'
+    action: click
+
+#点击我的房子tab房子
+goto_my_house:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_publish_house_layout'
+    action: click
+
+#点击帮你卖房tab
+goto_sell_house_tab:
+  - by: xpath
+    locator: '//*[@text="帮你卖房"]'
+    action: click
+
+#点击帮你卖房tab发布房源
+goto_release_house:
+  - by: xpath
+    locator: '//*[@text="发布房源"]'
+    action: click
+
+
+
+
