@@ -79,7 +79,7 @@ class TestMain(TestBase):
         self.shouye.goto_func_entrance_find_community().screenshot()
 
     @allure.description("点击“摇号查询”功能入口，进入淘房小程序")
-    def test_click_find_community(self, cancel_adv):
+    def test_goto_func_entrance_lottery_query(self, cancel_adv):
         cancel_adv(self.app._driver)
         self.shouye.goto_func_entrance_lottery_query().screenshot()
 
