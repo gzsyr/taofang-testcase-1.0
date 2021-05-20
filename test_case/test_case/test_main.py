@@ -43,7 +43,7 @@ class TestMain(TestBase):
     @allure.description("点击功能入口第三屏的求租")
     def test_click_find_house(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_entrance_swipe_left("找小区").func_entrance_swipe_left("家居").goto_func_entrance_find_house()
+        self.shouye.func_entrance_swipe_left("找小区").func_entrance_swipe_left("家居").goto_func_entrance_find_house().screenshot()
 
     # @allure.description("点击新房列表页面，列表项的第一个楼盘，进入详情页")
     # def test_goto_newhouse_detail(self):
