@@ -22,12 +22,12 @@ class TestMain(TestBase):
     @allure.description("下滑点击淘房头条更多")
     def test_goto_news_more(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_entrance_swipe("com.house365.newhouse:id/m_title").goto_news_more()
+        self.shouye.func_entrance_swipe("com.house365.newhouse:id/m_title").goto_news_more().screenshot()
 
     @allure.description("下滑点击淘房头条大新闻")
     def test_goto_news_live(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_entrance_swipe("com.house365.newhouse:id/m_title").goto_news_live()
+        self.shouye.func_entrance_swipe("com.house365.newhouse:id/m_title").goto_news_live().screenshot()
 
     @allure.description("点击功能入口“消息”tab，进入消息列表页面")
     def test_click_message(self, cancel_adv):
@@ -37,13 +37,13 @@ class TestMain(TestBase):
     @allure.description("点击功能入口第二屏的“买房流程”")
     def test_click_trade_process(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_trade_process()
+        self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_trade_process().screenshot()
         # self.shouye.cancel_index_adv().func_entrance_swape_left().goto_func_entrance_trade_process()
 
     @allure.description("点击功能入口第三屏的求租")
     def test_click_find_house(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_entrance_swipe_left("找小区").func_entrance_swipe_left("家居").goto_func_entrance_find_house()
+        self.shouye.func_entrance_swipe_left("找小区").func_entrance_swipe_left("家居").goto_func_entrance_find_house().screenshot()
 
     # @allure.description("点击新房列表页面，列表项的第一个楼盘，进入详情页")
     # def test_goto_newhouse_detail(self):
@@ -79,7 +79,7 @@ class TestMain(TestBase):
         self.shouye.goto_func_entrance_find_community().screenshot()
 
     @allure.description("点击“摇号查询”功能入口，进入淘房小程序")
-    def test_click_find_community(self, cancel_adv):
+    def test_goto_func_entrance_lottery_query(self, cancel_adv):
         cancel_adv(self.app._driver)
         self.shouye.goto_func_entrance_lottery_query().screenshot()
 
@@ -212,50 +212,64 @@ class TestMain(TestBase):
     @allure.description("滑动到”马上找房“，点击找新房")
     def test_goto_find_newhouse_tab(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_swipe("马上找房").goto_find_newhouse_tab()
+        self.shouye.func_swipe("马上找房").goto_find_newhouse_tab().screenshot()
 
     @allure.description("滑动到”马上找房“，点击找新房的马上找房")
     def test_goto_find_newhouse(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_swipe("马上找房").goto_find_newhouse()
+        self.shouye.func_swipe("马上找房").goto_find_newhouse().screenshot()
 
     @allure.description("滑动到”马上找房“，点击找二手房tab")
     def test_goto_find_second_tab(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_swipe("马上找房").goto_find_second_tab()
+        self.shouye.func_swipe("马上找房").goto_find_second_tab().screenshot()
 
     @allure.description("滑动到”马上找房“，点击找二手房的马上找房")
     def test_goto_find_second(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_swipe("马上找房").goto_find_second_tab().goto_find_second()
+        self.shouye.func_swipe("马上找房").goto_find_second_tab().goto_find_second().screenshot()
 
     @allure.description("滑动到”马上找房“，点击找租房tab")
     def test_goto_find_rent_tab(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_swipe("马上找房").goto_find_rent_tab()
+        self.shouye.func_swipe("马上找房").goto_find_rent_tab().screenshot()
 
     @allure.description("滑动到”马上找房“，点击找租房的马上找房")
     def test_goto_find_rent(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_swipe("马上找房").goto_find_rent_tab().goto_find_rent()
+        self.shouye.func_swipe("马上找房").goto_find_rent_tab().goto_find_rent().screenshot()
 
     @allure.description("滑动到”马上找房“，点击我的房子tab")
     def test_goto_my_house_tab(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_swipe("马上找房").goto_my_house_tab()
+        self.shouye.func_swipe("马上找房").goto_my_house_tab().screenshot()
 
     @allure.description("滑动到”马上找房“，点击我的房子tab")
     def test_goto_my_house(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_swipe("马上找房").goto_my_house_tab().goto_my_house()
+        self.shouye.func_swipe("马上找房").goto_my_house_tab().goto_my_house().screenshot()
 
     @allure.description("滑动到”马上找房“，点击帮你卖房tab")
     def test_goto_sell_house_tab(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_swipe("马上找房").goto_sell_house_tab()
+        self.shouye.func_swipe("马上找房").goto_sell_house_tab().screenshot()
 
     @allure.description("滑动到”马上找房“，点击帮你卖房tab发布房源")
     def test_goto_release_house(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_swipe("马上找房").goto_sell_house_tab().goto_release_house()
+        self.shouye.func_swipe("马上找房").goto_sell_house_tab().goto_release_house().screenshot()
+
+    @allure.description("滑动到”直播看房“，点击直播房源")
+    def test_goto_live_house(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("直播看房").goto_live_house().screenshot()
+
+
+    #@allure.description("滑动到”直播看房“，点击直播房源查看更多")
+    #def test_goto_live_house_more(self, cancel_adv):
+        #cancel_adv(self.app._driver)
+        #self.shouye.func_swipe("直播看房").func_entrance_swipe_left("查看更多").goto_live_house_more()
+
+
+
 
