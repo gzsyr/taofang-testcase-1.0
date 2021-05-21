@@ -11,12 +11,12 @@ if __name__ == "__main__":
                  "-s",
                  # "-rs",
                  # "--show-capture=all",
-                 "--alluredir", "./../TestResult",
+                 "--alluredir", "./../../TestResult",
                  # "--html=./../testreport.html", "--self-contained-html",
                  # "./test_case/test_house_detail.py",
-                 "./test_case/test_main.py::TestMain",
+                 "./test_case/test_main.py::TestMain::test_open_file",
                  # "-m search"
                  ])
 
-    os.system(r"allure generate --clean ./../TestResult -o ./../Report")
+    os.system(r"allure generate --clean ./../../TestResult -o ./../../Report")
     os.system(r"allure open ./../Report")  # 打开测试报告
