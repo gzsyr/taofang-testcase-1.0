@@ -309,6 +309,24 @@ goto_live_house_more:
     locator: 'com.house365.newhouse:id/m_more'
     action: click
 
+#点击房价评估
+goto_price_evaluate:
+  - by: xpath
+    locator: '//*[@text="房价评估"]'
+    action: click
+
+#点击南京二手房均价
+goto_second_price:
+  - by: xpath
+    locator: '//*[@text="南京二手房均价"]'
+    action: click
+
+#滑动到房博士
+func_swipe_doctor:
+  - action: swipe
+    value: '${pos_text}'
+
+
 
 
 

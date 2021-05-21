@@ -264,11 +264,20 @@ class TestMain(TestBase):
         cancel_adv(self.app._driver)
         self.shouye.func_swipe("直播看房").goto_live_house().screenshot()
 
-
     #@allure.description("滑动到”直播看房“，点击直播房源查看更多")
     #def test_goto_live_house_more(self, cancel_adv):
         #cancel_adv(self.app._driver)
         #self.shouye.func_swipe("直播看房").func_entrance_swipe_left("查看更多").goto_live_house_more()
+
+    @allure.description("滑动到”直播看房“，点击房价评估")
+    def test_goto_price_evaluate(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("直播看房").goto_price_evaluate.screenshot()
+
+    @allure.description("滑动到”365房博士“，点击南京二手房均价")
+    def test_goto_second_price(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("365房博士").goto_second_price.screenshot()
 
 
 

@@ -577,3 +577,34 @@ class Main(BasePage):
         self.tsleep(2)
         return self
 
+    def goto_price_evaluate(self):
+        """
+        点击房价评估
+        """
+        with allure.step("点击房价评估"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_second_price(self):
+        """
+        点击南京二手房均价
+        """
+        with allure.step("点击南京二手房均价"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def func_swipe_doctor(self, pos_text=None):
+        """
+        滑动到pos_text的位置，直播看房
+        :param pos_text: 1、写入页面存在的元素
+                         2、如果写pos_text=buttom，则滑动到页面底部
+        :return:
+        """
+        self._params["pos_text"] = pos_text
+        with allure.step(self._params["pos_text"] + "365房博士"):
+            self.steps("../../page_object/indexpage/main.yaml", replace=True)
+        self.tsleep(2)
+        return self
+
