@@ -316,6 +316,7 @@ goto_second_price:
     locator: '//*[@text="南京二手房均价"]'
     action: click
 
+#左滑直播模块至查看更多
 swipe_live_left:
   - action: swipe_left
     by: xpath
@@ -323,5 +324,82 @@ swipe_live_left:
     pos_value: 2
     value: "查看更多"
 
+#点击房博士更多
+goto_doctor_more:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_fbs_more'
+    action: click
+
+#点击房博士头像
+goto_doctor_photo:
+  - by: xpath
+    locator: '//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.view.ViewGroup'
+    action: click
+
+#点击房博士咨询按钮
+goto_doctor_consult:
+  - by: xpath
+    locator: '//android.view.ViewGroup[1]/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.RelativeLayout'
+    action: click
+
+#点击房博士问答数据
+goto_doctor_question:
+  - by: xpath
+    locator: '//android.view.ViewGroup[2]/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]'
+    action: click
+
+#点击首页房博士tab
+goto_doctor:
+  - by: xpath
+    locator: '//*[@text="房博士"]'
+    action: click
+
+#点击首页发现tab
+goto_find:
+  - by: xpath
+    locator: '//*[@text="发现"]'
+    action: click
+
+#点击首页我的tab
+goto_my:
+  - by: xpath
+    locator: '//*[@text="我的"]'
+    action: click
+
+#点击首页新房tab
+goto_newhouse_tab:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_new_btn'
+    action: click
+
+#点击首页新房tab楼盘
+goto_newhouse_item:
+  - by: xpath
+    locator: '//android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]'
+    action: click
+
+#点击首页二手房tab
+goto_second_tab:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_second_btn'
+    action: click
+
+#点击首页二手房tab房源
+goto_second_item:
+  - by: xpath
+    locator: '//android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]'
+    action: click
+
+#点击首页租房tab
+goto_rent_tab:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_rent_btn'
+    action: click
+
+#点击首页租房tab房源
+goto_rent_item:
+  - by: xpath
+    locator: '//android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]'
+    action: click
 
 

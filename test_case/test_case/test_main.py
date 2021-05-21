@@ -30,8 +30,7 @@ class TestMain(TestBase):
         self.shouye.func_entrance_swipe("com.house365.newhouse:id/m_title").goto_news_live().screenshot()
 
     @allure.description("点击功能入口“消息”tab，进入消息列表页面")
-    def test_click_message(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_message(self):
         self.shouye.goto_message().screenshot()
 
     @allure.description("点击功能入口第二屏的“买房流程”")
@@ -264,10 +263,10 @@ class TestMain(TestBase):
         cancel_adv(self.app._driver)
         self.shouye.func_swipe("直播看房").goto_live_house().screenshot()
 
-    #@allure.description("滑动到”直播看房“，点击直播房源查看更多")
-    #def test_goto_live_house_more(self, cancel_adv):
-        #cancel_adv(self.app._driver)
-        #self.shouye.func_swipe("直播看房").func_entrance_swipe_left("查看更多").goto_live_house_more()
+    @allure.description("滑动到”直播看房“，点击直播房源查看更多")
+    def test_goto_live_house_more(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("video_floor_title").swipe_live_left().goto_live_house_more()
 
     @allure.description("滑动到”直播看房“，点击房价评估")
     def test_goto_price_evaluate(self, cancel_adv):
@@ -279,9 +278,65 @@ class TestMain(TestBase):
         cancel_adv(self.app._driver)
         self.shouye.func_swipe("365房博士").goto_second_price().screenshot()
 
-    @allure.description("滑动到“直播看房”，点击“查看更多”")
-    def test_goto_live_house_more(self, cancel_adv):
+    @allure.description("滑动到”365房博士“，点击房博士更多")
+    def test_goto_doctor_more(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_swipe("video_floor_title").swipe_live_left().goto_live_house_more()
+        self.shouye.func_swipe("365房博士").goto_doctor_more().screenshot()
 
+    @allure.description("滑动到”365房博士“，点击房博士头像")
+    def test_goto_doctor_photo(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("365房博士").goto_doctor_photo().screenshot()
+
+    @allure.description("滑动到”365房博士“，点击房博士咨询按钮")
+    def test_goto_doctor_consult(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("365房博士").goto_doctor_consult().screenshot()
+
+    @allure.description("滑动到”365房博士“，点击房博士问答数据")
+    def test_goto_doctor_question(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("365房博士").goto_doctor_question().screenshot()
+
+    @allure.description("点击首页房博士tab")
+    def test_click_doctor(self):
+        self.shouye.goto_doctor().screenshot()
+
+    @allure.description("点击首页发现tab")
+    def test_click_find(self):
+        self.shouye.goto_find().screenshot()
+
+    @allure.description("点击首页我的tab")
+    def test_click_my(self):
+        self.shouye.goto_my().screenshot()
+
+    @allure.description("滑动到”新房tab“，点击新房tab")
+    def test_goto_newhouse_tab(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("com.house365.newhouse:id/m_new_btn").goto_newhouse_tab().screenshot()
+
+    @allure.description("滑动到”新房tab“，点击新房tab楼盘")
+    def test_goto_newhouse_item(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("com.house365.newhouse:id/m_new_btn").goto_newhouse_item().screenshot()
+
+    @allure.description("滑动到”新房tab“，点击二手房tab")
+    def test_goto_second_tab(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("com.house365.newhouse:id/m_new_btn").goto_second_tab().screenshot()
+
+    @allure.description("滑动到”新房tab“，点击二手房tab房源")
+    def test_goto_second_item(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("com.house365.newhouse:id/m_new_btn").goto_second_tab().goto_second_item().screenshot()
+
+    @allure.description("滑动到”新房tab“，点击租房tab")
+    def test_goto_rent_tab(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("com.house365.newhouse:id/m_new_btn").goto_rent_tab().screenshot()
+
+    @allure.description("滑动到”新房tab“，点击租房tab数据")
+    def test_goto_rent_item(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("com.house365.newhouse:id/m_new_btn").goto_rent_tab().goto_rent_item().screenshot()
 

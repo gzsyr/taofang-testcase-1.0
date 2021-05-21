@@ -340,19 +340,6 @@ class Main(BasePage):
         self.tsleep(2)
         return self
 
-    def func_entrance_swipe(self, pos_text=None):
-        """
-        滑动到pos_text的位置，淘房头条大新闻
-        :param pos_text: 1、写入页面存在的元素
-                         2、如果写pos_text=buttom，则滑动到页面底部
-        :return:
-        """
-        self._params["pos_text"] = pos_text
-        with allure.step(self._params["pos_text"] + "com.house365.newhouse:id/m_title"):
-            self.steps("../../page_object/indexpage/main.yaml", replace=True)
-        self.tsleep(2)
-        return self
-
     def goto_news_more(self):
         """
         点击淘房头条更多
@@ -582,12 +569,129 @@ class Main(BasePage):
         self.tsleep(2)
         return self
 
+    def goto_doctor_more(self):
+        """
+        点击房博士更多
+        """
+        with allure.step("点击房博士更多"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
     def swipe_live_left(self):
         """
         直播看房模块，左滑
         :return:
         """
         with allure.step("直播看房模块左滑"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_doctor_photo(self):
+        """
+        点击房博士头像
+        """
+        with allure.step("点击房博士头像"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_doctor_consult(self):
+        """
+        点击房博士咨询按钮
+        """
+        with allure.step("点击房博士咨询按钮"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_doctor_question(self):
+        """
+        点击房博士问答数据
+        """
+        with allure.step("点击房博士问答数据"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_doctor(self):
+        """
+        点击房博士tab
+        """
+        with allure.step("点击首页房博士tab"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_find(self):
+        """
+        点击首页发现tab
+        """
+        with allure.step("点击首页发现tab"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_my(self):
+        """
+        点击首页我的tab
+        """
+        with allure.step("点击首页我的tab"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_newhouse_tab(self):
+        """
+        点击首页新房tab
+        """
+        with allure.step("点击首页新房tab"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_newhouse_item(self):
+        """
+        点击首页新房tab楼盘
+        """
+        with allure.step("点击首页新房tab楼盘"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_second_tab(self):
+        """
+        点击首页二手房tab
+        """
+        with allure.step("点击首页二手房tab"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_second_item(self):
+        """
+        点击首页二手房tab数据
+        """
+        with allure.step("点击首页二手房tab数据"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_rent_tab(self):
+        """
+        点击首页租房tab
+        """
+        with allure.step("点击首页租房tab"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
+
+    def goto_rent_item(self):
+        """
+        点击首页租房tab数据
+        """
+        with allure.step("点击首页租房tab数据"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
         return self
