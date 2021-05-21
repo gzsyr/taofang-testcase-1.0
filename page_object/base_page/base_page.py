@@ -96,17 +96,31 @@ class BasePage:
 
         return self
 
-    def swipe_to_left(self, o_x, o_y):
+    def swipe_to_left(self, o_x, o_y, text=None):
         """
         根据传入的x、y坐标，向左滑动3/4的屏幕
         :param o_x:
         :param o_y:
+        :param text: 滑动到text的时候停止
         :return:
         """
         device_size = self._driver.get_window_size()
-        d_x = o_x - device_size['width'] * 0.75
-        self._driver.swipe(o_x, o_y, d_x, o_y)
-        return self
+        p_e = self._driver.page_source
+
+        if text is not None:
+            if text in p_e:
+                return self
+            else:
+                while text not in p_e:
+                    d_x = o_x - device_size['width'] * 0.75
+                    self._driver.swipe(o_x, o_y, d_x, o_y)
+                    p_e = self._driver.page_source
+                return self
+        else:
+            # 直接滑动一屏就停止
+            d_x = o_x - device_size['width'] * 0.75
+            self._driver.swipe(o_x, o_y, d_x, o_y)
+            return self
 
     def steps(self, path, name=None, replace=False):
         """
@@ -168,10 +182,22 @@ class BasePage:
                         eles[pos].click()
                 if "swipe_left" == action:
                     # 作为功能入口的左滑操作，传入为点击哪个元素开始左滑
-                    ele_loc = self.find(step["by"], step["locator"]).location
+                    # pos_value 是存在多个元素时，取第pos_value个元素的位置，从0开始计
+                    # value 是滑动到页面有value的时候，停止
+                    if 'pos_value' in step.keys():
+                        pos = int(step["pos_value"])
+                        eles = self.finds(step["by"], step["locator"])
+                        print(eles)
+                        print(steps)
+                        ele_loc = eles[pos].location
+                    else:
+                        ele_loc = self.find(step["by"], step["locator"]).location
                     x = ele_loc['x']
                     y = ele_loc['y']
-                    self.swipe_to_left(x, y)
+                    if 'value' in step.keys():
+                        self.swipe_to_left(x, y, step["value"])
+                    else:
+                        self.swipe_to_left(x, y)
 
 
     def back(self, c_name=None):
