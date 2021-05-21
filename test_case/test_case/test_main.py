@@ -102,7 +102,6 @@ class TestMain(TestBase):
         cancel_adv(self.app._driver)
         self.shouye.goto_func_entrance_online_shop().screenshot()
 
-
     @allure.description("点击“新房”tab，进入新房列表页面")
     def test_click_func_newhouse(self):
         self.shouye.goto_func_entrance_newhouse().screenshot()
