@@ -227,7 +227,7 @@ goto_news_live:
     locator: 'com.house365.newhouse:id/m_title'
     action: click
 
-#滑动到马上找房
+#滑动
 func_swipe:
   - action: swipe
     value: '${pos_text}'
@@ -292,11 +292,6 @@ goto_release_house:
     locator: '//*[@text="发布房源"]'
     action: click
 
-#滑动到直播看房
-func_swipe_live:
-  - action: swipe
-    value: '${pos_text}'
-
 #点击直播房源
 goto_live_house:
   - by: xpath
@@ -320,11 +315,6 @@ goto_second_price:
   - by: xpath
     locator: '//*[@text="南京二手房均价"]'
     action: click
-
-#滑动到房博士
-func_swipe_doctor:
-  - action: swipe
-    value: '${pos_text}'
 
 
 
