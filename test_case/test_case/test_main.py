@@ -53,53 +53,43 @@ class TestMain(TestBase):
     #     self.shouye.goto_newhouse().goto_newhouse_detail().goto_photo().screenshot()
 
     @allure.description("点击“购房工具”功能入口，进入购房工具箱页面")
-    def test_click_gfgj(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_gfgj(self):
         self.shouye.goto_func_entrance_gfgj().screenshot()
 
     @allure.description("点击“地图找房”功能入口，进入地图找房页面")
-    def test_click_map(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_map(self):
         self.shouye.goto_func_entrance_map().screenshot()
 
     @allure.description("点击“学校地图”功能入口，进入学校地图页面")
-    def test_click_school_map(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_school_map(self):
         self.shouye.goto_func_entrance_school_map().screenshot()
 
     @allure.description("点击“查房价”功能入口，进入查房价首页")
-    def test_click_check_price(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_check_price(self):
         self.shouye.goto_func_entrance_check_price().screenshot()
 
     @allure.description("点击“找小区”功能入口，进入小区列表页面")
-    def test_click_find_community(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_find_community(self):
         self.shouye.goto_func_entrance_find_community().screenshot()
 
     @allure.description("点击“摇号查询”功能入口，进入淘房小程序")
-    def test_goto_func_entrance_lottery_query(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_goto_func_entrance_lottery_query(self):
         self.shouye.goto_func_entrance_lottery_query().screenshot()
 
     @allure.description("点击“看房团”功能入口，进入看房团列表页面")
-    def test_click_group_house(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_group_house(self):
         self.shouye.goto_func_entrance_group_house().screenshot()
 
     @allure.description("点击“直播”功能入口，进入直播列表页面")
-    def test_click_live(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_live(self):
         self.shouye.goto_func_entrance_live().screenshot()
 
     @allure.description("点击“视频说房”功能入口，进入视频说房列表页面")
-    def test_click_video_house(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_video_house(self):
         self.shouye.goto_func_entrance_video_house().screenshot()
 
     @allure.description("点击“签到”功能入口，进入积分商城页面")
-    def test_click_online_shop(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_online_shop(self):
         self.shouye.goto_func_entrance_online_shop().screenshot()
 
     @allure.description("点击“新房”tab，进入新房列表页面")
