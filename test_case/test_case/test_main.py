@@ -279,6 +279,9 @@ class TestMain(TestBase):
         cancel_adv(self.app._driver)
         self.shouye.func_swipe("365房博士").goto_second_price().screenshot()
 
-
+    @allure.description("滑动到“直播看房”，点击“查看更多”")
+    def test_goto_live_house_more(self, cancel_adv):
+        cancel_adv(self.app._driver)
+        self.shouye.func_swipe("video_floor_title").swipe_live_left().goto_live_house_more()
 
 
