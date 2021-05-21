@@ -316,7 +316,12 @@ goto_second_price:
     locator: '//*[@text="南京二手房均价"]'
     action: click
 
-
+swipe_live_left:
+  - action: swipe_left
+    by: xpath
+    locator: '//*[contains(@resource-id, "draw_video")]'
+    pos_value: 2
+    value: "查看更多"
 
 
 

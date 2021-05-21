@@ -451,7 +451,7 @@ class Main(BasePage):
         :return:
         """
         self._params["pos_text"] = pos_text
-        with allure.step(self._params["pos_text"] + "马上找房"):
+        with allure.step("滑动到" + self._params["pos_text"]):
             self.steps("../../page_object/indexpage/main.yaml", replace=True)
         self.tsleep(2)
         return self
@@ -582,4 +582,12 @@ class Main(BasePage):
         self.tsleep(2)
         return self
 
-
+    def swipe_live_left(self):
+        """
+        直播看房模块，左滑
+        :return:
+        """
+        with allure.step("直播看房模块左滑"):
+            self.steps("../../page_object/indexpage/main.yaml")
+        self.tsleep(2)
+        return self
