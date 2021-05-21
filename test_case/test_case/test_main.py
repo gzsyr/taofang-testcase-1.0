@@ -110,7 +110,6 @@ class TestMain(TestBase):
     def test_click_city(self):
         self.shouye.goto_city().screenshot()
 
-
     @allure.description("点击首页搜索框")
     def test_click_search(self):
         self.shouye.goto_search().screenshot()
@@ -150,7 +149,6 @@ class TestMain(TestBase):
     @allure.description("点击首页近期开盘")
     def test_click_jqkp(self):
         self.shouye.goto_jqkp().screenshot()
-
 
     @allure.description("点击“房博士”功能入口，进入房博士首页")
     def test_click_doctor(self, cancel_adv):
