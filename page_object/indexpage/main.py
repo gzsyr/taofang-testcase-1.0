@@ -126,7 +126,7 @@ class Main(BasePage):
         with allure.step("点击功能入口的找小区icon"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
-        return
+        return self
 
     def goto_func_entrance_news(self):
         """
@@ -304,26 +304,6 @@ class Main(BasePage):
         :return:
         """
         with allure.step("点击功能入口的摇号查询icon"):
-            self.steps("../../page_object/indexpage/main.yaml")
-        self.tsleep(2)
-        return self
-
-    def goto_func_entrance_trade_process(self):
-        """
-        点击：功能入口-第二屏-买房流程
-        :return:
-        """
-        with allure.step("点击功能入口的买房流程icon"):
-            self.steps("../../page_object/indexpage/main.yaml")
-        self.tsleep(2)
-        return self
-
-    def goto_func_entrance_find_house(self):
-        """
-        点击：功能入口-第三屏-求租
-        :return:
-        """
-        with allure.step("点击功能入口的求租icon"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
         return self
