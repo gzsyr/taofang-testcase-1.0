@@ -3,6 +3,15 @@ goto_newhouse_detail:
   - by: id
     locator: 'com.house365.newhouse:id/m_img'    #"com.house365.newhouse:id/content"
     action: click
-#  - by: xpath
-#    locator: '//*[@text="西江瑞府"]'
-#    action: click
+
+# 点击位置
+click_filter_position:
+  - by: xpath
+    locator: '//*[contains(@resource-id, "view_search_bar_region_text")]'
+    action: click
+
+# 点击位置的下一级以及在下一级内容
+click_filter_position_menu:
+  - by: xpath
+    locator: '//*[@text="${filter_postion}"]'
+    action: click
