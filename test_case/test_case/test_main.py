@@ -22,12 +22,12 @@ class TestMain(TestBase):
     @allure.description("下滑点击淘房头条更多")
     def test_goto_news_more(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_entrance_swipe("com.house365.newhouse:id/m_title").goto_news_more().screenshot()
+        self.shouye.func_wipe("com.house365.newhouse:id/m_title").goto_news_more().screenshot()
 
     @allure.description("下滑点击淘房头条大新闻")
     def test_goto_news_live(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_entrance_swipe("com.house365.newhouse:id/m_title").goto_news_live().screenshot()
+        self.shouye.func_swipe("com.house365.newhouse:id/m_title").goto_news_live().screenshot()
 
     @allure.description("点击功能入口“消息”tab，进入消息列表页面")
     def test_click_message(self):
