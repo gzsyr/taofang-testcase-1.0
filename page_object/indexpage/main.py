@@ -1,6 +1,7 @@
 import allure
 
 from page_object.base_page.base_page import BasePage
+from page_object.indexpage.mainsearch import Search
 from page_object.newhouse.newhouselist import NewHouseList
 
 
@@ -27,6 +28,7 @@ class Main(BasePage):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
         return self
+
     # 以下是功能入口
     def goto_func_entrance_newhouse(self):
         """
@@ -363,7 +365,7 @@ class Main(BasePage):
         with allure.step("点击搜索框"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
-        return self
+        return Search(self._driver)
 
     def goto_scan(self):
         """
