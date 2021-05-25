@@ -333,9 +333,42 @@ class TestNewHouseList(TestBase):
             click_filter_screen(). \
             click_filter_position_menu("品牌房企"). \
             click_filter_position_menu("住宅"). \
-            func_swipe("开盘时间"). \
-            click_filter_position_menu("60-80㎡"). \
-            func_swipe("装修"). \
+            func_swipe("成品交付"). \
+            click_filter_position_menu("300㎡以上"). \
             click_filter_position_menu("本月开盘"). \
             click_filter_position_menu("精装修"). \
+            screenshot()
+
+    def test_click_filter_screen_definite(self):
+        """
+        点击筛选项：新房-筛选：筛选-品牌房企、住宅、60-80m、本月开盘、精装修、确定按钮
+        :return:
+        """
+        self.shouye.\
+            goto_func_entrance_newhouse(). \
+            click_filter_screen(). \
+            click_filter_position_menu("品牌房企"). \
+            click_filter_position_menu("住宅"). \
+            func_swipe("成品交付"). \
+            click_filter_position_menu("300㎡以上"). \
+            click_filter_position_menu("本月开盘"). \
+            click_filter_position_menu("精装修"). \
+            click_definite(). \
+            screenshot()
+
+    def test_click_filter_screen_empty(self):
+        """
+        点击筛选项：新房-筛选：筛选-品牌房企、住宅、60-80m、本月开盘、精装修、清空按钮
+        :return:
+        """
+        self.shouye.\
+            goto_func_entrance_newhouse(). \
+            click_filter_screen(). \
+            click_filter_position_menu("品牌房企"). \
+            click_filter_position_menu("住宅"). \
+            func_swipe("成品交付"). \
+            click_filter_position_menu("300㎡以上"). \
+            click_filter_position_menu("本月开盘"). \
+            click_filter_position_menu("精装修"). \
+            click_empty(). \
             screenshot()
