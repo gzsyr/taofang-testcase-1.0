@@ -16,6 +16,78 @@ click_filter_position_menu:
     locator: '//*[@text="${filter_postion}"]'
     action: click
 
+# 点击搜索框
+click_search_text:
+  - by: id
+    locator: 'com.house365.newhouse:id/search_text'
+    action: click
+
+# 点击地图
+click_map:
+  - by: xpath
+    locator: '//*[@text="地图"]'
+    action: click
+
+# 点击聚合入口1
+click_layout_one:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_layout_1'
+    action: click
+
+# 点击聚合入口2
+click_layout_two:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_layout_2'
+    action: click
+
+# 点击聚合入口3
+click_layout_three:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_layout_3'
+    action: click
+
+# 点击聚合入口4
+click_layout_four:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_layout_4'
+    action: click
+
+# 点击价格
+click_filter_price:
+  - by: xpath
+    locator: '//*[contains(@resource-id, "view_search_bar_price_text")]'
+    action: click
+
+# 点击户型
+click_filter_room:
+  - by: xpath
+    locator: '//*[contains(@resource-id, "view_search_bar_room_text")]'
+    action: click
+
+# 点击筛选
+click_filter_screen:
+  - by: xpath
+    locator: '//*[contains(@resource-id, "view_search_bar_filter_text")]'
+    action: click
+
+# 点击删除
+click_delete:
+  - by: xpath
+    locator: '//*[contains(@resource-id, "search_bar_delete_condition")]'
+    action: click
+
+# 删选-清空按钮
+click_empty:
+  - by: xpath
+    locator: '//*[@text="清空"]'
+    action: click
+
+# 删选-确定按钮
+click_definite:
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
 # 点击“综合排序”
 click_final_priorities:
   - by: xpath
