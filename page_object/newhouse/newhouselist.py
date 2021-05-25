@@ -55,6 +55,8 @@ class NewHouseList(BasePage):
             self.steps("../../page_object/newhouse/newhouselist.yaml")
         self.tsleep(2)
 
+        return self
+
     def click_price(self):
         """
         点击筛选项下方的“价格”
@@ -63,6 +65,8 @@ class NewHouseList(BasePage):
         with allure.step("点击筛选项下方的“价格”"):
             self.steps("../../page_object/newhouse/newhouselist.yaml")
         self.tsleep(2)
+
+        return self
 
     def click_opening_time(self):
         """
@@ -73,6 +77,8 @@ class NewHouseList(BasePage):
             self.steps("../../page_object/newhouse/newhouselist.yaml")
         self.tsleep(2)
 
+        return self
+
     def click_attention_rate(self):
         """
         点击筛选项下方的“关注度”
@@ -81,4 +87,6 @@ class NewHouseList(BasePage):
         with allure.step("点击筛选项下方的“关注度”"):
             self.steps("../../page_object/newhouse/newhouselist.yaml")
         self.tsleep(2)
+
+        return self
 
