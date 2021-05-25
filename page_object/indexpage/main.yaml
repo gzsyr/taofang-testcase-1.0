@@ -333,19 +333,19 @@ goto_doctor_more:
 #点击房博士头像
 goto_doctor_photo:
   - by: xpath
-    locator: '//androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.view.ViewGroup'
+    locator: '//*[contains(@resource-id, "com.house365.newhouse:id/avatar")]'
     action: click
 
 #点击房博士咨询按钮
 goto_doctor_consult:
   - by: xpath
-    locator: '//android.view.ViewGroup[1]/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]/android.widget.RelativeLayout'
+    locator: '//*[@text="咨询"]'
     action: click
 
 #点击房博士问答数据
 goto_doctor_question:
   - by: xpath
-    locator: '//android.view.ViewGroup[2]/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]'
+    locator: '//*[contains(@resource-id, "qa_tv")]'
     action: click
 
 #点击首页房博士tab
@@ -372,10 +372,10 @@ goto_newhouse_tab:
     locator: 'com.house365.newhouse:id/m_new_btn'
     action: click
 
-#点击首页新房tab楼盘
-goto_newhouse_item:
+#点击首页新房tab、二手房tab、租房tab楼盘
+goto_tab_item:
   - by: xpath
-    locator: '//android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]'
+    locator: '//*[contains(@resource-id,"tv_house_name")]'
     action: click
 
 #点击首页二手房tab
@@ -384,22 +384,8 @@ goto_second_tab:
     locator: 'com.house365.newhouse:id/m_second_btn'
     action: click
 
-#点击首页二手房tab房源
-goto_second_item:
-  - by: xpath
-    locator: '//android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]'
-    action: click
-
 #点击首页租房tab
 goto_rent_tab:
   - by: id
     locator: 'com.house365.newhouse:id/m_rent_btn'
     action: click
-
-#点击首页租房tab房源
-goto_rent_item:
-  - by: xpath
-    locator: '//android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.RelativeLayout[1]'
-    action: click
-
-

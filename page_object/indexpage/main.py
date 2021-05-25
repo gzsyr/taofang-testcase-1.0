@@ -633,11 +633,11 @@ class Main(BasePage):
         self.tsleep(2)
         return self
 
-    def goto_newhouse_item(self):
+    def goto_tab_item(self, des="新房"):
         """
-        点击首页新房tab楼盘
+        点击首页新房tab、二手房tab、租房tab楼盘
         """
-        with allure.step("点击首页新房tab楼盘"):
+        with allure.step("点击首页" + des + "tab楼盘"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
         return self
@@ -651,29 +651,11 @@ class Main(BasePage):
         self.tsleep(2)
         return self
 
-    def goto_second_item(self):
-        """
-        点击首页二手房tab数据
-        """
-        with allure.step("点击首页二手房tab数据"):
-            self.steps("../../page_object/indexpage/main.yaml")
-        self.tsleep(2)
-        return self
-
     def goto_rent_tab(self):
         """
         点击首页租房tab
         """
         with allure.step("点击首页租房tab"):
-            self.steps("../../page_object/indexpage/main.yaml")
-        self.tsleep(2)
-        return self
-
-    def goto_rent_item(self):
-        """
-        点击首页租房tab数据
-        """
-        with allure.step("点击首页租房tab数据"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
         return self
