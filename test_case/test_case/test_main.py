@@ -239,7 +239,7 @@ class TestMain(TestBase):
     @allure.description("滑动到”直播看房“，点击直播房源")
     def test_goto_live_house(self, cancel_adv):
         cancel_adv(self.app._driver)
-        self.shouye.func_swipe("直播看房").goto_live_house().screenshot()
+        self.shouye.func_swipe("video_floor_title").goto_live_house().screenshot()
 
     @allure.description("滑动到”直播看房“，点击直播房源查看更多")
     def test_goto_live_house_more(self, cancel_adv):
