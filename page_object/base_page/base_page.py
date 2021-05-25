@@ -85,8 +85,8 @@ class BasePage:
             if text != None and (text in p_s):
                 break
             s_x = device_size['width'] * 0.5
-            s_y = device_size['height'] * 0.75
-            e_y = device_size['height'] * 0.5
+            s_y = device_size['height'] * 0.80
+            e_y = device_size['height'] * 0.6
             self._driver.swipe(s_x, s_y, s_x, e_y, 500)
             p_e = self._driver.page_source
             self.tsleep(1)
