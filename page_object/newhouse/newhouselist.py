@@ -46,3 +46,39 @@ class NewHouseList(BasePage):
 
         return self
 
+    def click_final_priorities(self):
+        """
+        点击筛选项下方的“综合排序”
+        :return:
+        """
+        with allure.step("点击筛选项下方的“综合排序”"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+    def click_price(self):
+        """
+        点击筛选项下方的“价格”
+        :return:
+        """
+        with allure.step("点击筛选项下方的“价格”"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+    def click_opening_time(self):
+        """
+        点击筛选项下方的“开盘时间”
+        :return:
+        """
+        with allure.step("点击筛选项下方的“开盘时间”"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+    def click_attention_rate(self):
+        """
+        点击筛选项下方的“关注度”
+        :return:
+        """
+        with allure.step("点击筛选项下方的“关注度”"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+

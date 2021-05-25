@@ -15,3 +15,27 @@ click_filter_position_menu:
   - by: xpath
     locator: '//*[@text="${filter_postion}"]'
     action: click
+
+# 点击“综合排序”
+click_final_priorities:
+  - by: xpath
+    locator: '//*[@text="综合排序"]'
+    action: click
+
+# 点击筛选项下方的“价格”
+click_price:
+  - by: xpath
+    locator: '//*[contains(@resource-id, "img_arrow_down")]'
+    action: click
+
+# 点击筛选项下方的“开盘时间”
+click_opening_time:
+  - by: xpath
+    locator: '//*[@text="开盘时间"]'
+    action: click
+
+# 点击筛选项下方的“关注度”
+click_attention_rate:
+  - by: xpath
+    locator: '//*[@text="关注度"]'
+    action: click
