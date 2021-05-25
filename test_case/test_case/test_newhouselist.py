@@ -102,7 +102,6 @@ class TestNewHouseList(TestBase):
         """
         self.shouye.goto_func_entrance_newhouse().click_attention_rate().screenshot()
 
-
     @allure.description("列表页点击搜索框")
     def test_click_search_text(self):
         """
@@ -285,5 +284,40 @@ class TestNewHouseList(TestBase):
         """
         self.shouye. \
             goto_func_entrance_newhouse(). \
+            click_delete(). \
+            screenshot()
+
+    @allure.description("点击筛选项：位置-附近-1km，价格-25000-30000元/m，户型-三室")
+    def test_click_assemble(self):
+        """
+        点击筛选项：位置-附近-1km，价格-25000-30000元/m，户型-三室
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_filter_position(). \
+            click_filter_position_menu("附近"). \
+            click_filter_position_menu("1km"). \
+            click_filter_price(). \
+            click_filter_position_menu("20000-25000元/㎡"). \
+            click_filter_room(). \
+            click_filter_position_menu("三室"). \
+            screenshot()
+
+    @allure.description("点击筛选项：位置-附近-1km，价格-25000-30000元/m，户型-三室,点击清空按钮")
+    def test_click_grouping(self):
+        """
+        点击筛选项：位置-附近-1km，价格-25000-30000元/m，户型-三室，点击清空按钮
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_filter_position(). \
+            click_filter_position_menu("附近"). \
+            click_filter_position_menu("1km"). \
+            click_filter_price(). \
+            click_filter_position_menu("20000-25000元/㎡"). \
+            click_filter_room(). \
+            click_filter_position_menu("三室"). \
             click_delete(). \
             screenshot()

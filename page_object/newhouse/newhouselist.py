@@ -178,12 +178,6 @@ class NewHouseList(BasePage):
 
         return self
 
-
-
-
-
-
-
     def click_final_priorities(self):
         """
         点击筛选项下方的“综合排序”
