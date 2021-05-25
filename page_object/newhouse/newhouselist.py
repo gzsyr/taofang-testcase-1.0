@@ -46,6 +46,144 @@ class NewHouseList(BasePage):
 
         return self
 
+    def click_search_text(self):
+        """
+        点击列表项搜索框
+        :return:
+        """
+        with allure.step("点击列表项搜索框"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+    def click_map(self):
+        """
+        点击列表项地图
+        :return:
+        """
+        with allure.step("点击列表项地图"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+    def click_layout_one(self):
+        """
+        点击聚合入口1
+        :return:
+        """
+        with allure.step("点击聚合入口1"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+    def click_layout_two(self):
+        """
+        点击聚合入口2
+        :return:
+        """
+        with allure.step("点击聚合入口2"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+    def click_layout_three(self):
+        """
+        点击聚合入口3
+        :return:
+        """
+        with allure.step("点击聚合入口3"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+    def click_layout_four(self):
+        """
+        点击聚合入口4
+        :return:
+        """
+        with allure.step("点击聚合入口4"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+    def click_filter_price(self):
+        """
+        点击筛选项的“价格”
+        :return:
+        """
+        with allure.step("点击筛选项的“价格”"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+    def click_filter_room(self):
+        """
+        点击筛选项的“户型”
+        :return:
+        """
+        with allure.step("点击筛选项的“户型”"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+    def click_filter_screen(self):
+        """
+        点击筛选项的“筛选”
+        :return:
+        """
+        with allure.step("点击筛选项的“筛选”"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+    def click_delete(self):
+        """
+        点击删除按钮
+        :return:
+        """
+        with allure.step("点击删除按钮"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+    def click_empty(self):
+        """
+        点击删选清空按钮
+        :return:
+        """
+        with allure.step("点击筛选清空按钮"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+    def click_definite(self):
+        """
+        点击删选确定按钮
+        :return:
+        """
+        with allure.step("点击筛选确定按钮"):
+            self.steps("../../page_object/newhouse/newhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+
+
+
+
+
+
     def click_final_priorities(self):
         """
         点击筛选项下方的“综合排序”

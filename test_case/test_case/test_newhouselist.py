@@ -101,3 +101,189 @@ class TestNewHouseList(TestBase):
         :return:
         """
         self.shouye.goto_func_entrance_newhouse().click_attention_rate().screenshot()
+
+
+    @allure.description("列表页点击搜索框")
+    def test_click_search_text(self):
+        """
+        列表页点击搜索框
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_search_text(). \
+            screenshot()
+
+    @allure.description("列表页点击地图")
+    def test_click_map(self):
+        """
+        列表页点击搜索框
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_map(). \
+            screenshot()
+
+    @allure.description("列表页点击聚合入口1")
+    def test_click_layout_one(self):
+        """
+        列表页点击聚合入口1
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_layout_one(). \
+            screenshot()
+
+    @allure.description("列表页点击聚合入口2")
+    def test_click_layout_two(self):
+        """
+        列表页点击聚合入口2
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_layout_two(). \
+            screenshot()
+
+    @allure.description("列表页点击聚合入口3")
+    def test_click_layout_three(self):
+        """
+        列表页点击聚合入口3
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_layout_three(). \
+            screenshot()
+
+    @allure.description("列表页点击聚合入口4")
+    def test_click_layout_four(self):
+        """
+        列表页点击聚合入口4
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_layout_four(). \
+            screenshot()
+
+    @allure.description("点击筛选项：位置->附近")
+    def test_click_position_nearby(self):
+        """
+        点击筛选项：位置-区域
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_filter_position(). \
+            click_filter_position_menu("附近"). \
+            screenshot()
+
+    @allure.description("点击筛选项：位置->地铁")
+    def test_click_position_metro(self):
+        """
+        点击筛选项：位置-地铁
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_filter_position(). \
+            click_filter_position_menu("地铁"). \
+            screenshot()
+
+    @allure.description("点击筛选项：位置->地铁->一号线")
+    def test_click_position_metro_oneline(self):
+        """
+        点击筛选项：位置-地铁
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_filter_position(). \
+            click_filter_position_menu("地铁"). \
+            click_filter_position_menu("一号线"). \
+            screenshot()
+
+    @allure.description("点击筛选项：位置->板块")
+    def test_click_position_plate(self):
+        """
+        点击筛选项：位置-板块
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_filter_position(). \
+            click_filter_position_menu("板块"). \
+            screenshot()
+
+    @allure.description("点击筛选项：位置->板块->城中")
+    def test_click_position_plate_town_traders(self):
+        """
+        点击筛选项：位置-板块-城中
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_filter_position(). \
+            click_filter_position_menu("板块"). \
+            click_filter_position_menu("城中"). \
+            screenshot()
+
+    @allure.description("点击筛选项：价格")
+    def test_click_filter_price(self):
+        """
+        点击筛选项：价格
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_filter_price(). \
+            screenshot()
+
+    @allure.description("点击筛选项：价格-10000元/m以下")
+    def test_click_filter_price_onekilo(self):
+        """
+        点击筛选项：价格-10000元/m以下
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_filter_price(). \
+            click_filter_position_menu("10000元/㎡以下"). \
+            screenshot()
+
+    @allure.description("点击筛选项：户型")
+    def test_click_filter_room(self):
+        """
+        点击筛选项：户型
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_filter_room(). \
+            screenshot()
+
+    @allure.description("点击筛选项：户型-二室")
+    def test_click_filter_room_bilocular(self):
+        """
+        点击筛选项：户型-二室
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_filter_room(). \
+            click_filter_position_menu("二室"). \
+            screenshot()
+
+    @allure.description("点击删除按钮")
+    def test_click_delete(self):
+        """
+        点击删除按钮
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_newhouse(). \
+            click_delete(). \
+            screenshot()
