@@ -310,7 +310,7 @@ class TestNewHouseList(TestBase):
         点击筛选项：位置-附近-1km，价格-25000-30000元/m，户型-三室，点击清空按钮
         :return:
         """
-        self.shouye. \
+        a = self.shouye. \
             goto_func_entrance_newhouse(). \
             click_filter_position(). \
             click_filter_position_menu("附近"). \
@@ -318,11 +318,13 @@ class TestNewHouseList(TestBase):
             click_filter_price(). \
             click_filter_position_menu("20000-25000元/㎡"). \
             click_filter_room(). \
-            click_filter_position_menu("三室"). \
-            click_delete(). \
-            screenshot()
+            click_filter_position_menu("三室")
 
-    @allure.description("点击筛选项：新房-筛选：筛选-品牌房企、住宅、60-80m、本月开盘、精装修")
+        a.screenshot()
+
+        a.click_delete().screenshot()
+
+    @allure.description("点击筛选项：新房-筛选：筛选-品牌房企、住宅、300㎡以上、本月开盘、精装修")
     def test_click_filter_screen(self):
         """
         点击筛选项：新房-筛选：筛选-品牌房企、住宅、60-80m、本月开盘、精装修
@@ -339,9 +341,10 @@ class TestNewHouseList(TestBase):
             click_filter_position_menu("精装修"). \
             screenshot()
 
+    @allure.description("点击筛选项：新房-筛选：筛选-品牌房企、住宅、300㎡以上、本月开盘、精装修后，点击确定")
     def test_click_filter_screen_definite(self):
         """
-        点击筛选项：新房-筛选：筛选-品牌房企、住宅、60-80m、本月开盘、精装修、确定按钮
+        点击筛选项：新房-筛选：筛选-品牌房企、住宅、300㎡以上、本月开盘、精装修、确定按钮
         :return:
         """
         self.shouye.\
@@ -356,12 +359,13 @@ class TestNewHouseList(TestBase):
             click_definite(). \
             screenshot()
 
+    @allure.description("点击筛选项：新房-筛选：筛选-品牌房企、住宅、300㎡以上、本月开盘、精装修后，点击清空")
     def test_click_filter_screen_empty(self):
         """
-        点击筛选项：新房-筛选：筛选-品牌房企、住宅、60-80m、本月开盘、精装修、清空按钮
+        点击筛选项：新房-筛选：筛选-品牌房企、住宅、300㎡以上、本月开盘、精装修、清空按钮
         :return:
         """
-        self.shouye.\
+        a = self.shouye.\
             goto_func_entrance_newhouse(). \
             click_filter_screen(). \
             click_filter_position_menu("品牌房企"). \
@@ -369,6 +373,8 @@ class TestNewHouseList(TestBase):
             func_swipe("成品交付"). \
             click_filter_position_menu("300㎡以上"). \
             click_filter_position_menu("本月开盘"). \
-            click_filter_position_menu("精装修"). \
-            click_empty(). \
-            screenshot()
+            click_filter_position_menu("精装修")
+
+        a.screenshot()
+
+        a.click_empty().screenshot()
