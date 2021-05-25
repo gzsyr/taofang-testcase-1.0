@@ -69,3 +69,35 @@ class TestNewHouseList(TestBase):
             click_filter_position_menu("迈皋桥站")
         a.screenshot()
         a.click_filter_position().screenshot()
+
+    @allure.description("点击筛选项下方的“综合排序”")
+    def test_final_priorities(self):
+        """
+        点击筛选项下方的“综合排序”
+        :return:
+        """
+        self.shouye.goto_func_entrance_newhouse().click_final_priorities().screenshot()
+
+    @allure.description("点击筛选项下方的“价格”")
+    def test_click_price(self):
+        """
+        点击筛选项下方的“价格”
+        :return:
+        """
+        self.shouye.goto_func_entrance_newhouse().click_price().screenshot()
+
+    @allure.description("点击筛选项下方的“开盘时间”")
+    def test_click_open_time(self):
+        """
+        点击筛选项下方的“开盘时间”
+        :return:
+        """
+        self.shouye.goto_func_entrance_newhouse().click_opening_time().screenshot()
+
+    @allure.description("点击筛选项下方的“关注度”")
+    def test_click_attention_rate(self):
+        """
+        点击筛选项下方的“关注度”
+        :return:
+        """
+        self.shouye.goto_func_entrance_newhouse().click_attention_rate().screenshot()
