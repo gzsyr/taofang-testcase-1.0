@@ -124,8 +124,20 @@ class TestSellHouseList(TestBase):
         """
         self.shouye. \
             goto_func_entrance_esf(). \
-            click_empty(). \
             click_screening_location(). \
             click_filter_position_menu("附近"). \
+            screenshot()
+
+    @allure.description("点击筛选项：位置-附近")
+    def test_click_screening_location_area(self):
+        """
+        点击筛选项：位置-区域
+        :return:
+        """
+        self.shouye. \
+            goto_func_entrance_esf(). \
+            click_screening_location(). \
+            click_filter_position_menu("区域"). \
+            click_filter_position_menu("建邺区"). \
             screenshot()
 
