@@ -71,17 +71,111 @@ click_headlines:
     locator: 'com.house365.newhouse:id/cons_top_news'
     action: click
 
+
+
+# 点击筛选下一级以及在下一级内容
+click_filter_position_menu:
+  - by: xpath
+    locator: '//*[@text="${filter_postion}"]'
+    action: click
+
+
+#二手房列表筛选-总价
+click_filter_price：
+  - by: xpath
+    locator: '//*[contains(@resource-id,"view_search_bar_price_text")]'
+    action: click
+
+#二手房列表筛选-总价-自定义：最低价
+click_filter_lowest_price：
+  - by: xpath
+    locator: '//*[@text="最低价"]'
+    action: click
+
+
+#二手房列表筛选-总价-自定义：最高价
+click_filter_highest_price：
+  - by: xpath
+    locator: '//*[@text="最高价"]'
+    action: click
+
+
+#点击筛选页确定按钮
+click_filter_confirm：
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+#二手房列表筛选-房型
+click_filter_room:
+  - by: xpath
+    locator: '//*[contains(@resource-id,"view_search_bar_room_text")]'
+    action: click
+
+
+#筛选-更多
+click_filter_more:
+  - by: xpath
+    locator: '//*[contains(@resource-id,"view_search_bar_filter_text")]'
+    action: click
+
+#筛选-更多-重置
+click_filter_reset：
+  - by: xpath
+    locator: '//*[@text="重置"]'
+    action: click
+
+#筛选-排序
+click_filter_sort：
+  - by: xpath
+    locator: '//*[contains(@resource-id,"view_search_bar_sort_image")]'
+    action: click
+
+
+#标签筛选-南北通透
+click_north:
+  - by: xpath
+    locator: '//*[@text="南北通透"]'
+    action: click
+
+#标签筛选-VR带看
+click_vr_see:
+  - by: xpath
+    locator: '//*[@text="VR带看"]'
+    action: click
+
+#标签筛选-中介
+click_mediation:
+  - by: xpath
+    locator: '//*[@text="中介"]'
+    action: click
+
+#标签筛选-个人
+click_personal:
+  - by: xpath
+    locator: '//*[@text="个人"]'
+    action: click
+
+
+#标签筛选-写字楼
+click_office_buildings:
+  - by: xpath
+    locator: '//*[@text="写字楼"]'
+    action: click
+
+#列表项第一个房源
+goto_sellhouse_detail:
+  - by: id
+    locator: 'com.house365.newhouse:id/txt_title'
+    action: click
+
 # 点击位置
 click_screening_location:
   - by: xpath
     locator: '//*[contains(@resource-id, "view_search_bar_region_text")]'
     action: click
 
-# 点击位置的下一级以及在下一级内容
-click_filter_position_menu:
-  - by: xpath
-    locator: '//*[@text="${filter_postion}"]'
-    action: click
+
 
 # 清空按钮
 click_empty:

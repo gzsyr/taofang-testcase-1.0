@@ -39,6 +39,64 @@ class TestSellHouseList(TestBase):
         """
         self.shouye.goto_func_entrance_esf().click_neighborhood().screenshot()
 
+    @allure.description("点击二手房列表页第一个房源")
+    def test_goto_sellhouse_detail(self):
+        """
+        点击二手房列表页第一个房源进入详情页
+        """
+        self.shouye.goto_func_entrance_esf().goto_sellhouse_detail().screenshot()
+
+    @allure.description("点击二手房列表标签筛选——写字楼")
+    def test_click_office_buildings(self):
+        """
+        点击二手房列表标签筛选——写字楼
+        """
+        self.shouye.goto_func_entrance_esf().click_office_buildings().screenshot()
+
+    @allure.description("点击二手房列表标签筛选——个人")
+    def test_click_personal(self):
+        """
+        点击二手房列表标签筛选——个人
+        """
+        self.shouye.goto_func_entrance_esf().click_personal().screenshot()
+
+    @allure.description("点击二手房列表标签筛选——中介")
+    def test_click_mediation(self):
+        """
+        点击二手房列表标签筛选——中介
+        """
+        self.shouye.goto_func_entrance_esf().click_mediation().screenshot()
+
+    @allure.description("点击二手房列表标签筛选——VR带看")
+    def test_click_vr_see(self):
+        """
+        点击二手房列表标签筛选——VR带看
+        """
+        self.shouye.goto_func_entrance_esf().click_vr_see().screenshot()
+
+    @allure.description("点击二手房列表标签筛选——南北通透")
+    def test_click_north(self):
+        """
+        点击二手房列表标签筛选——南北通透
+        """
+        self.shouye.goto_func_entrance_esf().click_north().screenshot()
+
+    @allure.description("点击二手房列表筛选-房型-二室/三室")
+    def test_click_filter_room_menu(self):
+        """
+        点击二手房列表筛选-房型-二室/三室
+        """
+        self.shouye.goto_func_entrance_esf().click_filter_room(). \
+            click_filter_position_menu("二室").click_filter_position_menu("三室").click_filter_confirm().screenshot()
+
+    @allure.description("二手房-筛选：排序-总价从低到高")
+    def test_click_filter_sort(self):
+        """
+        二手房-筛选：排序-总价从低到高
+        """
+        self.shouye.goto_func_entrance_esf().click_filter_sort(). \
+            click_filter_position_menu("总价从低到高").screenshot()
+
     @allure.description("点击列表功能入口-个人房源")
     def test_click_personal_housing(self):
         """
