@@ -3,6 +3,7 @@ import allure
 from page_object.base_page.base_page import BasePage
 from page_object.indexpage.mainsearch import MainSearch
 from page_object.newhouse.newhouselist import NewHouseList
+from page_object.sellhouse.sellhouselist import SellHouseList
 
 
 class Main(BasePage):
@@ -48,7 +49,7 @@ class Main(BasePage):
         with allure.step("点击功能入口的二手房icon"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
-        return self
+        return SellHouseList(self._driver)
 
     def goto_func_entrance_zf(self):
         """
