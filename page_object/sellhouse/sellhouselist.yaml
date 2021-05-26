@@ -20,7 +20,7 @@ click_msg:
 # 点击二手房列表功能入口-找小区
 click_neighborhood:
   - by: xapth
-    locator: '//*[@text="找小区"]'
+    locator: '//*[@text="找小区"'
     action: click
 
 # 点击二手房列表功能入口-个人房源
