@@ -1,1 +1,72 @@
 # 二手房列表页面
+# 点击二手房列表搜索框
+click_search_text:
+  - by: id
+    locator: 'com.house365.newhouse:id/search_text'
+    action: click
+
+# 点击二手房列表地图
+click_map:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_map'
+    action: click
+
+# 点击二手房列表消息
+click_msg:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_msg'
+    action: click
+
+# 点击二手房列表功能入口-找小区
+click_neighborhood:
+  - by: xapth
+    locator: '//*[@text="找小区"]'
+    action: click
+
+# 点击二手房列表功能入口-个人房源
+click_personal_housing:
+  - by: xapth
+    locator: '//*[@text="个人房源"]'
+    action: click
+
+# 点击二手房列表功能入口-学校地图
+click_school_map:
+  - by: xapth
+    locator: '//*[@text="学校地图"]'
+    action: click
+
+# 点击二手房列表功能入口-查房价
+click_check_prices:
+  - by: xapth
+    locator: '//*[@text="查房价"]'
+    action: click
+
+# 点击二手房列表功能入口-我要买房
+click_buy_house:
+  - by: xapth
+    locator: '//*[@text="我要买房"]'
+    action: click
+
+# 点击二手房列表帮你找房icon
+click_find_room:
+  - by: id
+    locator: 'com.house365.newhouse:id/house_find_entrance'
+    action: click
+
+# 点击二手房列表快速卖房icon
+click_fast_selling:
+  - by: id
+    locator: 'com.house365.newhouse:id/house_sell_entrance'
+    action: click
+
+# 点击二手房列表买房咨询师icon
+click_consultant:
+  - by: id
+    locator: 'com.house365.newhouse:id/house_master_entrance'
+    action: click
+
+# 点击二手房列表楼市头条
+click_headlines:
+  - by: id
+    locator: 'com.house365.newhouse:id/cons_top_news'
+    action: click
