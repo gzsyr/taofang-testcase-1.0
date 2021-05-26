@@ -19,31 +19,31 @@ click_msg:
 
 # 点击二手房列表功能入口-找小区
 click_neighborhood:
-  - by: xapth
-    locator: '//*[@text="找小区"'
+  - by: xpath
+    locator: '//*[@text="找小区"]'
     action: click
 
 # 点击二手房列表功能入口-个人房源
 click_personal_housing:
-  - by: xapth
+  - by: xpath
     locator: '//*[@text="个人房源"]'
     action: click
 
 # 点击二手房列表功能入口-学校地图
 click_school_map:
-  - by: xapth
+  - by: xpath
     locator: '//*[@text="学校地图"]'
     action: click
 
 # 点击二手房列表功能入口-查房价
 click_check_prices:
-  - by: xapth
+  - by: xpath
     locator: '//*[@text="查房价"]'
     action: click
 
 # 点击二手房列表功能入口-我要买房
 click_buy_house:
-  - by: xapth
+  - by: xpath
     locator: '//*[@text="我要买房"]'
     action: click
 
@@ -69,4 +69,22 @@ click_consultant:
 click_headlines:
   - by: id
     locator: 'com.house365.newhouse:id/cons_top_news'
+    action: click
+
+# 点击位置
+click_screening_location:
+  - by: xpath
+    locator: '//*[contains(@resource-id, "view_search_bar_region_text")]'
+    action: click
+
+# 点击位置的下一级以及在下一级内容
+click_filter_position_menu:
+  - by: xpath
+    locator: '//*[@text="${filter_postion}"]'
+    action: click
+
+# 清空按钮
+click_empty:
+  - by: id
+    locator: 'com.house365.newhouse:id/search_bar_delete_condition'
     action: click

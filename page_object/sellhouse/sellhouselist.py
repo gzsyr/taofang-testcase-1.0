@@ -139,3 +139,39 @@ class SellHouseList(BasePage):
 
         return self
 
+    def click_screening_location(self):
+        """
+        点击列表位置
+        :return:
+        """
+        with allure.step("点击列表页位置"):
+            self.steps("../../page_object/sellhouse/sellhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
+    def click_filter_position_menu(self, text="不限"):
+        """
+        点击筛选项“位置”的菜单
+        :param text: 传入的需要点击的位置参数
+                     默认不限
+        :return:
+        """
+        self._params["filter_postion"] = text
+        with allure.step("点击筛选项的“位置”的" + text):
+            self.steps("../../page_object/sellhouse/sellhouselist.yaml", replace=True)
+        self.tsleep(2)
+
+        return self
+
+    def click_empty(self):
+        """
+        清空按钮
+        :return:
+        """
+        with allure.step("点击清空按钮"):
+            self.steps("../../page_object/sellhouse/sellhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
