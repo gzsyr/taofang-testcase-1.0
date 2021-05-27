@@ -184,3 +184,10 @@ click_empty:
   - by: id
     locator: 'com.house365.newhouse:id/search_bar_delete_condition'
     action: click
+
+
+
+#滑动
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'
