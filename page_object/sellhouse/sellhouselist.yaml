@@ -71,14 +71,11 @@ click_headlines:
     locator: 'com.house365.newhouse:id/cons_top_news'
     action: click
 
-
-
 # 点击筛选下一级以及在下一级内容
 click_filter_position_menu:
   - by: xpath
     locator: '//*[@text="${filter_postion}"]'
     action: click
-
 
 #二手房列表筛选-总价
 click_filter_price:
@@ -93,14 +90,12 @@ click_filter_lowest_price:
     action: send
     value: "${filter_price}"
 
-
 #二手房列表筛选-总价-自定义：最高价
 click_filter_highest_price:
   - by: xpath
     locator: '//*[@text="最高价"]'
     action: send
     value: "${filter_price}"
-
 
 #点击筛选页确定按钮
 click_filter_confirm:
@@ -113,7 +108,6 @@ click_filter_room:
   - by: xpath
     locator: '//*[contains(@resource-id,"view_search_bar_room_text")]'
     action: click
-
 
 #筛选-更多
 click_filter_more:
@@ -132,7 +126,6 @@ click_filter_sort:
   - by: xpath
     locator: '//*[contains(@resource-id,"view_search_bar_sort_image")]'
     action: click
-
 
 #标签筛选-南北通透
 click_north:
@@ -158,7 +151,6 @@ click_personal:
     locator: '//*[@text="个人"]'
     action: click
 
-
 #标签筛选-写字楼
 click_office_buildings:
   - by: xpath
@@ -177,15 +169,11 @@ click_screening_location:
     locator: '//*[contains(@resource-id, "view_search_bar_region_text")]'
     action: click
 
-
-
 # 清空按钮
 click_empty:
   - by: id
     locator: 'com.house365.newhouse:id/search_bar_delete_condition'
     action: click
-
-
 
 #滑动
 func_swipe:

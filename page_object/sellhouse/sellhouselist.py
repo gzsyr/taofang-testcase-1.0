@@ -162,8 +162,6 @@ class SellHouseList(BasePage):
         self.tsleep(2)
         return self
 
-
-
     def click_filter_lowest_price(self,text = None):
         """
         点击二手房列表筛选-总价-自定义：最低价
@@ -174,7 +172,6 @@ class SellHouseList(BasePage):
             self.steps("../../page_object/sellhouse/sellhouselist.yaml", replace=True)
         self.tsleep(2)
         return self
-
 
     def click_filter_highest_price(self,text = None):
         """
@@ -197,8 +194,6 @@ class SellHouseList(BasePage):
         self.tsleep(2)
         return self
 
-
-
     def click_filter_room(self):
         """
         点击二手房列表筛选-房型
@@ -208,8 +203,6 @@ class SellHouseList(BasePage):
             self.steps("../../page_object/sellhouse/sellhouselist.yaml")
         self.tsleep(2)
         return self
-
-
 
     def click_filter_more(self):
         """
@@ -231,9 +224,6 @@ class SellHouseList(BasePage):
         self.tsleep(2)
         return self
 
-
-
-
     def click_filter_sort(self):
         """
         点击筛选-排序
@@ -243,8 +233,6 @@ class SellHouseList(BasePage):
             self.steps("../../page_object/sellhouse/sellhouselist.yaml")
         self.tsleep(2)
         return self
-
-
 
     def click_north(self):
         """
@@ -256,7 +244,6 @@ class SellHouseList(BasePage):
         self.tsleep(2)
         return self
 
-
     def click_vr_see(self):
         """
         点击标签筛选-VR带看
@@ -267,8 +254,6 @@ class SellHouseList(BasePage):
         self.tsleep(2)
         return self
 
-
-
     def click_mediation(self):
         """
         点击标签筛选-中介
@@ -278,7 +263,6 @@ class SellHouseList(BasePage):
             self.steps("../../page_object/sellhouse/sellhouselist.yaml")
         self.tsleep(2)
         return self
-
 
     def click_personal(self):
         """
@@ -320,7 +304,6 @@ class SellHouseList(BasePage):
         self.tsleep(2)
 
         return self
-
 
     def click_empty(self):
         """

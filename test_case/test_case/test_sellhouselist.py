@@ -197,7 +197,7 @@ class TestSellHouseList(TestBase):
     @allure.description("点击二手房-筛选：位置-区域-建邺区")
     def test_click_screening_location_area(self):
         """
-        点击筛选项：位置-区域
+        点击筛选项：位置-区域-建邺区
         :return:
         """
         self.shouye. \
@@ -206,8 +206,6 @@ class TestSellHouseList(TestBase):
             click_filter_position_menu("区域"). \
             click_filter_position_menu("建邺区"). \
             screenshot()
-
-
 
     @allure.description("二手房-筛选：总价-200-250万")
     def test_click_filter_price(self):
@@ -232,7 +230,6 @@ class TestSellHouseList(TestBase):
             click_filter_confirm().\
             screenshot()
 
-
     @allure.description("1、二手房-筛选：位置-附近-1km 2、点击清空按钮")
     def test_click_empty(self):
         """
@@ -245,7 +242,6 @@ class TestSellHouseList(TestBase):
             click_filter_position_menu("附近"). \
             click_filter_position_menu("1km").screenshot().\
             click_empty().screenshot()
-
 
     @allure.description("二手房-筛选：更多-个人、住宅、80-100m、简装、1995年后、2-5层、南、无个税、VR看房、产权房，确定")
     def test_click_filter_more(self):
@@ -261,7 +257,6 @@ class TestSellHouseList(TestBase):
             click_filter_position_menu("VR看房").click_filter_position_menu("产权房").screenshot().\
             click_filter_confirm().screenshot()
 
-
     @allure.description("点击二手房-筛选：位置-地铁-1号线-迈皋桥站")
     def test_click_screening_location_station(self):
         """
@@ -274,7 +269,6 @@ class TestSellHouseList(TestBase):
             click_filter_position_menu("1号线"). \
             click_filter_position_menu("迈皋桥站").\
             screenshot()
-
 
     @allure.description("点击二手房-筛选：位置-学校-鼓楼区-拉萨路小学")
     def test_click_screening_location_school(self):
