@@ -225,12 +225,12 @@ class TestSellHouseList(TestBase):
         """
         二手房-筛选：总价-自定义，150-280万，确定
         """
-        self.shouye.goto_func_entrance_esf().\
+        step = self.shouye.goto_func_entrance_esf().\
             click_empty().click_filter_price().\
             click_filter_lowest_price("150").\
-            click_filter_highest_price("280").\
-            click_filter_confirm().\
-            screenshot()
+            click_filter_highest_price("280")
+        step.screenshot()
+        step.click_filter_confirm().screenshot()
 
 
     @allure.description("1、二手房-筛选：位置-附近-1km 2、点击清空按钮")
@@ -239,12 +239,13 @@ class TestSellHouseList(TestBase):
         1、二手房-筛选：位置-附近-1km
         2、点击清空按钮
         """
-        self.shouye. \
+        step = self.shouye. \
             goto_func_entrance_esf().click_empty(). \
             click_screening_location(). \
             click_filter_position_menu("附近"). \
-            click_filter_position_menu("1km").screenshot().\
-            click_empty().screenshot()
+            click_filter_position_menu("1km")
+        step.screenshot()
+        step.click_empty().screenshot()
 
 
     @allure.description("二手房-筛选：更多-个人、住宅、80-100m、简装、1995年后、2-5层、南、无个税、VR看房、产权房，确定")
@@ -252,14 +253,17 @@ class TestSellHouseList(TestBase):
         """
         二手房-筛选：更多-个人、住宅、80-100m、简装、1995年后、2-5层、南、无个税、VR看房、产权房，确定
         """
-        self.shouye.goto_func_entrance_esf().click_empty().click_filter_more().\
+        step1 = self.shouye.goto_func_entrance_esf().click_empty().click_filter_more().\
             click_filter_position_menu("个人").click_filter_position_menu("住宅").\
-            click_filter_position_menu("80-100㎡").click_filter_position_menu("简装").screenshot().\
-            swipe_to_buttom("使用权房").screenshot(). \
-            click_filter_position_menu("1995年后").click_filter_position_menu("2-5层"). \
+            click_filter_position_menu("80-100㎡").click_filter_position_menu("简装")
+        step1.screenshot()
+        step2 = step1.swipe_to_buttom("使用权房")
+        step2.screenshot()
+        step3 = step2.click_filter_position_menu("1995年后").click_filter_position_menu("2-5层"). \
             click_filter_position_menu("南").click_filter_position_menu("无个税"). \
-            click_filter_position_menu("VR看房").click_filter_position_menu("产权房").screenshot().\
-            click_filter_confirm().screenshot()
+            click_filter_position_menu("VR看房").click_filter_position_menu("产权房")
+        step3.screenshot()
+        step3.click_filter_confirm().screenshot()
 
 
     @allure.description("点击二手房-筛选：位置-地铁-1号线-迈皋桥站")
