@@ -9,5 +9,5 @@ action_search:
 # 根据输入的关键词选择结果
 select_search_result:
   - by: xpath
-    locator: '//*[@text="${house_name}"]'
+    locator: '//*[@text="${house_name}" and contains(@resource-id, "h_name")]'
     action: click
