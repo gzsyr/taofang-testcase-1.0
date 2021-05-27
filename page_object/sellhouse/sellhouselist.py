@@ -1,4 +1,5 @@
 from page_object.base_page.base_page import BasePage
+from page_object.sellhouse.sellhousedetail import SellHouseDetail
 import allure
 
 
@@ -292,7 +293,7 @@ class SellHouseList(BasePage):
         with allure.step("点击列表项第一个房源"):
             self.steps("../../page_object/sellhouse/sellhouselist.yaml")
         self.tsleep(2)
-        return self
+        return SellHouseDetail(self._driver)
 
     def click_screening_location(self):
         """

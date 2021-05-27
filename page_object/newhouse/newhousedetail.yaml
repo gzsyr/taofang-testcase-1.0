@@ -1,5 +1,23 @@
 # 点击相册上面的“查看更多”
-goto_photo:
+cick_newhouse_detail_more:
   - by: xpath
     locator: '//*[@text="查看更多"]'
+    action: click
+
+#点击新房详情页收藏按钮
+click_newhouse_detail_collection:
+  - by: id
+    locator: "com.house365.newhouse:id/house_detail_favor"
+    action: click
+
+#点击新房详情页分享按钮
+cick_newhouse_detail_share:
+  - by: id
+    locator: "com.house365.newhouse:id/share_button"
+    action: click
+
+#点击新房详情页图片
+cick_newhouse_detail_picture:
+  - by: id
+    locator: "com.house365.newhouse:id/text_house_sale_state"
     action: click
