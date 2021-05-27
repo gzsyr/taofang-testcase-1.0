@@ -39,7 +39,7 @@ class BasePage:
         with open(name, "rb") as f:
             content = f.read()
         allure.attach(content, attachment_type=allure.attachment_type.PNG)
-        return self
+
 
     @handle_black
     def find(self, locator, value):
