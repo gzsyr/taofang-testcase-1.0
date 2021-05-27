@@ -31,7 +31,7 @@ class IndexSearch(BasePage):
         # self._params["house_name"] = housename
         with allure.step("点击搜索结果楼盘页面"):
             self.steps("../../page_object/indexpage/indexsearch.yaml", replace=True)
-
+        self.tsleep(2)
         return NewHouseDetail(self._driver)
 
 

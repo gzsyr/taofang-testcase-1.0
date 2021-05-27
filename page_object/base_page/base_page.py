@@ -40,7 +40,6 @@ class BasePage:
             content = f.read()
         allure.attach(content, attachment_type=allure.attachment_type.PNG)
 
-
     @handle_black
     def find(self, locator, value):
         element: WebElement
@@ -80,7 +79,6 @@ class BasePage:
         """
         device_size = self._driver.get_window_size()
         p_e = self._driver.page_source
-
         while (1):
             p_s = p_e
             if text != None and (text in p_s):
