@@ -86,16 +86,24 @@ class TestSellHouseList(TestBase):
         """
         点击二手房列表筛选-房型-二室/三室
         """
-        self.shouye.goto_func_entrance_esf().click_filter_room(). \
-            click_filter_position_menu("二室").click_filter_position_menu("三室").click_filter_confirm().screenshot()
+        self.shouye.\
+            goto_func_entrance_esf().\
+            click_filter_room(). \
+            click_filter_position_menu("二室").\
+            click_filter_position_menu("三室").\
+            click_filter_confirm().\
+            screenshot()
 
     @allure.description("二手房-筛选：排序-总价从低到高")
     def test_click_filter_sort(self):
         """
         二手房-筛选：排序-总价从低到高
         """
-        self.shouye.goto_func_entrance_esf().click_filter_sort(). \
-            click_filter_position_menu("总价从低到高").screenshot()
+        self.shouye.\
+            goto_func_entrance_esf().\
+            click_filter_sort(). \
+            click_filter_position_menu("总价从低到高").\
+            screenshot()
 
     @allure.description("点击列表功能入口-个人房源")
     def test_click_personal_housing(self):
@@ -198,4 +206,49 @@ class TestSellHouseList(TestBase):
             click_filter_position_menu("区域"). \
             click_filter_position_menu("建邺区"). \
             screenshot()
+
+
+
+    @allure.description("二手房-筛选：总价-200-250万")
+    def test_click_filter_price(self):
+        """
+        二手房-筛选：总价-200-250万
+        """
+        self.shouye.\
+            goto_func_entrance_esf().click_empty().\
+            click_filter_price().\
+            click_filter_position_menu("200-250万").\
+            screenshot()
+
+    @allure.description("二手房-筛选：总价-自定义，150-280万，确定")
+    def test_click_filter_price_customize(self):
+        """
+        二手房-筛选：总价-自定义，150-280万，确定
+        """
+        self.shouye.goto_func_entrance_esf().\
+            click_empty().click_filter_price().\
+            click_filter_lowest_price("150").\
+            click_filter_highest_price("280").\
+            click_filter_confirm().\
+            screenshot()
+
+
+    @allure.description("1、二手房-筛选：位置-附近-1km 2、点击清空按钮")
+    def test_click_empty(self):
+        """
+        1、二手房-筛选：位置-附近-1km
+        2、点击清空按钮
+        """
+        self.shouye. \
+            goto_func_entrance_esf().click_empty(). \
+            click_screening_location(). \
+            click_filter_position_menu("附近"). \
+            click_filter_position_menu("1km"). \
+            click_empty().screenshot()
+
+
+
+
+
+
 

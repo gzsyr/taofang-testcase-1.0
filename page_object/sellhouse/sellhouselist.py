@@ -150,6 +150,7 @@ class SellHouseList(BasePage):
         with allure.step("点击筛选项的“位置”的" + text):
             self.steps("../../page_object/newhouse/newhouselist.yaml", replace=True)
         self.tsleep(2)
+        return self
 
     def click_filter_price(self):
         """
@@ -163,24 +164,26 @@ class SellHouseList(BasePage):
 
 
 
-    def click_filter_lowest_price(self):
+    def click_filter_lowest_price(self,text = None):
         """
         点击二手房列表筛选-总价-自定义：最低价
         :return:
         """
+        self._params["filter_price"] = text
         with allure.step("点击二手房列表筛选-总价-自定义：最低价"):
-            self.steps("../../page_object/sellhouse/sellhouselist.yaml")
+            self.steps("../../page_object/sellhouse/sellhouselist.yaml", replace=True)
         self.tsleep(2)
         return self
 
 
-    def click_filter_highest_price(self):
+    def click_filter_highest_price(self,text = None):
         """
         点击二手房列表筛选-总价-自定义：最高价
         :return:
         """
+        self._params["filter_price"] = text
         with allure.step("点击二手房列表筛选-总价-自定义：最高价"):
-            self.steps("../../page_object/sellhouse/sellhouselist.yaml")
+            self.steps("../../page_object/sellhouse/sellhouselist.yaml", replace=True)
         self.tsleep(2)
         return self
 

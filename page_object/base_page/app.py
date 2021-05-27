@@ -20,9 +20,9 @@ class App(BasePage):
             caps["platformName"] = "android"
 
             # yeshen 模拟器
-            # caps["deviceName"] = "127.0.0.1:62001"
-            # caps["automationName"] = "UiAutomator1"
-            # caps["platformVersion"] = "7.1.2"
+            caps["deviceName"] = "127.0.0.1:62001"
+            caps["automationName"] = "UiAutomator1"
+            caps["platformVersion"] = "7.1.2"
 
             # 小米8
             # caps["deviceName"] = "1682a454"
@@ -38,9 +38,9 @@ class App(BasePage):
             # caps["automationName"] = "UiAutomator1"
 
             # huaiwei mate9
-            caps["deviceName"] = "3HX0217302003038"
-            caps["platformVersion"] = "9.0"
-            caps["automationName"] = "UiAutomator1"
+            # caps["deviceName"] = "3HX0217302003038"
+            # caps["platformVersion"] = "9.0"
+            # caps["automationName"] = "UiAutomator1"
 
             caps["appPackage"] = self._package
             caps["appActivity"] = self._activity

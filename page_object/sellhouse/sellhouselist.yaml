@@ -81,27 +81,29 @@ click_filter_position_menu:
 
 
 #二手房列表筛选-总价
-click_filter_price：
+click_filter_price:
   - by: xpath
     locator: '//*[contains(@resource-id,"view_search_bar_price_text")]'
     action: click
 
 #二手房列表筛选-总价-自定义：最低价
-click_filter_lowest_price：
+click_filter_lowest_price:
   - by: xpath
     locator: '//*[@text="最低价"]'
-    action: click
+    action: send
+    value: "${filter_price}"
 
 
 #二手房列表筛选-总价-自定义：最高价
-click_filter_highest_price：
+click_filter_highest_price:
   - by: xpath
     locator: '//*[@text="最高价"]'
-    action: click
+    action: send
+    value: "${filter_price}"
 
 
 #点击筛选页确定按钮
-click_filter_confirm：
+click_filter_confirm:
   - by: xpath
     locator: '//*[@text="确定"]'
     action: click
@@ -120,13 +122,13 @@ click_filter_more:
     action: click
 
 #筛选-更多-重置
-click_filter_reset：
+click_filter_reset:
   - by: xpath
     locator: '//*[@text="重置"]'
     action: click
 
 #筛选-排序
-click_filter_sort：
+click_filter_sort:
   - by: xpath
     locator: '//*[contains(@resource-id,"view_search_bar_sort_image")]'
     action: click
