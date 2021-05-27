@@ -1,0 +1,13 @@
+# 首页-搜索
+# 输入关键词搜索
+action_search:
+  - by: id
+    locator: 'com.house365.newhouse:id/fragment_search_editText'
+    action: send
+    value: "${house_name}"
+
+# 根据输入的关键词选择结果
+select_search_result:
+  - by: xpath
+    locator: '//*[@text="${house_name}"]'
+    action: click
