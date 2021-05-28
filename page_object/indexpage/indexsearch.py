@@ -28,10 +28,45 @@ class IndexSearch(BasePage):
         return self
 
     def select_search_result(self, housename = None):
+        """
+        选择输入的搜索结果
+        :param housename:
+        :return:
+        """
         # self._params["house_name"] = housename
         with allure.step("点击搜索结果楼盘页面"):
             self.steps("../../page_object/indexpage/indexsearch.yaml", replace=True)
         self.tsleep(2)
         return NewHouseDetail(self._driver)
 
+    def show_business(self):
+        """
+        点击下拉箭头，展示新房、二手房等类型
+        :return:
+        """
+        with allure.step("点击下拉箭头，展示新房、二手房等类型"):
+            self.steps("../../page_object/indexpage/indexsearch.yaml")
+        self.tsleep(2)
+        return self
 
+    def select_business(self, business="新房"):
+        """
+        选择类型
+        :param: business默认为新房
+        :return:
+        """
+        self._params["business"] = business
+        with allure.step("选择类型：" + self._params["business"]):
+            self.steps("../../page_object/indexpage/indexsearch.yaml", replace=True)
+        self.tsleep(2)
+        return self
+
+    def select_sellhouse_result(self):
+        """
+        选择二手房的结果，匹配第一个结果数据
+        :return:
+        """
+        with allure.step("选择类型："):
+            self.steps("../../page_object/indexpage/indexsearch.yaml", replace=True)
+        self.tsleep(1)
+        return self
