@@ -1,5 +1,5 @@
 # 点击相册上面的“查看更多”
-cick_newhouse_detail_more:
+click_newhouse_detail_more:
   - by: xpath
     locator: '//*[@text="查看更多"]'
     action: click
@@ -11,25 +11,25 @@ click_newhouse_detail_collection:
     action: click
 
 #点击新房详情页分享按钮
-cick_newhouse_detail_share:
+click_newhouse_detail_share:
   - by: id
     locator: 'com.house365.newhouse:id/share_button'
     action: click
 
 #点击新房详情页图片
-cick_newhouse_detail_picture:
+click_newhouse_detail_picture:
   - by: id
-    locator: 'com.house365.newhouse:id/text_house_sale_state'
+    locator: 'com.house365.newhouse:id/photo_album'
     action: click
 
 #点击新房详情页计算器
-cick_newhouse_detail_calculator:
+click_newhouse_detail_calculator:
   - by: id
     locator: 'com.house365.newhouse:id/text_into_calculator'
     action: click
 
 #点击新房详情页地址旁边的箭头
-cick_newhouse_detail_arrow:
+click_newhouse_detail_arrow:
   - by: id
     locator: 'com.house365.newhouse:id/address_arrow'
     action: click
@@ -66,14 +66,14 @@ click_newhouse_detail_key_group:
 
 #点击新房详情页复制微信号
 click_newhouse_detail_cope_wechat:
-  - by: id
-    locator: 'com.house365.newhouse:id/tv_wx_promotion_copy_number'
+  - by: xpath
+    locator: '//*[@text="复制微信号"]'
     action: click
 
 #点击新房详情页我要预约
 click_newhouse_detail_signup:
-  - by: id
-    locator: 'com.house365.newhouse:id/tv_kf_signup'
+  - by: xpath
+    locator: '//*[@text="我要预约"]'
     action: click
 
 #点击新房详情页看房团查看详情
@@ -89,7 +89,7 @@ click_newhouse_detail_developmen:
     action: click
 
 #点击新房详情页户型解析
-ick_newhouse_detail_hxjiexi:
+click_newhouse_detail_hxjiexi:
   - by: id
     locator: 'com.house365.newhouse:id/tv_hxjiexi'
     action: click
@@ -219,3 +219,8 @@ click_newhouse_detail_call_tfh:
   - by: id
     locator: 'com.house365.newhouse:id/btn_call_tfh'
     action: click
+
+#滑动
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'

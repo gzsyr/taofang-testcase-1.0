@@ -19,7 +19,7 @@ class NewHouseList(BasePage):
             self.steps("../../page_object/newhouse/newhouselist.yaml")
         self.tsleep(2)
 
-        return NewHouseDetail(self._driver)
+        return self
 
     def click_filter_position(self):
         """

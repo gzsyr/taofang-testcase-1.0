@@ -7,7 +7,7 @@ class NewHouseDetail(BasePage):
     """
     新房详情页面，页面元素
     """
-    def cick_newhouse_detail_more(self):
+    def click_newhouse_detail_more(self):
         """
         点击相册上面的“查看更多”
         :return:
@@ -29,7 +29,7 @@ class NewHouseDetail(BasePage):
 
         return self
 
-    def cick_newhouse_detail_share(self):
+    def click_newhouse_detail_share(self):
         """
         新房详情页点击分享按钮
         :return:
@@ -40,9 +40,9 @@ class NewHouseDetail(BasePage):
 
         return self
 
-    def cick_newhouse_detail_picture(self):
+    def click_newhouse_detail_picture(self):
         """
-        新房详情页点击图片
+        新房详情页点击图片l
         :return:
         """
         with allure.step("新房详情页点击图片"):
@@ -412,4 +412,17 @@ class NewHouseDetail(BasePage):
             self.steps("../../page_object/newhouse/newhousedetail.yaml")
         self.tsleep(2)
 
+        return self
+
+    def func_swipe(self, pos_text=None):
+        """
+        滑动到pos_text的位置，滑动
+        :param pos_text: 1、写入页面存在的元素
+                         2、如果写pos_text=buttom，则滑动到页面底部
+        :return:
+        """
+        self._params["pos_text"] = pos_text
+        with allure.step("滑动到" + self._params["pos_text"]):
+            self.steps("../../page_object/indexpage/main.yaml", replace=True)
+        self.tsleep(2)
         return self
