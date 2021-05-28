@@ -7,17 +7,215 @@ cick_newhouse_detail_more:
 #点击新房详情页收藏按钮
 click_newhouse_detail_collection:
   - by: id
-    locator: "com.house365.newhouse:id/house_detail_favor"
+    locator: 'com.house365.newhouse:id/house_detail_favor'
     action: click
 
 #点击新房详情页分享按钮
 cick_newhouse_detail_share:
   - by: id
-    locator: "com.house365.newhouse:id/share_button"
+    locator: 'com.house365.newhouse:id/share_button'
     action: click
 
 #点击新房详情页图片
 cick_newhouse_detail_picture:
   - by: id
-    locator: "com.house365.newhouse:id/text_house_sale_state"
+    locator: 'com.house365.newhouse:id/text_house_sale_state'
+    action: click
+
+#点击新房详情页计算器
+cick_newhouse_detail_calculator:
+  - by: id
+    locator: 'com.house365.newhouse:id/text_into_calculator'
+    action: click
+
+#点击新房详情页地址旁边的箭头
+cick_newhouse_detail_arrow:
+  - by: id
+    locator: 'com.house365.newhouse:id/address_arrow'
+    action: click
+
+#点击新房详情页悬浮提问
+click_newhouse_detail_questions:
+  - by: xpath
+    locator: '//*[@text="提问"]'
+    action: click
+
+#点击新房详情页悬浮提问
+click_newhouse_detail_400tel:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_400tel'
+    action: click
+
+#点击新房详情页开盘通知我
+click_newhouse_detail_kptz:
+  - by: id
+    locator: 'com.house365.newhouse:id/lay_kptz'
+    action: click
+
+#点击新房详情页降价通知我
+click_newhouse_detail_jjtz:
+  - by: id
+    locator: 'com.house365.newhouse:id/lay_jjtz'
+    action: click
+
+#点击新房详情页一键加群
+click_newhouse_detail_key_group:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_qq_promotion_copy_number'
+    action: click
+
+#点击新房详情页复制微信号
+click_newhouse_detail_cope_wechat:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_wx_promotion_copy_number'
+    action: click
+
+#点击新房详情页我要预约
+click_newhouse_detail_signup:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_kf_signup'
+    action: click
+
+#点击新房详情页看房团查看详情
+click_newhouse_detail_check_detail:
+  - by: xpath
+    locator: '//*[@text="查看详情"]'
+    action: click
+
+#点击新房详情页最新动态
+click_newhouse_detail_developmen:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_dynamic'
+    action: click
+
+#点击新房详情页户型解析
+ick_newhouse_detail_hxjiexi:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_hxjiexi'
+    action: click
+
+#点击新房详情页楼盘详情
+click_newhouse_detail_house_detail:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_house_detail'
+    action: click
+
+#点击新房详情页楼盘点评
+click_newhouse_detail_house_comment:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_house_comment'
+    action: click
+
+#点击新房详情页一房一价
+click_newhouse_detail_yifangyijia:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_yifangyijia'
+    action: click
+
+#点击新房详情页楼盘动态右侧箭头按钮
+click_newhouse_detail_dynamic_arrow:
+  - by: id
+    locator: 'com.house365.newhouse:id/v_dynamic_arrow'
+    action: click
+
+#点击新房详情页楼盘动态内容下拉箭头
+click_newhouse_detail_more_ico:
+  - by: xpath
+    locator: '//*[@text="楼盘动态"]/../..//*[contains(@resource-id, "bt_more_ico")]'
+    action: click
+
+#点击新房详情页楼盘动态内容
+click_newhouse_detail_desc_short:
+  - by: xpath
+    locator: '//*[@text="楼盘动态"]/../..//*[contains(@resource-id, "tv_desc_short")]'
+    action: click
+
+#点击新房详情页详细信息内容下拉箭头
+click_newhouse_detail_xxnr_more_ico:
+  - by: xpath
+    locator: '//*[@text="详细信息"]/../..//*[contains(@resource-id, "bt_more_ico")]'
+    action: click
+
+#点击新房详情页详细信息纠错
+click_newhouse_detail_error_correction:
+  - by: xpath
+    locator: '//*[@text="纠错"]'
+    action: click
+
+#点击新房详情页位置及周边右侧箭头
+click_newhouse_detail_wzzb_address:
+  - by: id
+    locator: 'com.house365.newhouse:id/v_dynamic_arrow_address'
+    action: click
+
+#点击新房详情页位置及周边内容下拉箭头
+click_newhouse_detail_wzzb_more_ico:
+  - by: xpath
+    locator: '//*[@text="位置及周边"]/../..//*[contains(@resource-id, "bt_more_ico")]'
+    action: click
+
+#点击新房详情页位置及周边“咨询楼盘配套及区域规划”
+click_newhouse_detail_tv_plan:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_plan'
+    action: click
+
+#点击新房详情页位置及周边地图
+click_newhouse_detail_map_image:
+  - by: id
+    locator: 'com.house365.newhouse:id/map_image'
+    action: click
+
+#点击新房详情页楼盘点评右侧箭头
+click_newhouse_detail_imageview:
+  - by: xpath
+    locator: '//*[@text="楼盘点评"]/../..//*[contains(@class,"android.widget.ImageView")]'
+    action: click
+
+#点击新房详情页楼盘点评“点评赚淘房币，立即点评”
+click_newhouse_detail_bt_comment:
+  - by: id
+    locator: 'com.house365.newhouse:id/bt_Comment'
+    action: click
+
+#点击新房详情页房博士解读右侧更多按钮
+click_newhouse_detail_fbs_right_arrow:
+  - by: id
+    locator: 'com.house365.newhouse:id/more_fbs_right_arrow'
+    action: click
+
+#点击新房详情页房博士解读“我要提问”
+click_newhouse_detail_bt_ask:
+  - by: id
+    locator: 'com.house365.newhouse:id/bt_ask'
+    action: click
+
+#点击新房详情页房博士解读内容
+click_newhouse_detail_tv_title_ask:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_title_ask'
+    action: click
+
+#点击新房详情页申请优惠
+click_newhouse_detail_tfh_discount:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_tfh_discount'
+    action: click
+
+#点击新房详情页我要看房
+click_newhouse_detail_look_house:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_look_house'
+    action: click
+
+#点击新房详情页在线咨询
+click_newhouse_detail_online_chat_tfh:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_online_chat_tfh'
+    action: click
+
+#点击新房详情页拨打电话
+click_newhouse_detail_call_tfh:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_call_tfh'
     action: click
