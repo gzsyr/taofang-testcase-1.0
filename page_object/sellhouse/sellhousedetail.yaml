@@ -1,1 +1,151 @@
 # 二手房详情页面
+#点击二手房详情页分享按钮
+click_sellhouse_detail_action_share:
+  - by: id
+    locator: "com.house365.newhouse:id/action_share"
+    action: click
+
+
+#点击二手房详情页收藏按钮
+click_sellhouse_detail_action_fav:
+  - by: id
+    locator: 'com.house365.newhouse:id/action_fav'
+    action: click
+
+
+#点击二手房详情页消息按钮
+click_sellhouse_detail_iv_msg:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_msg'
+    action: click
+
+
+#点击二手房详情页相册按钮
+click_sellhouse_detail_numindicator:
+  - by: id
+    locator: 'com.house365.newhouse:id/bannerContainer'
+    action: click
+
+#点击二手房详情页房贷计算器按钮
+click_sellhouse_detail_loan:
+  - by: id
+    locator: 'com.house365.newhouse:id/detail_loan'
+    action: click
+
+
+#点击首付及月供咨询?
+click_sellhouse_detail_house_down_payment:
+  - by: id
+    locator: 'com.house365.newhouse:id/house_down_payment'
+    action: click
+
+
+#点击所属小区右侧箭头
+click_sellhouse_detail_image_view:
+  - by: xpath
+    locator: '//*[@text="所属小区"]/../android.widget.ImageView'
+    action: click
+
+
+#点击学校
+click_sellhouse_detail_school:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_xuequName'
+    action: click
+
+
+#点击二手房买卖有疑问右侧箭头
+click_sellhouse_detail_fang_bo_shi:
+  - by: id
+    locator: 'com.house365.newhouse:id/fang_bo_shi'
+    action: click
+
+
+#点击房源描述向下的箭头
+click_sellhouse_detail_fyms_bt_more_ico:
+  - by: xpath
+    locator: '//*[@text="房源描述"]/../..//*[contains(@resource-id, "bt_more_ico")]'
+    action: click
+
+#点击举报
+click_sellhouse_detail_report:
+  - by: xpath
+    locator: '//*[@text="举报"]'
+    action: click
+
+#点击房价评估
+click_sellhouse_detail_wanna_assess:
+  - by: id
+    locator: 'com.house365.newhouse:id/wanna_assess'
+    action: click
+
+
+#点击小区地址的地图
+click_sellhouse_detail_map_image:
+  - by: id
+    locator: 'com.house365.newhouse:id/map_image'
+    action: click
+
+
+#点击小区地址地图下方的向下箭头
+click_sellhouse_detail_xqdzdt_more_ico:
+  - by: xpath
+    locator: '//*[@text="小区地址"]/../../..//*[contains(@resource-id, "bt_more_ico")]'
+    action: click
+
+
+#点击同小区房源右边的“全部”
+click_sellhouse_detail_house_sell_count:
+  - by: id
+    locator: 'com.house365.newhouse:id/house_sell_count'
+    action: click
+
+
+#点击悬浮-预约看房
+click_sellhouse_detail_appointment:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_to_appointment'
+    action: click
+
+#点击悬浮-提问
+click_sellhouse_detail_ll_arrow:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_arrow'
+    action: click
+
+#点击经纪人头像
+click_sellhouse_detail_person_photo:
+  - by: id
+    locator: 'com.house365.newhouse:id/person_photo'
+    action: click
+
+#点击电话咨询
+click_sellhouse_detail_call_business_novrdk:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_call_business_novrdk'
+    action: click
+
+#点击在线咨询
+click_sellhouse_detail_im_business_novrdk:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_im_business_novrdk'
+    action: click
+
+
+
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'
+
+
+
+
+
+
+
+
+
+
+
+
+
