@@ -169,7 +169,7 @@ click_newhouse_detail_map_image:
 #点击新房详情页楼盘点评右侧箭头
 click_newhouse_detail_imageview:
   - by: xpath
-    locator: '//*[@text="楼盘点评"]/../..//*[contains(@class,"android.widget.ImageView")]'
+    locator: '//*[contains(@resource-id,"com.house365.newhouse:id/more_comment_layout")]'
     action: click
 
 #点击新房详情页楼盘点评“点评赚淘房币，立即点评”

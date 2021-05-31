@@ -160,3 +160,147 @@ class TestNewHouseDetail(TestBase):
         :return:
         """
         self.goto_housedetail().func_swipe("详细信息").click_newhouse_detail_yifangyijia().screenshot()
+
+    @allure.description("新房详情页点击楼盘动态右侧箭头")
+    def test_click_newhouse_detail_dynamic_arrow(self):
+        """
+        新房详情页点击楼盘动态右侧箭头
+        :return:
+        """
+        self.goto_housedetail().func_swipe("详细信息").click_newhouse_detail_dynamic_arrow().screenshot()
+
+    @allure.description("新房详情页点击楼盘动态内容")
+    def test_click_newhouse_detail_desc_short(self):
+        """
+        新房详情页点击楼盘动态内容
+        :return:
+        """
+        self.goto_housedetail().func_swipe("详细信息").click_newhouse_detail_desc_short().screenshot()
+
+    @allure.description("新房详情页点击楼盘动态内容下拉箭头")
+    def test_click_newhouse_detail_more_ico(self):
+        """
+        新房详情页点击楼盘动态内容下拉箭头
+        :return:
+        """
+        self.goto_housedetail().func_swipe("详细信息").click_newhouse_detail_more_ico().screenshot()
+
+    @allure.description("新房详情页点击详细信息的“纠错”")
+    def test_click_newhouse_detail_error_correction(self):
+        """
+        新房详情页点击详细信息的“纠错”
+        :return:
+        """
+        self.goto_housedetail().func_swipe("主力户型").click_newhouse_detail_error_correction().screenshot()
+
+    @allure.description("新房详情页点击详细信息的下拉箭头")
+    def test_click_newhouse_detail_xxnr_more_ico(self):
+        """
+        新房详情页点击详细信息的下拉箭头
+        :return:
+        """
+        self.goto_housedetail().func_swipe("主力户型").click_newhouse_detail_xxnr_more_ico().screenshot()
+
+    @allure.description("新房详情页点击位置及周边右侧箭头")
+    def test_click_newhouse_detail_wzzb_address(self):
+        """
+        新房详情页点击位置及周边右侧箭头
+        :return:
+        """
+        self.goto_housedetail().func_swipe("咨询楼盘配套及区域规划").click_newhouse_detail_wzzb_address().screenshot()
+
+    @allure.description("新房详情页点击位置及周边下拉箭头")
+    def test_click_newhouse_detail_wzzb_more_ico(self):
+        """
+        新房详情页点击位置及周边下拉箭头
+        :return:
+        """
+        self.goto_housedetail().func_swipe("咨询楼盘配套及区域规划").click_newhouse_detail_wzzb_more_ico().screenshot()
+
+    @allure.description("新房详情页点击位置及周边“咨询楼盘配套及区域规划”")
+    def test_click_newhouse_detail_tv_plan(self):
+        """
+        新房详情页点击位置及周边“咨询楼盘配套及区域规划”
+        :return:
+        """
+        self.goto_housedetail().func_swipe("咨询楼盘配套及区域规划").click_newhouse_detail_tv_plan().screenshot()
+
+    @allure.description("新房详情页点击位置及周边的地图")
+    def test_click_newhouse_detail_map_image(self):
+        """
+        新房详情页点击位置及周边的地图
+        :return:
+        """
+        self.goto_housedetail().func_swipe("咨询楼盘配套及区域规划").click_newhouse_detail_map_image().screenshot()
+
+    @allure.description("新房详情页点击楼盘点评右侧箭头")
+    def test_click_newhouse_detail_imageview(self):
+        """
+        新房详情页点击楼盘点评右侧箭头
+        :return:
+        """
+        self.goto_housedetail().func_swipe("com.house365.newhouse:id/room_ratingbar").click_newhouse_detail_imageview().screenshot()
+
+    @allure.description("新房详情页点击楼盘点评“点评赚淘房币，立即点评”")
+    def test_click_newhouse_detail_bt_comment(self):
+        """
+        新房详情页点击 楼盘点评“点评赚淘房币，立即点评”
+        :return:
+        """
+        self.goto_housedetail().func_swipe("我要提问").click_newhouse_detail_bt_comment().screenshot()
+
+    @allure.description("新房详情页点击房博士解读右侧“更多”")
+    def test_click_newhouse_detail_fbs_right_arrow(self):
+        """
+        新房详情页点击房博士解读右侧“更多”
+        :return:
+        """
+        self.goto_housedetail().func_swipe("我要提问").click_newhouse_detail_fbs_right_arrow().screenshot()
+
+    @allure.description("新房详情页点击房博士房博士内容项")
+    def test_click_newhouse_detail_tv_title_ask(self):
+        """
+        新房详情页点击房博士房博士内容项
+        :return:
+        """
+        self.goto_housedetail().func_swipe("我要提问").click_newhouse_detail_tv_title_ask().screenshot()
+
+    @allure.description("新房详情页点击房博士“我要提问”")
+    def test_click_newhouse_detail_bt_ask(self):
+        """
+        新房详情页点击房博士“我要提问”
+        :return:
+        """
+        self.goto_housedetail().func_swipe("我要提问").click_newhouse_detail_bt_ask().screenshot()
+
+    @allure.description("新房详情页点击申请优惠")
+    def test_click_newhouse_detail_tfh_discount(self):
+        """
+        新房详情页点击申请优惠
+        :return:
+        """
+        self.goto_housedetail().click_newhouse_detail_tfh_discount().screenshot()
+
+    @allure.description("新房详情页点击我要看房")
+    def test_click_newhouse_detail_look_house(self):
+        """
+        新房详情页点击我要看房
+        :return:
+        """
+        self.goto_housedetail().click_newhouse_detail_look_house().screenshot()
+
+    @allure.description("新房详情页点击在线咨询")
+    def test_click_newhouse_detail_online_chat_tfh(self):
+        """
+        新房详情页点击在线咨询
+        :return:
+        """
+        self.goto_housedetail().click_newhouse_detail_online_chat_tfh().screenshot()
+
+    @allure.description("新房详情页点击拨打电话")
+    def test_click_newhouse_detail_call_tfh(self):
+        """
+        新房详情页点击拨打电话
+        :return:
+        """
+        self.goto_housedetail().click_newhouse_detail_call_tfh().screenshot()
