@@ -17,6 +17,7 @@ def handle_black(func):
 
         _black_list = [
             (MobileBy.ID, "com.house365.newhouse:id/close"),  #首页、新房列表，弹屏广告
+            (MobileBy.ID, "com.house365.newhouse:id/m_close"), # 发布房源弹出的物业类型框
             (MobileBy.ID, "com.house365.newhouse:id/image_ad_close_btn"), # 新房详情页底部悬浮广告
             (MobileBy.XPATH, "//*[@text='下次再说']"),
             (MobileBy.XPATH, "//*[@text='确定']"),
