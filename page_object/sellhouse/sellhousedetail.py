@@ -44,7 +44,6 @@ class SellHouseDetail(BasePage):
         self.tsleep(2)
         return self
 
-
     def click_sellhouse_detail_loan(self):
         """
         点击二手房详情页房贷计算器按钮
@@ -53,7 +52,6 @@ class SellHouseDetail(BasePage):
             self.steps("../../page_object/sellhouse/sellhousedetail.yaml")
         self.tsleep(2)
         return self
-
 
     def click_sellhouse_detail_house_down_payment(self):
         """
@@ -64,7 +62,6 @@ class SellHouseDetail(BasePage):
         self.tsleep(2)
         return self
 
-
     def click_sellhouse_detail_image_view(self):
         """
         点击所属小区右侧箭头
@@ -73,8 +70,6 @@ class SellHouseDetail(BasePage):
             self.steps("../../page_object/sellhouse/sellhousedetail.yaml")
         self.tsleep(2)
         return self
-
-
 
     def click_sellhouse_detail_school(self):
         """
@@ -103,7 +98,6 @@ class SellHouseDetail(BasePage):
         self.tsleep(2)
         return self
 
-
     def click_sellhouse_detail_report(self):
         """
         点击举报
@@ -112,7 +106,6 @@ class SellHouseDetail(BasePage):
             self.steps("../../page_object/sellhouse/sellhousedetail.yaml")
         self.tsleep(2)
         return self
-
 
     def click_sellhouse_detail_wanna_assess(self):
         """
@@ -132,7 +125,6 @@ class SellHouseDetail(BasePage):
         self.tsleep(2)
         return self
 
-
     def click_sellhouse_detail_xqdzdt_more_ico(self):
         """
         点击小区地址地图下方的向下箭头
@@ -151,7 +143,6 @@ class SellHouseDetail(BasePage):
         self.tsleep(2)
         return self
 
-
     def click_sellhouse_detail_appointment(self):
         """
         点击悬浮-预约看房
@@ -169,7 +160,6 @@ class SellHouseDetail(BasePage):
             self.steps("../../page_object/sellhouse/sellhousedetail.yaml")
         self.tsleep(2)
         return self
-
 
     def click_sellhouse_detail_person_photo(self):
         """
@@ -197,8 +187,6 @@ class SellHouseDetail(BasePage):
             self.steps("../../page_object/sellhouse/sellhousedetail.yaml")
         self.tsleep(2)
         return self
-
-
 
     def func_swipe(self, pos_text=None):
         """
