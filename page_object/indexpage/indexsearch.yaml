@@ -29,3 +29,9 @@ select_sellhouse_result:
   - by: xpath
     locator: '//*[@resource-id="com.house365.newhouse:id/txt_block" and contains(@text, "${house_name}")]'
     action: click
+
+# 点击取消按钮
+click_cancel:
+  - by: id
+    locator: 'com.house365.newhouse:id/fragment_search_textView'
+    action: click

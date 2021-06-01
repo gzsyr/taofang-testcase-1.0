@@ -70,3 +70,13 @@ class IndexSearch(BasePage):
             self.steps("../../page_object/indexpage/indexsearch.yaml", replace=True)
         self.tsleep(1)
         return self
+
+    def click_cancel(self):
+        """
+        点击取消按钮，回到首页
+        :return:
+        """
+        with allure.step("点击取消，回到首页"):
+            self.steps("../../page_object/indexpage/indexsearch.yaml")
+        self.tsleep(2)
+        return self
