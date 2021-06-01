@@ -1,1 +1,37 @@
 # 发布房源引导页面
+
+#点击引导页的发布房源按钮
+click_publishindex_m_publish:
+  - by: id
+    locator: "com.house365.newhouse:id/m_publish"
+    action: click
+
+# 点击引导页的右上角帮助按钮
+click_publishindex_m_help:
+  - by: id
+    locator: "com.house365.newhouse:id/m_help"
+    action: click
+
+# 点击引导页的右上角服务按钮
+click_publishindex_m_service:
+  - by: id
+    locator: "com.house365.newhouse:id/m_service"
+    action: click
+
+#点击引导页的评估房价按钮
+click_publishindex_m_pinggu_img:
+  - by: id
+    locator: "com.house365.newhouse:id/m_pinggu_img"
+    action: click
+
+#点击引导页的学校地图按钮
+click_publishindex_m_xuequ_img:
+  - by: id
+    locator: "com.house365.newhouse:id/m_xuequ_img"
+    action: click
+
+#点击引导页的计算器按钮
+click_publishindex_m_jisuanqi_img:
+  - by: id
+    locator: "com.house365.newhouse:id/m_jisuanqi_img"
+    action: click
