@@ -219,3 +219,10 @@ class BasePage:
 
     def getCurrentActivity(self):
         return self._driver.current_activity
+
+    def inPageSource(self, text=None):
+        p_e = self._driver.page_source
+        if text in p_e:
+            return True
+        else:
+            return False
