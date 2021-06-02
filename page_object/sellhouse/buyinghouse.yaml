@@ -1,1 +1,55 @@
 # 我要买房页面
+
+# 删除“专属房卡”页面，重新生成
+show_buying_house_page:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_delete'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_left'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_generate'
+    action: click
+
+# 选择房屋类型
+select_house_type:
+  - by: xpath
+    locator: '//*[@text="${house_type}"]'
+    action: click
+
+# 选择预算
+swipe_house_budget:
+  - by: id
+    locator: 'com.house365.newhouse:id/rsb_budget'
+    action: swipe_left
+
+# 弹出意向位置选择框
+show_location:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_loc_indicator'
+    action: click
+
+# 选择位置内容
+select_house_location:
+  - by: xpath
+    locator: '//*[@text="${house_location}"]'
+    action: click
+
+# 选择位置内容页，点击“确定”
+select_house_location_confirm:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_confirm'
+    action: click
+
+# 选择更多需求
+goto_house_more_requirement:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_additional_add'
+    action: click
+
+# 点击“立即找房”
+click_find_house_button:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_find_house'
+    action: click
