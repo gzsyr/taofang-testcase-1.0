@@ -15,6 +15,11 @@ if __name__ == "__main__":
                  # "--html=./../testreport.html", "--self-contained-html",
                  # "./test_case/test_house_detail.py",
                  "./test_main.py::TestMain",
+                 "./test_buyinghouse.py",
+                 "./test_newhousedetail.py",
+                 "./test_newhouselist.py",
+                 "./test_search.py",
+                 "./test_sellhouselist.py"
                  # "-m search"
                  ])
 

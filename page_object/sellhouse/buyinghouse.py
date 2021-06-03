@@ -45,11 +45,10 @@ class BuyingHouse(BasePage):
         :param: house_type: 房屋类型，默认为“住宅”
         :return:
         """
-        # with allure.step("选择预算"):
-        #     self.steps("../../page_object/sellhouse/buyinghouse.yaml", replace=True)
-        # self.tsleep(2)
-        # return self
-        pass
+        with allure.step("选择预算"):
+            self.steps("../../page_object/sellhouse/buyinghouse.yaml")
+        self.tsleep(2)
+        return self
 
     def show_location(self):
         """

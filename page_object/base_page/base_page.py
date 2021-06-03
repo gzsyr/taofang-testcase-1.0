@@ -197,6 +197,16 @@ class BasePage:
                         self.swipe_to_left(x, y, step["value"])
                     else:
                         self.swipe_to_left(x, y)
+                if "seekbar" == action:
+                    # seekbar控件的测试
+                    per = int(step["value"])
+                    ele = self.find(step["by"], step["locator"])
+                    x = ele.location.get('x')
+                    y = ele.location.get('y')
+                    w = ele.size.get('width')
+                    self._driver.swipe(x, y, w * per, y, 1000)
+                    # self._driver
+
 
 
     def back(self, c_name=None):
