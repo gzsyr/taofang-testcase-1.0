@@ -43,7 +43,7 @@ click_sellhouse_detail_house_down_payment:
 #点击所属小区右侧箭头
 click_sellhouse_detail_image_view:
   - by: xpath
-    locator: '//*[@text="所属小区"]/../android.widget.ImageView'
+    locator: '//*[@text="所属小区"]/..//*[contains(@resource-id, "block_name")]'
     action: click
 
 
