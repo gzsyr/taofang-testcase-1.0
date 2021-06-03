@@ -30,6 +30,14 @@ class TestBuyingHouse(TestBase):
         #     select_house_type(house_item="房屋类型", house_type="别墅").screenshot()
         self.shouye.select_house_type(house_item="房屋类型", house_type="别墅").screenshot()
 
+    @allure.description("拖动预算进度条")
+    def test_swipe_budget(self):
+        """
+        拖动预算进度条
+        :return:
+        """
+        self.shouye.swipe_house_budget()
+
     @allure.description("点击展示出意向位置的菜单")
     def test_show_location(self):
         """

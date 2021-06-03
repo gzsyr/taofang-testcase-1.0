@@ -22,7 +22,8 @@ select_house_type:
 swipe_house_budget:
   - by: id
     locator: 'com.house365.newhouse:id/rsb_budget'
-    action: swipe_left
+    action: seekbar
+    value: '0.3'
 
 # 弹出意向位置选择框
 show_location:
