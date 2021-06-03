@@ -1,6 +1,7 @@
 import allure
 
 from page_object.base_page.base_page import BasePage
+from page_object.sellhouse.publishhouse import PublishHouse
 
 
 class PublishIndex(BasePage):
@@ -16,7 +17,7 @@ class PublishIndex(BasePage):
         with allure.step("点击发布房源引导页的发布房源按钮"):
             self.steps("../../page_object/sellhouse/publishindex.yaml")
         self.tsleep(2)
-        return self
+        return PublishHouse(self._driver)
 
     def click_publishindex_m_help(self):
         """

@@ -3,6 +3,7 @@ import allure
 from page_object.base_page.base_page import BasePage
 from page_object.indexpage.indexsearch import IndexSearch
 from page_object.newhouse.newhouselist import NewHouseList
+from page_object.sellhouse.publishindex import PublishIndex
 from page_object.sellhouse.buyinghouse import BuyingHouse
 from page_object.sellhouse.sellhouselist import SellHouseList
 
@@ -240,7 +241,7 @@ class Main(BasePage):
         with allure.step("点击功能入口的求购icon"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
-        return BuyingHouse(self._driver)
+        return self
 
     def goto_func_entrance_publish_sell(self):
         """
@@ -250,7 +251,7 @@ class Main(BasePage):
         with allure.step("点击功能入口的我要卖房icon"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
-        return self
+        return PublishIndex(self._driver)
 
     def goto_func_entrance_financial_service(self):
         """

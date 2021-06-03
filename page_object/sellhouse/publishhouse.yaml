@@ -1,1 +1,163 @@
 # 发布房源页面
+
+# 关闭物业类型弹窗
+close_house_type:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_close'
+    action: click
+
+# 重置房源信息
+click_publishhouse_reset:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_reset'
+    action: click
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+# 点击物业类型
+click_publishhouse_type:
+  - by: xpath
+    locator: '//*[@text="物业类型"]/../..//*[contains(@resource-id, "m_img_right")]'
+    action: click
+
+# 选择
+select_pubilshhouse_type:
+  - by: xpath
+    locator: '//*[@text="${house_type}"]'
+    action: click
+
+# 点击小区名称
+click_publishhouse_name:
+  - by: xpath
+    locator: '//*[@text="小区名称"]/../..//*[contains(@resource-id, "m_img_right")]'
+    action: click
+
+# 点击小区名称搜索框
+send_publishhouse_name_search:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_word'
+    action: send
+    value: "${house_name}"
+
+# 点击小区名称搜索结果
+select_publishhouse_name_result:
+  - by: xpath
+    locator: '//*[@text="${house_name}" and contains(@resource-id, "m_name")]'
+    action: click
+
+# 输入房源楼栋号
+send_publishhouse_dong:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_dong'
+    action: send
+    value: "${house_detail}"
+
+# 输入房源单元
+send_publishhouse_danyuan:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_danyuan'
+    action: send
+    value: "${house_detail}"
+
+# 输入房源室
+send_publishhouse_shi:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_shi'
+    action: send
+    value: "${house_detail}"
+
+# 输入期望价格
+send_publishhouse_price:
+  - by: xpath
+    locator: '//*[@text="期望售价"]/../..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${house_detail}"
+
+
+# 输入房屋面积
+send_publishhouse_area:
+  - by: xpath
+    locator: '//*[@text="房屋建筑面积"]/../..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${house_detail}"
+
+# 点击房屋权属
+click_publishhouse_property:
+  - by: xpath
+    locator: '//*[@text="房屋权属"]/../..//*[contains(@resource-id, "m_img_right")]'
+    action: click
+
+# 输入您的称呼
+send_publishhouse_seller:
+  - by: xpath
+    locator: '//*[@text="您的称呼"]/../..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${house_detail}"
+
+# 点击下一步
+click_publishhouse_next:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_next'
+    action: click
+
+goto_next_all:
+# 选择物业类型
+  - by: xpath
+    locator: '//*[@text="物业类型"]/../..//*[contains(@resource-id, "m_img_right")]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="${house_type}"]'
+    action: click
+# 选择小区
+  - by: xpath
+    locator: '//*[@text="小区名称"]/../..//*[contains(@resource-id, "m_img_right")]'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_word'
+    action: send
+    value: "${house_name}"
+  - by: xpath
+    locator: '//*[@text="${house_name}" and contains(@resource-id, "m_name")]'
+    action: click
+# 输入房源楼栋号
+  - by: id
+    locator: 'com.house365.newhouse:id/m_dong'
+    action: send
+    value: "${house_detail}"
+# 输入房源单元
+  - by: id
+    locator: 'com.house365.newhouse:id/m_danyuan'
+    action: send
+    value: "${house_detail}"
+# 输入房源室
+  - by: id
+    locator: 'com.house365.newhouse:id/m_shi'
+    action: send
+    value: "${house_detail}"
+# 输入期望价格
+  - by: xpath
+    locator: '//*[@text="期望售价"]/../..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${house_detail}"
+# 输入房屋面积
+  - by: xpath
+    locator: '//*[@text="房屋建筑面积"]/../..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${house_detail}"
+# 点击房屋权属
+  - by: xpath
+    locator: '//*[@text="房屋权属"]/../..//*[contains(@resource-id, "m_img_right")]'
+    action: click
+# 输入您的称呼
+  - by: xpath
+    locator: '//*[@text="您的称呼"]/../..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${house_detail}"
+# 点击下一步
+  - by: id
+    locator: 'com.house365.newhouse:id/m_next'
+    action: click
+
+
+
