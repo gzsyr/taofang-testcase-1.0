@@ -182,12 +182,22 @@ class PublishHouse(BasePage):
         self.tsleep(2)
         return self
 
-    def goto_next_all(self):
+    def goto_next_all(self, type="住宅",  name="万科红郡住宅", dong='8', danyuan='1', shi='502',
+                      price='450', area='120', property='产权房', seller='365公司'):
         """
         输入出售房源信息，点击下一步
         :return:
         """
+        self._params["type"] = type
+        self._params["name"] = name
+        self._params["dong"] = dong
+        self._params["danyuan"] = danyuan
+        self._params["shi"] = shi
+        self._params["price"] = price
+        self._params["area"] = area
+        self._params["property"] = property
+        self._params["seller"] = seller
         with allure.step("输入出售房源信息，点击下一步"):
-            self.steps("../../page_object/sellhouse/publishhouse.yaml")
+            self.steps("../../page_object/sellhouse/publishhouse.yaml", replace=True)
         self.tsleep(2)
         return self

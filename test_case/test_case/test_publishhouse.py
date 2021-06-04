@@ -73,7 +73,7 @@ class TestPublishHouse(TestBase):
         :return:
         """
         self.goto_publish_sell().click_publishindex_m_publish().\
-            click_publishhouse_type().select_house_type(house_item="物业类型", house_type="住宅").screenshot()
+            click_publishhouse_type().select_pubilshhouse_type(house_item="物业类型", house_type="住宅").screenshot()
 
     @allure.description("点击小区名称-搜索-万科红郡住宅")
     def test_publish_s2(self):

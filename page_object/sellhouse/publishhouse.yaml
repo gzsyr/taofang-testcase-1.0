@@ -107,7 +107,7 @@ goto_next_all:
     locator: '//*[@text="物业类型"]/../..//*[contains(@resource-id, "m_img_right")]'
     action: click
   - by: xpath
-    locator: '//*[@text="${house_type}"]'
+    locator: '//*[@text="${type}"]'
     action: click
 # 选择小区
   - by: xpath
@@ -116,48 +116,50 @@ goto_next_all:
   - by: id
     locator: 'com.house365.newhouse:id/m_word'
     action: send
-    value: "${house_name}"
+    value: "${name}"
   - by: xpath
-    locator: '//*[@text="${house_name}" and contains(@resource-id, "m_name")]'
+    locator: '//*[@text="${name}" and contains(@resource-id, "m_name")]'
     action: click
 # 输入房源楼栋号
   - by: id
     locator: 'com.house365.newhouse:id/m_dong'
     action: send
-    value: "${house_detail}"
+    value: "${dong}"
 # 输入房源单元
   - by: id
     locator: 'com.house365.newhouse:id/m_danyuan'
     action: send
-    value: "${house_detail}"
+    value: "${danyuan}"
 # 输入房源室
   - by: id
     locator: 'com.house365.newhouse:id/m_shi'
     action: send
-    value: "${house_detail}"
+    value: "${shi}"
 # 输入期望价格
   - by: xpath
     locator: '//*[@text="期望售价"]/../..//*[contains(@resource-id, "m_value")]'
     action: send
-    value: "${house_detail}"
+    value: "${price}"
 # 输入房屋面积
   - by: xpath
     locator: '//*[@text="房屋建筑面积"]/../..//*[contains(@resource-id, "m_value")]'
     action: send
-    value: "${house_detail}"
+    value: "${area}"
 # 点击房屋权属
   - by: xpath
     locator: '//*[@text="房屋权属"]/../..//*[contains(@resource-id, "m_img_right")]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="${property}"]'
     action: click
 # 输入您的称呼
   - by: xpath
     locator: '//*[@text="您的称呼"]/../..//*[contains(@resource-id, "m_value")]'
     action: send
-    value: "${house_detail}"
+    value: "${seller}"
 # 点击下一步
   - by: id
     locator: 'com.house365.newhouse:id/m_next'
     action: click
-
 
 
