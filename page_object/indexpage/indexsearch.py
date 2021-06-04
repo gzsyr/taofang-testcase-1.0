@@ -2,6 +2,7 @@ import allure
 
 from page_object.base_page.base_page import BasePage
 from page_object.newhouse.newhousedetail import NewHouseDetail
+from page_object.sellhouse.sellhousedetail import SellHouseDetail
 
 
 class IndexSearch(BasePage):
@@ -69,7 +70,7 @@ class IndexSearch(BasePage):
         with allure.step("选择类型："):
             self.steps("../../page_object/indexpage/indexsearch.yaml", replace=True)
         self.tsleep(1)
-        return self
+        return SellHouseDetail(self._driver)
 
     def click_cancel(self):
         """
