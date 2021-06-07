@@ -79,8 +79,8 @@ click_filter_position_menu:
 
 #二手房列表筛选-总价
 click_filter_price:
-  - by: xpath
-    locator: '//*[contains(@resource-id,"view_search_bar_price_text")]'
+  - by: id
+    locator: 'com.house365.newhouse:id/view_search_bar_price_text'
     action: click
 
 #二手房列表筛选-总价-自定义：最低价
@@ -105,14 +105,14 @@ click_filter_confirm:
 
 #二手房列表筛选-房型
 click_filter_room:
-  - by: xpath
-    locator: '//*[contains(@resource-id,"view_search_bar_room_text")]'
+  - by: id
+    locator: 'com.house365.newhouse:id/view_search_bar_room_text'
     action: click
 
 #筛选-更多
 click_filter_more:
-  - by: xpath
-    locator: '//*[contains(@resource-id,"view_search_bar_filter_text")]'
+  - by: id
+    locator: 'com.house365.newhouse:id/view_search_bar_filter_text'
     action: click
 
 #筛选-更多-重置
@@ -123,8 +123,8 @@ click_filter_reset:
 
 #筛选-排序
 click_filter_sort:
-  - by: xpath
-    locator: '//*[contains(@resource-id,"view_search_bar_sort_image")]'
+  - by: id
+    locator: 'com.house365.newhouse:id/view_search_bar_sort_image'
     action: click
 
 #标签筛选-南北通透
