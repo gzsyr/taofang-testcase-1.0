@@ -1,3 +1,5 @@
+import subprocess
+
 from appium import webdriver
 
 from page_object.base_page.base_page import BasePage
@@ -19,18 +21,24 @@ class App(BasePage):
             caps = {}
             caps["platformName"] = "android"
 
+            devicename = subprocess.check_output("adb devices").split(str.encode("\r\n"))[1].split(str.encode("\t"))[0].decode("UTF-8")
+            aa = "adb -P 5037 -s " + devicename + " shell getprop ro.build.version.release"
+            version = subprocess.check_output(aa).split(str.encode("\r\n"))[0].decode("UTF-8")
+            # adb devices   获取deviceName
+            # adb -P 5037 -s 1cd2f6f5 shell getprop ro.build.version.release   获取platformVersion
+
             # yeshen 模拟器
-            caps["deviceName"] = "127.0.0.1:62001"
-            caps["automationName"] = "UiAutomator1"
-            caps["platformVersion"] = "7.1.2"
+            # caps["deviceName"] = "127.0.0.1:62001"
+            # caps["automationName"] = "UiAutomator1"
+            # caps["platformVersion"] = "7.1.2"
 
             # 小米8
             # caps["deviceName"] = "1682a454"
             # caps["platformVersion"] = "10"
-            #
-            # # huawei
-            #caps["deviceName"] = "JTK5T20318000225"
-            #caps["platformVersion"] = "10.0.0"
+
+            # # huawei mate 30
+            # caps["deviceName"] = "JTK5T20318000225"
+            # caps["platformVersion"] = "10.0.0"
 
             # xiaomi  4C
             # caps["deviceName"] = "2e72982d"
@@ -40,7 +48,13 @@ class App(BasePage):
             # huaiwei mate9
             # caps["deviceName"] = "3HX0217302003038"
             # caps["platformVersion"] = "9.0"
-            # caps["automationName"] = "UiAutomator1"
+
+            # 小米4 lte
+            # caps["deviceName"] = "1cd2f6f5"
+            # caps["platformVersion"] = "6.0.1"
+
+            caps["deviceName"] = devicename #"1cd2f6f5"
+            caps["platformVersion"] = version #"6.0.1"
 
             caps["appPackage"] = self._package
             caps["appActivity"] = self._activity
