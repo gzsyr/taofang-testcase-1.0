@@ -198,7 +198,7 @@ class BasePage:
                     else:
                         self.swipe_to_left(x, y)
                 if "seekbar" == action:
-                    # seekbar控件的测试
+                    # seekbar控件的测试，实例：我要买房页面的价格
                     per = int(step["value"])
                     ele = self.find(step["by"], step["locator"])
                     x = ele.location.get('x')
@@ -206,8 +206,9 @@ class BasePage:
                     w = ele.size.get('width')
                     self._driver.swipe(x, y, w * per, y, 1000)
                     # self._driver
-
-
+                if "delay" == action:
+                    # 延迟时间，单位秒
+                    self.tsleep(step["value"])
 
     def back(self, c_name=None):
         """
