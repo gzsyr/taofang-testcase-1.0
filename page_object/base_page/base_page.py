@@ -208,7 +208,8 @@ class BasePage:
                     # self._driver
                 if "delay" == action:
                     # 延迟时间，单位秒
-                    self.tsleep(step["value"])
+                    t = int(step["value"])
+                    self.tsleep(t)
 
     def back(self, c_name=None):
         """
