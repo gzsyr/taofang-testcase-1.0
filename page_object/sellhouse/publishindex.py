@@ -68,4 +68,3 @@ class PublishIndex(BasePage):
             self.steps("../../page_object/sellhouse/publishindex.yaml")
         self.tsleep(2)
         return self
-

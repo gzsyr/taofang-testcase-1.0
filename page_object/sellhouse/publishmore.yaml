@@ -1,1 +1,308 @@
 # 发布房源 最后一个“更多资料”页面
+
+# 点击户型选择
+click_publishhouse_room:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_room'
+    action: click
+
+# 点击选择取消
+click_publishhouse_cancel:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_cancle'
+    action: click
+
+# 点击选择确定
+click_publishhouse_confirm:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_ok'
+    action: click
+
+# 点击楼层选择
+click_publishhouse_floor:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_room'
+    action: click
+
+# 点击楼层选择平层
+select_publishhouse_flat:
+  - by: xpath
+    locator: '//*[@text="单层"]'
+    action: click
+
+# 点击楼层选择跃层
+select_publishhouse_jump:
+  - by: xpath
+    locator: '//*[@text="跃层"]'
+    action: click
+
+# 点击房屋照片
+click_publishhouse_pictures:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_imgs'
+    action: click
+
+# 点击房屋图片的右上角提示
+click_publishhouse_prompt:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_right'
+    action: click
+
+# 图片添加页面，选择拍照
+send_publishhouse_take_pictures:
+  - by: xpath
+    locator: '//*[@text="拍照"]'
+    action: click
+  - by: id
+    locator: 'com.android.camera:id/v6_shutter_button_internal'
+    action: click
+  - by: id
+    locator: 'com.android.camera:id/v6_btn_done'
+    action: click
+
+# 图片添加页面，选择相册选择
+click_publishhouse_local_pictures:
+  - by: xpath
+    locator: '//*[@text="相册选择"]'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/v_cover'
+    action: click_pos
+    value: "${i}"
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_hand'
+    action: click
+
+# 点击左上角返回按钮返回
+click_publishhouse_back:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_left'
+    action: click
+
+# 进入房源描述页
+click_publishhouse_desc:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_desc'
+    action: click
+
+# 点击房源特色
+click_publishhouse_feature:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_feature'
+    action: click
+
+# 点击上传证件照
+click_publishhouse_identity:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_identifi_layout'
+    action: click
+
+# 添加图片
+click_publishhouse_add_pictures:
+  - by: xpath
+    locator: '//*[@resource-id="${picture_num}"]//*[@resource-id="com.house365.newhouse:id/m_img"]'
+    action: click
+
+# 上传完成添加证件照
+click_publishhouse_identity_confirm:
+  - by: xpath
+    locator: '//*[@text="完成"]'
+    action: click
+
+
+# 进入权属认证页
+click_publishhouse_ownership:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_ownership'
+    action: click
+
+# 点击权属证件类型
+click_publishhouse_ownership_type:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_hint'
+    action: click
+
+# 选择权属类型
+select_publishhouse_ownership_type:
+  - by: xpath
+    locator: '//*[@text="${house_type}"]'
+    action: click
+
+# 输入权属证件号码
+send_publishhouse_ownership_number:
+  - by: xpath
+    locator: '//*[@text="证件号码"]/..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${ownership_number}"
+
+# 输入产权人姓名
+send_publishhouse_property_owner:
+  - by: xpath
+    locator: '//*[@text="产权人姓名"]/..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${property_owner}"
+
+# 输入产权人身份证号
+send_publishhouse_owner_identity:
+  - by: xpath
+    locator: '//*[@text="产权人身份证号"]/..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${owner_identity}"
+
+# 返回二次确定返回
+click_publishhouse_back_confirm:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_left'
+    action: click
+
+# 返回二次确定取消返回
+click_publishhouse_back_cancel:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_right'
+    action: click
+
+# 点击标题
+click_publishhouse_title:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_form_title'
+    action: click
+
+# 输入标题
+send_publishhouse_text:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_text'
+    action: send
+    value: "${text}"
+
+# 点击确定
+click_publishhouse_submit:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_submit'
+    action: click
+
+# 完成权属认证填写
+finish_ownership:
+# 选择权属证件类型
+  - by: id
+    locator: 'com.house365.newhouse:id/m_hint'
+    action: click
+  - by: xpath
+    locator: '//*[@text="${certificate_type}"]'
+    action: click
+# 输入权属证件号码
+  - by: xpath
+    locator: '//*[@text="证件号码"]/..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${number}"
+# 输入产权人姓名
+  - by: xpath
+    locator: '//*[@text="产权人姓名"]/..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${owner}"
+# 输入产权人身份证号
+  - by: xpath
+    locator: '//*[@text="产权人身份证号"]/..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${identity}"
+
+finish_publishhouse:
+# 户型选择
+  - by: id
+    locator: 'com.house365.newhouse:id/m_room'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_ok'
+    action: click
+# 楼层选择
+  - by: id
+    locator: 'com.house365.newhouse:id/m_floor'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_ok'
+    action: click
+# 房屋照片
+  - by: id
+    locator: 'com.house365.newhouse:id/m_imgs'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_img'
+    action: click
+  - by: xpath
+    locator: '//*[@text="拍照"]'
+    action: click
+  - by: id
+    locator: 'com.android.camera:id/v6_shutter_button_internal'
+    action: click
+  - by: id
+    locator: 'com.android.camera:id/v6_btn_done'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_submit'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_left'
+    action: click
+# 房源描述
+  - by: id
+    locator: 'com.house365.newhouse:id/m_desc'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_text'
+    action: send
+    value: "${desc}"
+  - by: id
+    locator: 'com.house365.newhouse:id/m_submit'
+    action: click
+# 房源特色
+  - by: id
+    locator: 'com.house365.newhouse:id/m_feature'
+    action: click
+  - by: xpath
+    locator: '//*[@text="${feature}"]'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_submit'
+    action: click
+# 上传证件照
+  - by: id
+    locator: 'com.house365.newhouse:id/m_identifi_layout'
+    action: click
+  - by: xpath
+    locator: '//*[@resource-id="${picture_num}"]//*[@resource-id="com.house365.newhouse:id/m_img"]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="相册选择"]'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/v_cover'
+    action: click_pos
+    value: "${num}"
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_hand'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_submit'
+    action: click
+# 权属认证
+  - by: id
+    locator: 'com.house365.newhouse:id/m_hint'
+    action: click
+  - by: xpath
+    locator: '//*[@text="${certificate_type}"]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="证件号码"]/..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${number}"
+  - by: xpath
+    locator: '//*[@text="产权人姓名"]/..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${owner}"
+  - by: xpath
+    locator: '//*[@text="产权人身份证号"]/..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${identity}"
+  - by: id
+    locator: 'com.house365.newhouse:id/m_submit'
+    action: click
+
