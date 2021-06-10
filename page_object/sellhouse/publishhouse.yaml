@@ -17,8 +17,8 @@ click_publishhouse_reset:
 
 # 点击物业类型
 click_publishhouse_type:
-  - by: xpath
-    locator: '//*[@text="物业类型"]/../..//*[contains(@resource-id, "m_img_right")]'
+  - by: id
+    locator: 'com.house365.newhouse:id/m_type'
     action: click
 
 # 选择
@@ -84,8 +84,8 @@ send_publishhouse_area:
 
 # 点击房屋权属
 click_publishhouse_property:
-  - by: xpath
-    locator: '//*[@text="房屋权属"]/../..//*[contains(@resource-id, "m_img_right")]'
+  - by: id
+    locator: 'com.house365.newhouse:id/m_quanshu'
     action: click
 
 # 输入您的称呼
@@ -103,11 +103,11 @@ click_publishhouse_next:
 
 goto_next_all:
 # 选择物业类型
-  - by: xpath
-    locator: '//*[@text="物业类型"]/../..//*[contains(@resource-id, "m_img_right")]'
+  - by: id
+    locator: 'com.house365.newhouse:id/m_type'
     action: click
   - by: xpath
-    locator: '//*[@text="${type}"]'
+    locator: '//*[@text="${house_type}"]'
     action: click
 # 选择小区
   - by: xpath
@@ -146,11 +146,11 @@ goto_next_all:
     action: send
     value: "${area}"
 # 点击房屋权属
-  - by: xpath
-    locator: '//*[@text="房屋权属"]/../..//*[contains(@resource-id, "m_img_right")]'
+  - by: id
+    locator: 'com.house365.newhouse:id/m_quanshu'
     action: click
   - by: xpath
-    locator: '//*[@text="${property}"]'
+    locator: '//*[@text="${house_ownership}"]'
     action: click
 # 输入您的称呼
   - by: xpath
@@ -159,192 +159,4 @@ goto_next_all:
     value: "${seller}"
 
 
-# 点击户型选择
-click_publishhouse_room:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_room'
-    action: click
-
-# 点击选择取消
-click_publishhouse_cancel:
-  - by: xpath
-    locator: '//*[@text="取消"]'
-    action: click
-
-# 点击选择确定
-click_publishhouse_confirm:
-  - by: xpath
-    locator: '//*[@text="确定"]'
-    action: click
-
-# 点击楼层选择
-click_publishhouse_floor:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_room'
-    action: click
-
-# 点击楼层选择取消
-click_publishhouse_floor_cancel:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_cancle'
-    action: click
-
-# 点击楼层选择确定
-click_publishhouse_floor_confirm:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_ok'
-    action: click
-
-# 点击楼层选择平层
-select_publishhouse_flat:
-  - by: xpath
-    locator: '//*[@text="单层"]'
-    action: click
-
-# 点击楼层选择跃层
-select_publishhouse_jump:
-  - by: xpath
-    locator: '//*[@text="跃层"]'
-    action: click
-
-# 点击房屋照片
-click_publishhouse_pictures:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_imgs'
-    action: click
-
-# 点击房屋图片的右上角提示
-click_publishhouse_prompt:
-  - by: id
-    locator: 'com.house365.newhouse:id/btn_right'
-    action: click
-
-# 添加房屋图片
-click_publishhouse_add_pictures:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_img'
-    action: click
-
-# 房屋图片添加页面，选择拍照
-click_publishhouse_taking_pictures:
-  - by: xpath
-    locator: '//*[@text="拍照"]'
-    action: click
-
-# 房屋图片添加页面完成
-click_publishhouse_taking_pictures_finish:
-  - by: xpath
-    locator: '//*[@text="完成"]'
-    action: click
-
-# 点击左上角返回按钮返回
-click_publishhouse_back:
-  - by: id
-    locator: 'com.house365.newhouse:id/btn_left'
-    action: click
-
-
-# 进入房源描述页
-click_publishhouse_desc:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_desc'
-    action: click
-
-
-# 点击房源特色
-click_publishhouse_feature:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_feature'
-    action: click
-
-
-# 点击上传证件照
-click_publishhouse_identity:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_identifi_layout'
-    action: click
-
-# 添加证件照
-click_publishhouse_add_identity:
-  - by: xpath
-    locator: '//*[@resource-id="${picture_num}"]//*[@resource-id="com.house365.newhouse:id/m_img"]'
-    action: click
-
-# 上传完成添加证件照
-click_publishhouse_identity_confirm:
-  - by: xpath
-    locator: '//*[@text="完成"]'
-    action: click
-
-
-# 进入权属认证页
-click_publishhouse_ownership:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_ownership'
-    action: click
-
-# 点击权属证件类型
-click_publishhouse_ownership_type:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_hint'
-    action: click
-
-# 选择权属类型
-select_publishhouse_ownership_type:
-  - by: xpath
-    locator: '//*[@text="${house_type}"]'
-    action: click
-
-# 输入权属证件号码
-send_publishhouse_ownership_number:
-  - by: xpath
-    locator: '//*[@text="证件号码"]/..//*[contains(@resource-id, "m_value")]'
-    action: send
-    value: "${ownership_number}"
-
-# 输入产权人姓名
-send_publishhouse_property_owner:
-  - by: xpath
-    locator: '//*[@text="产权人姓名"]/..//*[contains(@resource-id, "m_value")]'
-    action: send
-    value: "${property_owner}"
-
-# 输入产权人身份证号
-send_publishhouse_owner_identity:
-  - by: xpath
-    locator: '//*[@text="产权人身份证号"]/..//*[contains(@resource-id, "m_value")]'
-    action: send
-    value: "${owner_identity}"
-
-# 返回二次确定返回
-click_publishhouse_back_confirm:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_left'
-    action: click
-
-# 返回二次确定取消返回
-click_publishhouse_back_cancel:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_right'
-    action: click
-
-# 点击标题
-click_publishhouse_title:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_form_title'
-    action: click
-
-# 输入标题
-send_publishhouse_text:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_text'
-    action: send
-    value: "${text}"
-
-
-# 点击确定
-click_publishhouse_submit:
-  - by: id
-    locator: 'com.house365.newhouse:id/m_submit'
-    action: click
 
