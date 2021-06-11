@@ -34,13 +34,11 @@ class TestMain(TestBase):
         self.shouye.goto_message().screenshot()
 
     @allure.description("点击功能入口第二屏的“买房流程”")
-    def test_click_trade_process(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_trade_process(self):
         self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_trade_process().screenshot()
 
     @allure.description("点击功能入口第三屏的求租")
-    def test_click_find_house(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_find_house(self):
         self.shouye.func_entrance_swipe_left("找小区").func_entrance_swipe_left("家居").goto_func_entrance_find_house().screenshot()
 
     @allure.description("点击“购房工具”功能入口，进入购房工具箱页面")
@@ -132,58 +130,47 @@ class TestMain(TestBase):
         self.shouye.goto_jqkp().screenshot()
 
     @allure.description("点击“房博士”功能入口，进入房博士首页")
-    def test_click_doctor(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_doctor(self):
         self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_doctor().screenshot()
 
     @allure.description("点击“计算器”功能入口，进入贷款计算器页面")
-    def test_click_calculator(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_calculator(self):
         self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_calculator().screenshot()
 
     @allure.description("点击“365直卖”功能入口，进入直卖房源列表页面")
-    def test_click_zhimai_list(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_zhimai_list(self):
         self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_zhimai_list().screenshot()
 
     @allure.description("点击“家居”功能入口，进入家居H5首页")
-    def test_click_home_improvement(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_home_improvement(self):
         self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_home_improvement().screenshot()
 
     @allure.description("点击“求购”功能入口，进入我要买房页面")
-    def test_click_want_buy(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_want_buy(self):
         self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_want_buy().screenshot()
 
     @allure.description("点击“我要卖房”功能入口，进入发布房源页面")
-    def test_click_publish_sell(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_publish_sell(self):
         self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_publish_sell().screenshot()
 
     @allure.description("点击“金融服务”功能入口，进入365小贷H5页面")
-    def test_click_financial_service(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_financial_service(self):
         self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_financial_service().screenshot()
 
     @allure.description("点击“VR看房”功能入口，进入VR看房列表页面")
-    def test_click_VR_list(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_VR_list(self):
         self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_VR_list().screenshot()
 
     @allure.description("点击“养老频道”功能入口，进入365养老小程序")
-    def test_click_pension_channel(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_pension_channel(self):
         self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_pension_channel().screenshot()
 
     @allure.description("点击“我要出租”功能入口，进入发布租房页面")
-    def test_click_publish_rent(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_publish_rent(self):
         self.shouye.func_entrance_swipe_left("找小区").func_entrance_swipe_left("家居").goto_func_entrance_publish_rent().screenshot()
 
     @allure.description("点击“房产资讯”功能入口，进入资讯列表页面")
-    def test_click_news(self, cancel_adv):
-        cancel_adv(self.app._driver)
+    def test_click_news(self):
         self.shouye.func_entrance_swipe_left("找小区").func_entrance_swipe_left("家居").goto_func_entrance_news().screenshot()
 
     @allure.description("滑动到”马上找房“，点击找新房")

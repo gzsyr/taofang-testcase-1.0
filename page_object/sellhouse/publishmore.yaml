@@ -53,25 +53,29 @@ send_publishhouse_take_pictures:
   - by: xpath
     locator: '//*[@text="拍照"]'
     action: click
-  - by: id
-    locator: 'com.android.camera:id/v6_shutter_button_internal'
-    action: click
+  - action: press
+    value: '27'
+# 华为mate30 com.huawei.camera:id/done_button
   - by: id
     locator: 'com.android.camera:id/v6_btn_done'
     action: click
+  - action: delay
+    value: '3'
 
 # 图片添加页面，选择相册选择
-click_publishhouse_local_pictures:
+send_publishhouse_local_pictures:
   - by: xpath
     locator: '//*[@text="相册选择"]'
     action: click
   - by: id
     locator: 'com.house365.newhouse:id/v_cover'
     action: click_pos
-    value: "${i}"
+    value: "${index}"
   - by: id
     locator: 'com.house365.newhouse:id/btn_hand'
     action: click
+  - action: delay
+    value: '3'
 
 # 点击左上角返回按钮返回
 click_publishhouse_back:
@@ -89,6 +93,12 @@ click_publishhouse_desc:
 click_publishhouse_feature:
   - by: id
     locator: 'com.house365.newhouse:id/m_feature'
+    action: click
+
+# 选择
+select_pubilshhouse_type:
+  - by: xpath
+    locator: '//*[@text="${house_type}"]'
     action: click
 
 # 点击上传证件照
@@ -119,13 +129,7 @@ click_publishhouse_ownership:
 # 点击权属证件类型
 click_publishhouse_ownership_type:
   - by: id
-    locator: 'com.house365.newhouse:id/m_hint'
-    action: click
-
-# 选择权属类型
-select_publishhouse_ownership_type:
-  - by: xpath
-    locator: '//*[@text="${house_type}"]'
+    locator: 'com.house365.newhouse:id/m_type'
     action: click
 
 # 输入权属证件号码
@@ -184,7 +188,7 @@ click_publishhouse_submit:
 finish_ownership:
 # 选择权属证件类型
   - by: id
-    locator: 'com.house365.newhouse:id/m_hint'
+    locator: 'com.house365.newhouse:id/m_type'
     action: click
   - by: xpath
     locator: '//*[@text="${certificate_type}"]'
@@ -194,16 +198,16 @@ finish_ownership:
     locator: '//*[@text="证件号码"]/..//*[contains(@resource-id, "m_value")]'
     action: send
     value: "${number}"
-# 输入产权人姓名
-  - by: xpath
-    locator: '//*[@text="产权人姓名"]/..//*[contains(@resource-id, "m_value")]'
-    action: send
-    value: "${owner}"
-# 输入产权人身份证号
-  - by: xpath
-    locator: '//*[@text="产权人身份证号"]/..//*[contains(@resource-id, "m_value")]'
-    action: send
-    value: "${identity}"
+## 输入产权人姓名
+#  - by: xpath
+#    locator: '//*[@text="产权人姓名"]/..//*[contains(@resource-id, "m_value")]'
+#    action: send
+#    value: "${owner}"
+## 输入产权人身份证号
+#  - by: xpath
+#    locator: '//*[@text="产权人身份证号"]/..//*[contains(@resource-id, "m_value")]'
+#    action: send
+#    value: "${identity}"
 
 finish_publishhouse:
 # 户型选择
@@ -230,11 +234,10 @@ finish_publishhouse:
   - by: xpath
     locator: '//*[@text="拍照"]'
     action: click
+  - action: press
+    value: '27'
   - by: id
-    locator: 'com.android.camera:id/v6_shutter_button_internal'
-    action: click
-  - by: id
-    locator: 'com.android.camera:id/v6_btn_done'
+    locator: 'com.huawei.camera:id/done_button'
     action: click
   - by: id
     locator: 'com.house365.newhouse:id/m_submit'
@@ -285,7 +288,7 @@ finish_publishhouse:
     action: click
 # 权属认证
   - by: id
-    locator: 'com.house365.newhouse:id/m_hint'
+    locator: 'com.house365.newhouse:id/m_type'
     action: click
   - by: xpath
     locator: '//*[@text="${certificate_type}"]'
@@ -294,14 +297,14 @@ finish_publishhouse:
     locator: '//*[@text="证件号码"]/..//*[contains(@resource-id, "m_value")]'
     action: send
     value: "${number}"
-  - by: xpath
-    locator: '//*[@text="产权人姓名"]/..//*[contains(@resource-id, "m_value")]'
-    action: send
-    value: "${owner}"
-  - by: xpath
-    locator: '//*[@text="产权人身份证号"]/..//*[contains(@resource-id, "m_value")]'
-    action: send
-    value: "${identity}"
+#  - by: xpath
+#    locator: '//*[@text="产权人姓名"]/..//*[contains(@resource-id, "m_value")]'
+#    action: send
+#    value: "${owner}"
+#  - by: xpath
+#    locator: '//*[@text="产权人身份证号"]/..//*[contains(@resource-id, "m_value")]'
+#    action: send
+#    value: "${identity}"
   - by: id
     locator: 'com.house365.newhouse:id/m_submit'
     action: click
