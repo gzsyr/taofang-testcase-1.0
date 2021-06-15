@@ -305,4 +305,4 @@ class TestPublishHouse(TestBase):
         """
         step1 = self.goto_publish_more().finish_publishhouse()
         step1.screenshot()
-        step1.click_publishhouse_submit().screenshot()
+        step1.click_publishhouse_submit().delay_publishhouse('6').screenshot()

@@ -287,6 +287,17 @@ class PublishMore(BasePage):
         self.tsleep(2)
         return self
 
+    def delay_publishhouse(self, sec='5'):
+        """
+        等待发布完成
+        :return:
+        """
+        self._params["sec"] = sec
+        with allure.step("完成发布房源信息填写，等待发布完成"):
+            self.steps("../../page_object/sellhouse/publishmore.yaml", replace=True)
+        self.tsleep(2)
+        return self
+
     def finish_ownership(self, certificate_type="房屋所有权号", number="南京市房权证建邺字第123456号",
                          owner='钱女士', identity='320112199912121234'):
         """

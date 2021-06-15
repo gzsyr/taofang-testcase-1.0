@@ -21,7 +21,7 @@ click_publishhouse_confirm:
 # 点击楼层选择
 click_publishhouse_floor:
   - by: id
-    locator: 'com.house365.newhouse:id/m_room'
+    locator: 'com.house365.newhouse:id/m_floor'
     action: click
 
 # 点击楼层选择平层
@@ -57,7 +57,7 @@ send_publishhouse_take_pictures:
     value: '27'
 # 华为mate30 com.huawei.camera:id/done_button
   - by: id
-    locator: 'com.android.camera:id/v6_btn_done'
+    locator: 'com.huawei.camera:id/done_button'
     action: click
   - action: delay
     value: '3'
@@ -264,7 +264,7 @@ finish_publishhouse:
     locator: '//*[@text="${feature}"]'
     action: click
   - by: id
-    locator: 'com.house365.newhouse:id/m_submit'
+    locator: 'com.house365.newhouse:id/m_ok'
     action: click
 # 上传证件照
   - by: id
@@ -288,6 +288,9 @@ finish_publishhouse:
     action: click
 # 权属认证
   - by: id
+    locator: 'com.house365.newhouse:id/m_ownership'
+    action: click
+  - by: id
     locator: 'com.house365.newhouse:id/m_type'
     action: click
   - by: xpath
@@ -308,4 +311,8 @@ finish_publishhouse:
   - by: id
     locator: 'com.house365.newhouse:id/m_submit'
     action: click
+
+delay_publishhouse:
+  - action: delay
+    value: '${sec}'
 
