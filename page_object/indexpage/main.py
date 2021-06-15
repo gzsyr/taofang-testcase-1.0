@@ -2,6 +2,7 @@ import allure
 
 from page_object.base_page.base_page import BasePage
 from page_object.indexpage.indexsearch import IndexSearch
+from page_object.indexpage.selectcity import SelectCity
 from page_object.newhouse.newhouselist import NewHouseList
 from page_object.sellhouse.publishindex import PublishIndex
 from page_object.sellhouse.buyinghouse import BuyingHouse
@@ -359,7 +360,7 @@ class Main(BasePage):
         with allure.step("点击城市"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
-        return self
+        return SelectCity(self._driver)
 
     def goto_search(self):
         """

@@ -1,0 +1,5 @@
+# 选择城市页面
+select_name:
+  - by: xpath
+    locator: '//*[@text="${name}"]'
+    action: click
