@@ -260,23 +260,23 @@ class TestPublishHouse(TestBase):
         self.goto_publish_more().click_publishhouse_ownership().\
             send_publishhouse_ownership_number('宁（2020）城市不动产权第00521454号').screenshot()
 
-    # @allure.description("更多资料页-权属认证-输入产权人姓名：吴女士")
-    # def test_publish_property_owner(self):
-    #     """
-    #     更多资料页-权属认证-输入产权人姓名
-    #     :return:
-    #     """
-    #     self.goto_publish_more().click_publishhouse_ownership().\
-    #         send_publishhouse_property_owner('吴女士').screenshot()
+    @allure.description("更多资料页-权属认证-输入产权人姓名：吴女士")
+    def test_publish_property_owner(self):
+        """
+        更多资料页-权属认证-输入产权人姓名
+        :return:
+        """
+        self.goto_publish_more().click_publishhouse_ownership().\
+            send_publishhouse_property_owner('吴女士').screenshot()
 
-    # @allure.description("更多资料页-权属认证-产权人身份证号：32011155212456322")
-    # def test_publish_owner_identity(self):
-    #     """
-    #     更多资料页-权属认证-产权人身份证号
-    #     :return:
-    #     """
-    #     self.goto_publish_more().click_publishhouse_ownership().\
-    #         send_publishhouse_owner_identity('32011155212456322').screenshot()
+    @allure.description("更多资料页-权属认证-产权人身份证号：32011155212456322")
+    def test_publish_owner_identity(self):
+        """
+        更多资料页-权属认证-产权人身份证号
+        :return:
+        """
+        self.goto_publish_more().click_publishhouse_ownership().\
+            send_publishhouse_owner_identity('32011155212456322').screenshot()
 
     @allure.description("更多资料页完成权属认证填写")
     def test_publish_ownership(self):
