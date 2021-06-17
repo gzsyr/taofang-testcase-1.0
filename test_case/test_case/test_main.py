@@ -1,4 +1,6 @@
 import allure
+import pytest
+
 from test_case.base_test.test_base import TestBase
 
 
@@ -305,3 +307,7 @@ class TestMain(TestBase):
         cancel_adv(self.app._driver)
         self.shouye.func_swipe("tv_house_price_unit").goto_rent_tab().goto_tab_item().screenshot()
 
+    @allure.description("切换城市")
+    @pytest.mark.parametrize("letter, cityname", [("S", "苏州"), ("N", "南京")])
+    def test_select_city(self, letter, cityname):
+        self.shouye.goto_city().select_letter(letter).select_city(cityname).screenshot()
