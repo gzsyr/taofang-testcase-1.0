@@ -267,14 +267,14 @@ class PublishMore(BasePage):
         self.tsleep(2)
         return self
 
-    def click_publishhouse_submit(self):
+    def click_publishhouse_submit(self, sec='2'):
         """
         更多资料页完成按钮点击
         :return:
         """
         with allure.step("更多资料页完成按钮点击"):
             self.steps("../../page_object/sellhouse/publishmore.yaml")
-        self.tsleep(2)
+        self.tsleep(int(sec))
         return self
 
     def click_publishhouse_title(self):
