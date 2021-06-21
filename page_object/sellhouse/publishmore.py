@@ -267,14 +267,14 @@ class PublishMore(BasePage):
         self.tsleep(2)
         return self
 
-    def click_publishhouse_submit(self, sec='2'):
+    def click_publishhouse_submit(self, sec: int = 2):
         """
         更多资料页完成按钮点击
         :return:
         """
         with allure.step("更多资料页完成按钮点击"):
             self.steps("../../page_object/sellhouse/publishmore.yaml")
-        self.tsleep(int(sec))
+        self.tsleep(sec)
         return self
 
     def click_publishhouse_title(self):
@@ -284,17 +284,6 @@ class PublishMore(BasePage):
         """
         with allure.step("更多资料页点击标题"):
             self.steps("../../page_object/sellhouse/publishmore.yaml")
-        self.tsleep(2)
-        return self
-
-    def delay_publishhouse(self, sec='5'):
-        """
-        等待发布完成
-        :return:
-        """
-        self._params["sec"] = sec
-        with allure.step("完成发布房源信息填写，等待发布完成"):
-            self.steps("../../page_object/sellhouse/publishmore.yaml", replace=True)
         self.tsleep(2)
         return self
 

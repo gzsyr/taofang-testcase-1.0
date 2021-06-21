@@ -311,8 +311,3 @@ finish_publishhouse:
   - by: id
     locator: 'com.house365.newhouse:id/m_submit'
     action: click
-
-delay_publishhouse:
-  - action: delay
-    value: '${sec}'
-

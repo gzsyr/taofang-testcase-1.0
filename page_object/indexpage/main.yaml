@@ -9,46 +9,52 @@ cancel_index_adv:
     locator: 'com.house365.newhouse:id/close'
     action: click
 
-#以下是功能入口
-goto_func_entrance_gfgj:
+# 第一屏功能入口，合并一个步骤处理 by zsy
+goto_func_entrance_first:
   - by: xpath
-    locator: '//*[@text="购房工具"]'
+    locator: '//*[@text="${func_entry}"]'
     action: click
 
-goto_func_entrance_map:
-  - by: xpath
-    locator: '//*[@text="地图找房"]'
-    action: click
-
-goto_func_entrance_school_map:
-  - by: xpath
-    locator: '//*[@text="学校地图"]'
-    action: click
-
+##以下是功能入口
+#goto_func_entrance_gfgj:
+#  - by: xpath
+#    locator: '//*[@text="购房工具"]'
+#    action: click
+#
+#goto_func_entrance_map:
+#  - by: xpath
+#    locator: '//*[@text="地图找房"]'
+#    action: click
+#
+#goto_func_entrance_school_map:
+#  - by: xpath
+#    locator: '//*[@text="学校地图"]'
+#    action: click
+#
 goto_func_entrance_news:
   - by: xpath
     locator: '//*[@text="房产资讯"]'
     action: click
-
-goto_func_entrance_group_house:
-  - by: xpath
-    locator: '//*[@text="看房团"]'
-    action: click
-
-goto_func_entrance_live:
-  - by: xpath
-    locator: '//*[@text="直播"]'
-    action: click
-
-goto_func_entrance_video_house:
-  - by: xpath
-    locator: '//*[@text="视频说房"]'
-    action: click
-
-goto_func_entrance_online_shop:
-  - by: xpath
-    locator: '//*[@text="签到"]'
-    action: click
+#
+#goto_func_entrance_group_house:
+#  - by: xpath
+#    locator: '//*[@text="看房团"]'
+#    action: click
+#
+#goto_func_entrance_live:
+#  - by: xpath
+#    locator: '//*[@text="直播"]'
+#    action: click
+#
+#goto_func_entrance_video_house:
+#  - by: xpath
+#    locator: '//*[@text="视频说房"]'
+#    action: click
+#
+#goto_func_entrance_online_shop:
+#  - by: xpath
+#    locator: '//*[@text="签到"]'
+#    action: click
 
 goto_func_entrance_trade_process:
   - by: xpath
@@ -110,20 +116,21 @@ goto_func_entrance_publish_rent:
     locator: '//*[@text="我要出租"]'
     action: click
 
-goto_func_entrance_lottery_query:
-  - by: xpath
-    locator: '//*[@text="摇号查询"]'
-    action: click
+#goto_func_entrance_lottery_query:
+#  - by: xpath
+#    locator: '//*[@text="摇号查询"]'
+#    action: click
 
-goto_func_entrance_check_price:
-  - by: xpath
-    locator: '//*[@text="查房价"]'
-    action: click
-
-goto_func_entrance_find_community:
-  - by: xpath
-    locator: '//*[@text="找小区"]'
-    action: click
+# 第一屏功能入口，合并一个步骤处理 by zsy
+#goto_func_entrance_check_price:
+#  - by: xpath
+#    locator: '//*[@text="查房价"]'
+#    action: click
+#
+#goto_func_entrance_find_community:
+#  - by: xpath
+#    locator: '//*[@text="找小区"]'
+#    action: click
 
 func_entrance_swipe_left:
   - action: swipe_left
@@ -166,37 +173,37 @@ goto_map:
     locator: 'com.house365.newhouse:id/m_map'
     action: click
 
-#点击新房icon
-goto_func_entrance_newhouse:
-  - by: xpath
-    locator: '//*[@text="新房"]'
-    action: click
-
-#点击二手房icon
-goto_func_entrance_esf:
-  - by: xpath
-    locator: '//*[@text="二手房"]'
-    action: click
-
-
-#点击租房icon
-goto_func_entrance_zf:
-  - by: xpath
-    locator: '//*[@text="租房"]'
-    action: click
-
-#点击商铺办公icon
-goto_func_entrance_spbg:
-  - by: xpath
-    locator: '//*[@text="商铺办公"]'
-    action: click
-
-
-#点击房源发布icon
-goto_func_entrance_fyfb:
-  - by: xpath
-    locator: '//*[@text="房源发布"]'
-    action: click
+# 以下暂时去除功能入口第一屏，合并一个接口goto_func_entrance_first  by zsy
+##点击新房icon
+#goto_func_entrance_newhouse:
+#  - by: xpath
+#    locator: '//*[@text="新房"]'
+#    action: click
+#
+##点击二手房icon
+#goto_func_entrance_esf:
+#  - by: xpath
+#    locator: '//*[@text="二手房"]'
+#    action: click
+#
+##点击租房icon
+#goto_func_entrance_zf:
+#  - by: xpath
+#    locator: '//*[@text="租房"]'
+#    action: click
+#
+##点击商铺办公icon
+#goto_func_entrance_spbg:
+#  - by: xpath
+#    locator: '//*[@text="商铺办公"]'
+#    action: click
+#
+#
+##点击房源发布icon
+#goto_func_entrance_fyfb:
+#  - by: xpath
+#    locator: '//*[@text="房源发布"]'
+#    action: click
 
 #点击楼盘动态
 goto_lpdt:
