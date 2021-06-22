@@ -1,4 +1,5 @@
 import allure
+import pytest
 
 from test_case.base_test.test_base import TestBase
 
@@ -21,13 +22,13 @@ class TestPublishHouse(TestBase):
         """
         return self.goto_publish_index().click_publishindex_m_publish()
 
-    def goto_publish_more(self):
+    def goto_publish_more(self, house_type="住宅", shi='502'):
         """
         我要卖房进入更多资料页
         :return:
         """
         # return self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_publish_sell(). \
-        return self.goto_publish_sell().goto_next_all().click_publishhouse_next()
+        return self.goto_publish_sell().goto_next_all(house_type=house_type, shi=shi).click_publishhouse_next()
 
     @allure.description("点击引导页的发布房源按钮")
     def test_click_publish(self):
@@ -298,11 +299,15 @@ class TestPublishHouse(TestBase):
             send_publishhouse_text('新标题').click_publishhouse_submit().screenshot()
 
     @allure.description("发布房源")
-    def test_publishhouse_all(self):
+    @pytest.mark.parametrize(("house_type", "shi", "feature"), [("住宅", "502", "唯一住房"), ("别墅", "503", "带花园"),
+                                                                ("写字楼", "2007", "中心商务区"), ("商铺", "103", "高回报率"),
+                                                                ("厂房仓库", "100", ""), ("车库车位", "666", ""),
+                                                                ("公寓", "1003", "")])
+    def test_publishhouse_all(self, house_type, shi, feature):
         """
         发布房源
         :return:
         """
-        step1 = self.goto_publish_more().finish_publishhouse()
+        step1 = self.goto_publish_more(house_type=house_type, shi=shi).finish_publishhouse(feature=feature)
         step1.screenshot()
         step1.click_publishhouse_submit().screenshot()

@@ -318,7 +318,12 @@ class PublishMore(BasePage):
         self._params["number"] = number
         self._params["owner"] = owner
         self._params["identity"] = identity
-        with allure.step("输入权属认证信息"):
-            self.steps("../../page_object/sellhouse/publishmore.yaml", replace=True)
-        self.tsleep(2)
+        with allure.step("输入更多信息"):
+            if feature != '':
+                self.steps("../../page_object/sellhouse/publishmore.yaml", name='finish_publishhouse_house',
+                           replace=True)
+            else:
+                self.steps("../../page_object/sellhouse/publishmore.yaml", name='finish_publishhouse_loft',
+                           replace=True)
+            self.tsleep(2)
         return self

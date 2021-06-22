@@ -209,7 +209,7 @@ finish_ownership:
 #    action: send
 #    value: "${identity}"
 
-finish_publishhouse:
+finish_publishhouse_house:
 # 户型选择
   - by: id
     locator: 'com.house365.newhouse:id/m_room'
@@ -266,6 +266,109 @@ finish_publishhouse:
   - by: id
     locator: 'com.house365.newhouse:id/m_ok'
     action: click
+# 上传证件照
+  - by: id
+    locator: 'com.house365.newhouse:id/m_identifi_layout'
+    action: click
+  - by: xpath
+    locator: '//*[@resource-id="${picture_num}"]//*[@resource-id="com.house365.newhouse:id/m_img"]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="相册选择"]'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/v_cover'
+    action: click_pos
+    value: "${num}"
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_hand'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_submit'
+    action: click
+# 权属认证
+  - by: id
+    locator: 'com.house365.newhouse:id/m_ownership'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_type'
+    action: click
+  - by: xpath
+    locator: '//*[@text="${certificate_type}"]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="证件号码"]/..//*[contains(@resource-id, "m_value")]'
+    action: send
+    value: "${number}"
+#  - by: xpath
+#    locator: '//*[@text="产权人姓名"]/..//*[contains(@resource-id, "m_value")]'
+#    action: send
+#    value: "${owner}"
+#  - by: xpath
+#    locator: '//*[@text="产权人身份证号"]/..//*[contains(@resource-id, "m_value")]'
+#    action: send
+#    value: "${identity}"
+  - by: id
+    locator: 'com.house365.newhouse:id/m_submit'
+    action: click
+
+finish_publishhouse_loft:
+# 户型选择
+  - by: id
+    locator: 'com.house365.newhouse:id/m_room'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_ok'
+    action: click
+# 楼层选择
+  - by: id
+    locator: 'com.house365.newhouse:id/m_floor'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_ok'
+    action: click
+# 房屋照片
+  - by: id
+    locator: 'com.house365.newhouse:id/m_imgs'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_img'
+    action: click
+  - by: xpath
+    locator: '//*[@text="拍照"]'
+    action: click
+  - action: press
+    value: '27'
+  - by: id
+    locator: 'com.huawei.camera:id/done_button'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_submit'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_left'
+    action: click
+# 房源描述
+  - by: id
+    locator: 'com.house365.newhouse:id/m_desc'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/m_text'
+    action: send
+    value: "${desc}"
+  - by: id
+    locator: 'com.house365.newhouse:id/m_submit'
+    action: click
+# 房源特色
+#  - by: id
+#    locator: 'com.house365.newhouse:id/m_feature'
+#    action: click
+#  - by: xpath
+#    locator: '//*[@text="${feature}"]'
+#    action: click
+#  - by: id
+#    locator: 'com.house365.newhouse:id/m_ok'
+#    action: click
 # 上传证件照
   - by: id
     locator: 'com.house365.newhouse:id/m_identifi_layout'
