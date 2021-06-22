@@ -26,5 +26,5 @@ rent_house_news:
 # 租房首页点击第一屏功能入口
 rent_house_function_entrance:
   - by: xpath
-    locator: '//*[@text="${func_entry}"'
+    locator: '//*[@text="${func_entry}"]'
     action: click
