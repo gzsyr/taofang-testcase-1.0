@@ -1,1 +1,30 @@
-#租房首页
+# 租房首页
+# 租房首页点击搜索框
+rent_house_search:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_search'
+    action: click
+
+# 租房首页点击地图找房
+map_find_room:
+  - by: xpath
+    locator: '//*[@text="地图找房"]'
+    action: click
+
+# 租房首页点击通勤找房
+commuting_find_room:
+  - by: xpath
+    locator: '//*[@text="通勤找房"]'
+    action: click
+
+# 租房首页点击消息
+rent_house_news:
+  - by: xpath
+    locator: '//*[@text="消息"]'
+    action: click
+
+# 租房首页点击第一屏功能入口
+rent_house_function_entrance:
+  - by: xpath
+    locator: '//*[@text="${func_entry}"'
+    action: click
