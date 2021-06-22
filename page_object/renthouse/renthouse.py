@@ -1,10 +1,16 @@
 import allure
 from page_object.base_page.base_page import BasePage
+from page_object.renthouse.brandapartmentlist import BrandApartmentList
+from page_object.renthouse.lookroommatelist import LookRoommateList
+from page_object.renthouse.officebuildinglist import OfficeBuildingList
+from page_object.renthouse.rentfindhouse import RentFindHouse
+from page_object.renthouse.renthouselist import RentHouseList
+from page_object.renthouse.singleapartmentlist import SingleApartmentList
+
 
 class RentHouse(BasePage):
-
     """
-    租房首页相关元素
+    租房首页
     """
     def rent_house_search(self):
         """
@@ -60,5 +66,19 @@ class RentHouse(BasePage):
         with allure.step("点击功能入口：" + self._params["func_entry"]):
             self.steps("../../page_object/renthouse/renthouse.yaml", replace=True)
         self.tsleep(1)
-        return self
+        if "整租" == self._params["func_entry"]:
+            return RentHouseList(self._driver)
+        elif "找室友" == self._params["func_entry"]:
+            return LookRoommateList(self._driver)
+        elif "品牌公寓" == self._params["func_entry"]:
+            return BrandApartmentList(self._driver)
+        elif "写字楼" == self._params["func_entry"]:
+            return OfficeBuildingList(self._driver)
+        elif "独栋公寓" == self._params["func_entry"]:
+            return SingleApartmentList(self._driver)
+        elif "我要求租" == self._params["func_entry"]:
+            return RentFindHouse(self._driver)
+        else:
+            return self
+
 

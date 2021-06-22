@@ -1,1 +1,73 @@
 # 租房房源列表页面
+
+#点击租房搜索
+click_renthouse_search:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_search'
+    action: click
+
+# 根据text,点击筛选菜单
+click_filter_position_menu:
+  - by: id
+    locator: '//*[@text="${filter_postion}"]'
+    action: click
+
+# 点击筛选位置-全南京
+click_filter_position:
+  - by: id
+    locator: 'com.house365.newhouse:id/rl_weizhi'
+    action: click
+
+# 点击筛选租金
+click_filter_price:
+  - by: id
+    locator: 'com.house365.newhouse:id/rl_rent'
+    action: click
+
+# 点击筛选户型
+click_filter_room:
+  - by: id
+    locator: 'com.house365.newhouse:id/rl_room'
+    action: click
+
+# 点击筛选-筛选菜单
+click_filter_more:
+  - by: id
+    locator: 'com.house365.newhouse:id/rl_filtrate'
+    action: click
+
+# 筛选清空
+click_empty:
+  - by: id
+    locator: 'com.house365.newhouse:id/search_reset_btn'
+    action: click
+
+# 筛选确定
+click_definite:
+  - by: id
+    locator: 'com.house365.newhouse:id/search_confirm_btn'
+    action: click
+
+# 点击排序
+click_filter_sort:
+  - by: id
+    locator: 'com.house365.newhouse:id/im_sort'
+    action: click
+
+# 排序取消
+click_cancel:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_cancle'
+    action: click
+
+# 排序确定
+click_ok:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_ok'
+    action: click
+
+# 进入租房详情页
+goto_renthouse_detail:
+  - by: id
+    locator: 'com.house365.newhouse:id/cl_group_house'
+    action: click
