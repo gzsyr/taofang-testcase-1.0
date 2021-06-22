@@ -204,12 +204,14 @@ class BasePage:
                     x = ele.location.get('x')
                     y = ele.location.get('y')
                     w = ele.size.get('width')
-                    self._driver.swipe(x, y, w * per, y, 1000)
+                    self._driver.swipe(x, y, w * 0.3, y, 1000)
                     # self._driver
                 if "delay" == action:
                     # 延迟时间，单位秒
                     t = int(step["value"])
                     self.tsleep(t)
+                if "None" == action:
+                    print("此步骤略过")
 
     def back(self, c_name=None):
         """
