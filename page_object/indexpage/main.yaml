@@ -225,7 +225,7 @@ goto_jqkp:
 
 goto_message:
   - by: xpath
-    locator: '//*[@text="消息"]'
+    locator: '//*[@resource-id="android:id/tabs"]/android.view.ViewGroup[2]' #'//*[@text="消息"]'
     action: click
 
 #点击淘房头条大新闻
@@ -358,19 +358,19 @@ goto_doctor_question:
 #点击首页房博士tab
 goto_doctor:
   - by: xpath
-    locator: '//*[@text="房博士"]'
+    locator: '//*[@resource-id="android:id/tabs"]/android.view.ViewGroup[3]' #'//*[@text="房博士"]'
     action: click
 
 #点击首页发现tab
 goto_find:
   - by: xpath
-    locator: '//*[@text="发现"]'
+    locator: '//*[@resource-id="android:id/tabs"]/android.view.ViewGroup[4]' #'//*[@text="发现"]'
     action: click
 
 #点击首页我的tab
 goto_my:
   - by: xpath
-    locator: '//*[@text="我的"]'
+    locator: '//*[@resource-id="android:id/tabs"]/android.view.ViewGroup[5]' #'//*[@text="我的"]'
     action: click
 
 #点击首页新房tab
