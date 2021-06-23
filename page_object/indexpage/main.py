@@ -1,6 +1,7 @@
 import allure
 
 from page_object.base_page.base_page import BasePage
+from page_object.indexpage.buyingtools import BuyingTools
 from page_object.indexpage.indexsearch import IndexSearch
 from page_object.indexpage.selectcity import SelectCity
 from page_object.newhouse.newhouselist import NewHouseList
@@ -45,7 +46,7 @@ class Main(BasePage):
         with allure.step("点击功能入口：" + self._params["func_entry"]):
             self.steps("../../page_object/indexpage/main.yaml", replace=True)
         self.tsleep(1)
-        return self
+        return BuyingTools(self._driver)
 
     # 以下是功能入口 , 暂时合并第一屏的代码------by： zsy
     def goto_func_entrance_newhouse(self):

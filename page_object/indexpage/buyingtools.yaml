@@ -1,0 +1,5 @@
+# 购房工具箱页面的内容
+goto_tools:
+  - by: xpath
+    locator: '//*[@text="${tool}"]'
+    action: click
