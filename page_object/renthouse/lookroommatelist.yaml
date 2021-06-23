@@ -1,1 +1,25 @@
 # 找室友页面
+# 我的找室友入口
+lookroom_mine:
+  - by: id
+    locator: "com.house365.newhouse:id/btn_my_publish"
+    action: click
+
+#找室友列表消息入口
+lookroom_news:
+  - by: id
+    locator: "com.house365.newhouse:id/btn_msg"
+    action: click
+
+# 找室友列表全南京
+click_filter_position:
+  - by: xpath
+    locator: '//*[@text="全南京"]'
+    action: click
+
+# 点击全南京的下一级以及在下一级内容
+click_filter_position_menu:
+  - by: xpath
+    locator: '//*[@text="${filter_postion}"]'
+    action: click
+
