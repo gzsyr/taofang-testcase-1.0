@@ -1,1 +1,37 @@
 # 我要求租页面
+
+# 点击求租菜单文字
+select_rent_tiem:
+  - by: xpath
+    locator: '//*[@text="${rent_item}"]'
+    action: click
+
+# 点击意向位置展开筛选项
+show_location:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_location'
+    action: click
+
+# 点击意向位置筛选项
+select_rent_location:
+  - by: xpath
+    locator: '//*[@text="${rent_location}"]'
+    action: click
+
+# 点击意向位置重置
+click_rent_location_reset:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_reset'
+    action: click
+
+# 点击意向位置确定
+click_rent_location_confirm:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_confirm'
+    action: click
+
+# 点击意向位置筛选项
+click_rent_findhouse:
+  - by: xpath
+    locator: 'com.house365.newhouse:id/btn_to_find_house'
+    action: click

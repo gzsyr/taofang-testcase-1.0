@@ -8,7 +8,7 @@ click_renthouse_search:
 
 # 根据text,点击筛选菜单
 click_filter_position_menu:
-  - by: id
+  - by: xpath
     locator: '//*[@text="${filter_postion}"]'
     action: click
 

@@ -1,1 +1,48 @@
 # 写字楼页面
+
+# 写字楼列表点击搜索
+click_officehouse_search:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_search'
+    action: click
+
+# 点击IM消息
+goto_message:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_msg'
+    action: click
+
+#点击写字楼功能入口
+goto_func_entrance:
+  - by: xpath
+    locator: '//*[@text="${func_entry}"]'
+    action: click
+
+# 点击大家都在搜第一个
+goto_office_position:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_hot_1_bg'
+    action: click
+
+# 点击热门楼盘-查看全部
+goto_office_hotlist:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_home_list_more'
+    action: click
+
+# 点击热门楼盘第一个楼盘，进入详情
+goto_office_hotdetail:
+  - by: xpath
+    locator: '//*[contains(@resource-id,"tv_house_title")]'
+    action: click
+
+# 点击推荐楼盘第一个楼盘，进入详情
+goto_office_recommenddetail:
+  - by: xpath
+    locator: '//*[contains(@resource-id,"tv_title")]'
+    action: click
+
+# 上滑动页面
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'
