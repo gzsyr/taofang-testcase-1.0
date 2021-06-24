@@ -210,8 +210,13 @@ class BasePage:
                     # 延迟时间，单位秒
                     t = int(step["value"])
                     self.tsleep(t)
-                if "None" == action:
-                    print("此步骤略过")
+                if "check_click" == action:
+                    # 先判断元素在不在，在的话点击，不在直接返回
+                    ele = self.find(step["by"], step["locator"])
+                    if len(ele) == 0:
+                        print("no element")
+                    else:
+                        ele.click()
 
     def back(self, c_name=None):
         """
