@@ -1,0 +1,121 @@
+# 租房房源详情页面
+
+#点击租房详情返回按钮
+click_renthouse_detail_back:
+  - by: xpath
+    locator: '//*[@content-desc="转到上一层级"]'
+    action: click
+
+#点击租房详情分享按钮
+click_renthouse_detail_share:
+  - by: id
+    locator: 'com.house365.newhouse:id/action_share'
+    action: click
+
+#点击租房详情收藏
+click_renthouse_detail_fav:
+  - by: id
+    locator: 'com.house365.newhouse:id/action_fav'
+    action: click
+
+#点击租房详情IM咨询
+click_renthouse_detail_msg:
+  - by: id
+    locator: 'com.house365.newhouse:id/action_msg'
+    action: click
+
+#点击租房详情图片
+click_renthouse_detail_photo:
+  - by: id
+    locator: 'com.house365.newhouse:id/detail_photo_layout'
+    action: click
+
+#点击租房详情租金IM咨询
+click_renthouse_detail_im_price:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_price_im'
+    action: click
+
+#点击租房详情所属小区
+click_renthouse_detail_block:
+  - by: id
+    locator: 'com.house365.newhouse:id/block_name'
+    action: click
+
+#点击租房详情预约看房IM
+click_renthouse_detail_im_lookhouse:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_contact_im'
+    action: click
+
+#租房详情描述展开
+show_renthouse_detail_desc_more:
+  - by: xpath
+    locator: '//*[@text="房源描述"]/../..//*[contains(@resource-id,"bt_more_ico")]'
+    action: click
+
+#点击租房详情IM咨询详情
+click_renthouse_detail_im_desc:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_equipment_im'
+    action: click
+
+#点击租房详情提问
+click_renthouse_im_question:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_arrow'
+    action: click
+
+#点击租房详情举报
+click_renthouse_detail_report:
+  - by: id
+    locator: 'com.house365.newhouse:id/rl_tip'
+    action: click
+
+#点击租房详情小区地图
+click_renthouse_detail_map:
+  - by: xpath
+    locator: 'com.house365.newhouse:id/ly_block_map'
+    action: click
+
+#展开租房详情配套设施
+show_renthouse_detail_facilities:
+  - by: xpath
+    locator: '//*[@text="小区地址"]/../../..//*[contains(@resource-id,"bt_more_ico")]'
+    action: click
+
+#点击租房详情返回按钮
+click_renthouse_detail_list_more:
+  - by: id
+    locator: 'com.house365.newhouse:id/house_sell_count'
+    action: click
+
+#同小区单个房源
+click_renthouse_detail_other:
+  - by: xpath
+    locator: '//*[contains(@resource-id,"txt_title")]'
+    action: click
+
+#点击租房详情置顶按钮:
+click_renthouse_detail_top:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_to_top'
+    action: click
+
+#点击租房详情经纪人头像
+click_renthouse_detail_business:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_person_layout'
+    action: click
+
+#点击租房详情返回按钮
+click_renthouse_detail_call:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_call_business_novrdk'
+    action: click
+
+#点击租房详情返回按钮
+click_renthouse_detail_im:
+  - by: id
+    locator: 'com.house365.newhouse:id/rl_im_business_novrdk'
+    action: click

@@ -1,6 +1,7 @@
 import allure
 
 from page_object.base_page.base_page import BasePage
+from page_object.renthouse.renthousedetail import RentHouseDetail
 
 
 class RentHouseList(BasePage):
@@ -127,4 +128,4 @@ class RentHouseList(BasePage):
         with allure.step("进入租房详情页"):
             self.steps("../../page_object/renthouse/renthouselist.yaml")
         self.tsleep(2)
-        return self
+        return RentHouseDetail(self._driver)
