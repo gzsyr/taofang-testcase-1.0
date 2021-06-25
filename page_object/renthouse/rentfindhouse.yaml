@@ -32,6 +32,6 @@ click_rent_location_confirm:
 
 # 点击意向位置筛选项
 click_rent_findhouse:
-  - by: xpath
+  - by: id
     locator: 'com.house365.newhouse:id/btn_to_find_house'
     action: click

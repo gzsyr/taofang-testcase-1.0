@@ -61,7 +61,7 @@ click_renthouse_detail_im_desc:
     action: click
 
 #点击租房详情提问
-click_renthouse_im_question:
+click_renthouse_detail_im_question:
   - by: id
     locator: 'com.house365.newhouse:id/ll_arrow'
     action: click
@@ -74,7 +74,7 @@ click_renthouse_detail_report:
 
 #点击租房详情小区地图
 click_renthouse_detail_map:
-  - by: xpath
+  - by: id
     locator: 'com.house365.newhouse:id/ly_block_map'
     action: click
 
@@ -108,14 +108,19 @@ click_renthouse_detail_business:
     locator: 'com.house365.newhouse:id/btn_person_layout'
     action: click
 
-#点击租房详情返回按钮
+#点击租房详情经纪人电话
 click_renthouse_detail_call:
   - by: id
     locator: 'com.house365.newhouse:id/btn_call_business_novrdk'
     action: click
 
-#点击租房详情返回按钮
+#点击租房详情经纪人IM
 click_renthouse_detail_im:
   - by: id
     locator: 'com.house365.newhouse:id/rl_im_business_novrdk'
     action: click
+
+#滑动
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'
