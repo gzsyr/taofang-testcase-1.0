@@ -1,4 +1,6 @@
 import allure
+import pytest
+
 from test_case.base_test.test_base import TestBase
 
 
@@ -46,40 +48,52 @@ class TestSellHouseList(TestBase):
         """
         self.shouye.goto_func_entrance_esf().goto_sellhouse_detail().screenshot()
 
-    @allure.description("点击二手房列表标签筛选——写字楼")
-    def test_click_office_buildings(self):
+    # 以下直接数据驱动标签筛选 by zsy
+    @allure.description("点击二手房列表标签筛选")
+    @pytest.mark.parametrize("tips", ["VR看房", "中介", "个人", "南北通透"])
+    def test_tips_filter(self, tips):
         """
-        点击二手房列表标签筛选——写字楼
+        数据驱动测试用例执行二手房列表的标签筛选
+        :param tips:
+        :return:
         """
-        self.shouye.goto_func_entrance_esf().click_office_buildings().screenshot()
+        self.shouye.goto_func_entrance_esf().click_tips_filter(tips).screenshot()
 
-    @allure.description("点击二手房列表标签筛选——个人")
-    def test_click_personal(self):
-        """
-        点击二手房列表标签筛选——个人
-        """
-        self.shouye.goto_func_entrance_esf().click_personal().screenshot()
-
-    @allure.description("点击二手房列表标签筛选——中介")
-    def test_click_mediation(self):
-        """
-        点击二手房列表标签筛选——中介
-        """
-        self.shouye.goto_func_entrance_esf().click_mediation().screenshot()
-
-    @allure.description("点击二手房列表标签筛选——VR带看")
-    def test_click_vr_see(self):
-        """
-        点击二手房列表标签筛选——VR带看
-        """
-        self.shouye.goto_func_entrance_esf().click_vr_see().screenshot()
-
-    @allure.description("点击二手房列表标签筛选——南北通透")
-    def test_click_north(self):
-        """
-        点击二手房列表标签筛选——南北通透
-        """
-        self.shouye.goto_func_entrance_esf().click_north().screenshot()
+    # 由上一个用例代替以下用例 by zsy
+    # @allure.description("点击二手房列表标签筛选——写字楼")
+    # def test_click_office_buildings(self):
+    #     """
+    #     点击二手房列表标签筛选——写字楼
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_office_buildings().screenshot()
+    #
+    # @allure.description("点击二手房列表标签筛选——个人")
+    # def test_click_personal(self):
+    #     """
+    #     点击二手房列表标签筛选——个人
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_personal().screenshot()
+    #
+    # @allure.description("点击二手房列表标签筛选——中介")
+    # def test_click_mediation(self):
+    #     """
+    #     点击二手房列表标签筛选——中介
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_mediation().screenshot()
+    #
+    # @allure.description("点击二手房列表标签筛选——VR带看")
+    # def test_click_vr_see(self):
+    #     """
+    #     点击二手房列表标签筛选——VR带看
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_vr_see().screenshot()
+    #
+    # @allure.description("点击二手房列表标签筛选——南北通透")
+    # def test_click_north(self):
+    #     """
+    #     点击二手房列表标签筛选——南北通透
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_north().screenshot()
 
     @allure.description("点击二手房列表筛选-房型-二室/三室")
     def test_click_filter_room_menu(self):
@@ -230,20 +244,6 @@ class TestSellHouseList(TestBase):
         step.screenshot()
         step.click_filter_confirm().screenshot()
 
-    @allure.description("1、二手房-筛选：位置-附近-1km 2、点击清空按钮")
-    def test_click_empty(self):
-        """
-        1、二手房-筛选：位置-附近-1km
-        2、点击清空按钮
-        """
-        step = self.shouye. \
-            goto_func_entrance_esf().click_empty(). \
-            click_screening_location(). \
-            click_filter_position_menu("附近"). \
-            click_filter_position_menu("1km")
-        step.screenshot()
-        step.click_empty().screenshot()
-
     @allure.description("二手房-筛选：更多-个人、住宅、80-100m、简装、1995年后、2-5层、南、无个税、VR看房、产权房，确定")
     def test_click_filter_more(self):
         """
@@ -289,15 +289,11 @@ class TestSellHouseList(TestBase):
             click_filter_position_menu("拉萨路小学").\
             screenshot()
 
-
-
-
-
-
-
-
-
-
-
-
-
+    # 直接點擊清空按鈕
+    @allure.description("点击清空按钮")
+    def test_click_empty(self):
+        """
+        1、点击清空按钮
+        """
+        step = self.shouye. \
+            goto_func_entrance_esf().click_empty().screenshot()

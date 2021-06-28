@@ -127,35 +127,40 @@ click_filter_sort:
     locator: 'com.house365.newhouse:id/view_search_bar_sort_image'
     action: click
 
-#标签筛选-南北通透
-click_north:
+# 合并下面的标签筛选：by zsy
+click_tips_filter:
   - by: xpath
-    locator: '//*[@text="南北通透"]'
+    locator: '//*[@text="${tips}"]'
     action: click
-
-#标签筛选-VR带看
-click_vr_see:
-  - by: xpath
-    locator: '//*[@text="VR带看"]'
-    action: click
-
-#标签筛选-中介
-click_mediation:
-  - by: xpath
-    locator: '//*[@text="中介"]'
-    action: click
-
-#标签筛选-个人
-click_personal:
-  - by: xpath
-    locator: '//*[@text="个人"]'
-    action: click
-
-#标签筛选-写字楼
-click_office_buildings:
-  - by: xpath
-    locator: '//*[@text="写字楼"]'
-    action: click
+##标签筛选-南北通透
+#click_north:
+#  - by: xpath
+#    locator: '//*[@text="南北通透"]'
+#    action: click
+#
+##标签筛选-VR带看
+#click_vr_see:
+#  - by: xpath
+#    locator: '//*[@text="VR带看"]'
+#    action: click
+#
+##标签筛选-中介
+#click_mediation:
+#  - by: xpath
+#    locator: '//*[@text="中介"]'
+#    action: click
+#
+##标签筛选-个人
+#click_personal:
+#  - by: xpath
+#    locator: '//*[@text="个人"]'
+#    action: click
+#
+##标签筛选-写字楼
+#click_office_buildings:
+#  - by: xpath
+#    locator: '//*[@text="写字楼"]'
+#    action: click
 
 #列表项第一个房源
 goto_sellhouse_detail:

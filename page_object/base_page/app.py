@@ -13,6 +13,7 @@ class App(BasePage):
     # _activity = "com.house365.newhouse.ui.MainActivity"
 
     def start(self):
+
         """
         执行appium连接设备
         :return:self
@@ -91,6 +92,7 @@ class App(BasePage):
             print("openapp: 执行launch_app")
         else:
             self.start()
+            print("openapp: 执行app.start")
 
         return self
 

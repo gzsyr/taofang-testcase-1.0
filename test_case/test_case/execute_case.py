@@ -18,7 +18,9 @@ if __name__ == "__main__":
                  "./test_buyinghouse.py",
                  "./test_newhousedetail.py",
                  "./test_newhouselist.py",
+                 "./test_publishhouse.py",
                  "./test_search.py",
+                 "./test_sellhousedetail.py",
                  "./test_sellhouselist.py"
                  # "-m search"
                  ])

@@ -1,0 +1,80 @@
+# 租房首页
+# 租房首页点击搜索框
+rent_house_search:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_search'
+    action: click
+
+# 租房首页点击地图找房
+map_find_room:
+  - by: xpath
+    locator: '//*[@text="地图找房"]'
+    action: click
+
+# 租房首页点击通勤找房
+commuting_find_room:
+  - by: xpath
+    locator: '//*[@text="通勤找房"]'
+    action: click
+
+# 租房首页点击消息
+rent_house_news:
+  - by: xpath
+    locator: '//*[@text="消息"]'
+    action: click
+
+# 租房首页点击第一屏功能入口
+rent_house_function_entrance:
+  - by: xpath
+    locator: '//*[@text="${func_entry}"]'
+    action: click
+
+# 功能入口左滑
+func_entrance_swipe_left:
+  - action: swipe_left
+    by: xpath
+    locator: '//*[@text="${pos_text}"]'
+
+# 租房首页附近tab
+rent_house_nearby:
+  - by: xpath
+    locator: '//*[@text="附近"]'
+    action: click
+
+# 租房首页公寓tab
+rent_house_apartment:
+  - by: xpath
+    locator: '//*[@text="公寓"]'
+    action: click
+
+# 租房首页严选tab
+rent_house_strict_selection:
+  - by: xpath
+    locator: '//*[@text="严选"]'
+    action: click
+
+# 租房首页写字楼tab
+rent_house_office:
+  - by: xpath
+    locator: '//*[@text="写字楼"]'
+    action: click
+
+# 租房首页发布房源
+rent_house_release_house:
+  - by: xpath
+    locator: '//*[@text="发房源"]'
+    action: click
+
+# 租房首页我的
+rent_house_mine:
+  - by: xpath
+    locator: '//*[@text="我的"]'
+    action: click
+
+# 租房首页租房顾问
+rent_house_rent_consultant:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_im_zuboshi'
+    action: click
+
+

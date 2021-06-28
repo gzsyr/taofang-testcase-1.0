@@ -1,4 +1,5 @@
 import allure
+import pytest
 
 from test_case.base_test.test_base import TestBase
 
@@ -21,13 +22,13 @@ class TestPublishHouse(TestBase):
         """
         return self.goto_publish_index().click_publishindex_m_publish()
 
-    def goto_publish_more(self):
+    def goto_publish_more(self, house_type="住宅", shi='502'):
         """
         我要卖房进入更多资料页
         :return:
         """
         # return self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_publish_sell(). \
-        return self.goto_publish_sell().goto_next_all().click_publishhouse_next()
+        return self.goto_publish_sell().goto_next_all(house_type=house_type, shi=shi).click_publishhouse_next()
 
     @allure.description("点击引导页的发布房源按钮")
     def test_click_publish(self):
@@ -186,7 +187,7 @@ class TestPublishHouse(TestBase):
         self.goto_publish_more().click_publishhouse_floor().click_publishhouse_confirm().screenshot()
 
     @allure.description("更多资料页选择房屋照片，小技巧提示语")
-    def test_publish_prompt(self):
+    def test_publish_tip(self):
         """
         更多资料页选择房屋照片，点击小技巧提示语
         :return:
@@ -194,7 +195,7 @@ class TestPublishHouse(TestBase):
         self.goto_publish_more().click_publishhouse_pictures().click_publishhouse_prompt().screenshot()
 
     @allure.description("更多资料页上传一张房源图片")
-    def test_publish_take_pictures(self):
+    def test_publish_house_picture(self):
         """
         更多资料页上传一张拍照房源图片
         少于6张图片完成时需二次确定
@@ -226,10 +227,10 @@ class TestPublishHouse(TestBase):
             select_pubilshhouse_type(house_item="房源特色", house_type="有钥匙").\
             select_pubilshhouse_type(house_item="房源特色", house_type="南北通透"). \
             select_pubilshhouse_type(house_item="房源特色", house_type="电梯").\
-            click_publishhouse_submit().screenshot()
+            click_publishhouse_confirm().screenshot()
 
     @allure.description("更多资料页上传证件照")
-    def test_publish_identity(self):
+    def test_publish_identity_picture(self):
         """
         更多资料页上传证件照
         :return:
@@ -249,7 +250,7 @@ class TestPublishHouse(TestBase):
         """
         self.goto_publish_more().click_publishhouse_ownership().\
             click_publishhouse_ownership_type().\
-            select_publishhouse_type(house_item="证件类型", house_type="不动产权证号").screenshot()
+            select_pubilshhouse_type(house_item="证件类型", house_type="不动产权证号").screenshot()
 
     @allure.description("更多资料页-权属认证-输入证件号码：宁（2020）城市不动产权第00521454号")
     def test_publish_ownership_number(self):
@@ -298,9 +299,15 @@ class TestPublishHouse(TestBase):
             send_publishhouse_text('新标题').click_publishhouse_submit().screenshot()
 
     @allure.description("发布房源")
-    def test_publishhouse_all(self):
+    @pytest.mark.parametrize(("house_type", "shi", "feature"), [("住宅", "502", "唯一住房"), ("别墅", "503", "带花园"),
+                                                                ("写字楼", "2007", "中心商务区"), ("商铺", "103", "高回报率"),
+                                                                ("厂房仓库", "100", ""), ("车库车位", "666", ""),
+                                                                ("公寓", "1003", "")])
+    def test_publishhouse_all(self, house_type, shi, feature):
         """
         发布房源
         :return:
         """
-        self.goto_publish_more().finish_publishhouse().screenshot()
+        step1 = self.goto_publish_more(house_type=house_type, shi=shi).finish_publishhouse(feature=feature)
+        step1.screenshot()
+        step1.click_publishhouse_submit().screenshot()

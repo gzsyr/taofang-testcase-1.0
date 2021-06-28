@@ -103,9 +103,9 @@ class PublishMore(BasePage):
         更多资料页上传相册图片.默认上传第一张
         :return:
         """
-        self._params["i"] = keyword
+        self._params["index"] = keyword
         with allure.step("更多资料页上传相册图片"):
-            self.steps("../../page_object/sellhouse/publishmore.yaml")
+            self.steps("../../page_object/sellhouse/publishmore.yaml", replace=True)
         self.tsleep(2)
         return self
 
@@ -180,14 +180,14 @@ class PublishMore(BasePage):
         self.tsleep(2)
         return self
 
-    def click_publishhouse_add_pictures(self, keyword='com.house365.newhouse:id/m_grid'):
+    def click_publishhouse_add_pictures(self, keyword='com.house365.newhouse:id/m_grid_back'):
         """
         更多资料页点击添加图片
         :return:
         """
         self._params["picture_num"] = keyword
         with allure.step("更多资料页添加图片"):
-            self.steps("../../page_object/sellhouse/publishmore.yaml")
+            self.steps("../../page_object/sellhouse/publishmore.yaml", replace=True)
         self.tsleep(2)
         return self
 
@@ -228,7 +228,20 @@ class PublishMore(BasePage):
         """
         self._params["ownership_number"] = keyword
         with allure.step("输入更多资料页-区属认证-证件号码"):
-            self.steps("../../page_object/sellhouse/publishmore.yaml")
+            self.steps("../../page_object/sellhouse/publishmore.yaml", replace=True)
+        self.tsleep(2)
+        return self
+
+    def select_pubilshhouse_type(self, house_item="物业类型", house_type="住宅"):
+        """
+        选择 房屋类型
+        :param:  house_item: 选择项，用户步骤中展示
+                 house_type: 房屋类型，默认为“住宅”
+        :return:
+        """
+        self._params["house_type"] = house_type
+        with allure.step("选择”" + house_item + "“的内容：" + house_type):
+            self.steps("../../page_object/sellhouse/publishhouse.yaml", replace=True)
         self.tsleep(2)
         return self
 
@@ -239,7 +252,7 @@ class PublishMore(BasePage):
         """
         self._params["property_owner"] = keyword
         with allure.step("更多资料页-权属认证-产权人姓名"):
-            self.steps("../../page_object/sellhouse/publishmore.yaml")
+            self.steps("../../page_object/sellhouse/publishmore.yaml", replace=True)
         self.tsleep(2)
         return self
 
@@ -250,18 +263,18 @@ class PublishMore(BasePage):
         """
         self._params["owner_identity"] = keyword
         with allure.step("更多资料页点击户型"):
-            self.steps("../../page_object/sellhouse/publishmore.yaml")
+            self.steps("../../page_object/sellhouse/publishmore.yaml", replace=True)
         self.tsleep(2)
         return self
 
-    def click_publishhouse_submit(self):
+    def click_publishhouse_submit(self, sec: int = 2):
         """
         更多资料页完成按钮点击
         :return:
         """
         with allure.step("更多资料页完成按钮点击"):
             self.steps("../../page_object/sellhouse/publishmore.yaml")
-        self.tsleep(2)
+        self.tsleep(sec)
         return self
 
     def click_publishhouse_title(self):
@@ -305,7 +318,12 @@ class PublishMore(BasePage):
         self._params["number"] = number
         self._params["owner"] = owner
         self._params["identity"] = identity
-        with allure.step("输入权属认证信息"):
-            self.steps("../../page_object/sellhouse/publishmore.yaml", replace=True)
-        self.tsleep(2)
+        with allure.step("输入更多信息"):
+            if feature != '':
+                self.steps("../../page_object/sellhouse/publishmore.yaml", name='finish_publishhouse_house',
+                           replace=True)
+            else:
+                self.steps("../../page_object/sellhouse/publishmore.yaml", name='finish_publishhouse_loft',
+                           replace=True)
+            self.tsleep(2)
         return self

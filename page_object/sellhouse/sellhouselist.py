@@ -150,7 +150,7 @@ class SellHouseList(BasePage):
         self._params["filter_postion"] = text
         with allure.step("点击筛选项的“位置”的" + text):
             self.steps("../../page_object/newhouse/newhouselist.yaml", replace=True)
-        self.tsleep(2)
+        self.tsleep(1)
         return self
 
     def click_filter_price(self):
@@ -235,55 +235,68 @@ class SellHouseList(BasePage):
         self.tsleep(2)
         return self
 
-    def click_north(self):
+    # 以下标签筛选的直接用例中数据驱动 by zsy
+    def click_tips_filter(self, tips="中介"):
         """
-        点击标签筛选-南北通透
+        筛选项下方的标签
         :return:
         """
-        with allure.step("点击标签筛选-南北通透"):
-            self.steps("../../page_object/sellhouse/sellhouselist.yaml")
+        self._params["tips"] = tips
+        with allure.step("点击标签筛选-" + self._params["tips"]):
+            self.steps("../../page_object/sellhouse/sellhouselist.yaml", replace=True)
         self.tsleep(2)
         return self
 
-    def click_vr_see(self):
-        """
-        点击标签筛选-VR带看
-        :return:
-        """
-        with allure.step("点击标签筛选-VR带看"):
-            self.steps("../../page_object/sellhouse/sellhouselist.yaml")
-        self.tsleep(2)
-        return self
-
-    def click_mediation(self):
-        """
-        点击标签筛选-中介
-        :return:
-        """
-        with allure.step("点击标签筛选-中介"):
-            self.steps("../../page_object/sellhouse/sellhouselist.yaml")
-        self.tsleep(2)
-        return self
-
-    def click_personal(self):
-        """
-        点击标签筛选-个人
-        :return:
-        """
-        with allure.step("点击标签筛选-个人"):
-            self.steps("../../page_object/sellhouse/sellhouselist.yaml")
-        self.tsleep(2)
-        return self
-
-    def click_office_buildings(self):
-        """
-        点击标签筛选-写字楼
-        :return:
-        """
-        with allure.step("点击标签筛选-写字楼"):
-            self.steps("../../page_object/sellhouse/sellhouselist.yaml")
-        self.tsleep(2)
-        return self
+    # 由上面一个方法代替以下方法，by zsy
+    # def click_north(self):
+    #     """
+    #     点击标签筛选-南北通透
+    #     :return:
+    #     """
+    #     with allure.step("点击标签筛选-南北通透"):
+    #         self.steps("../../page_object/sellhouse/sellhouselist.yaml")
+    #     self.tsleep(2)
+    #     return self
+    #
+    # def click_vr_see(self):
+    #     """
+    #     点击标签筛选-VR带看
+    #     :return:
+    #     """
+    #     with allure.step("点击标签筛选-VR带看"):
+    #         self.steps("../../page_object/sellhouse/sellhouselist.yaml")
+    #     self.tsleep(2)
+    #     return self
+    #
+    # def click_mediation(self):
+    #     """
+    #     点击标签筛选-中介
+    #     :return:
+    #     """
+    #     with allure.step("点击标签筛选-中介"):
+    #         self.steps("../../page_object/sellhouse/sellhouselist.yaml")
+    #     self.tsleep(2)
+    #     return self
+    #
+    # def click_personal(self):
+    #     """
+    #     点击标签筛选-个人
+    #     :return:
+    #     """
+    #     with allure.step("点击标签筛选-个人"):
+    #         self.steps("../../page_object/sellhouse/sellhouselist.yaml")
+    #     self.tsleep(2)
+    #     return self
+    #
+    # def click_office_buildings(self):
+    #     """
+    #     点击标签筛选-写字楼
+    #     :return:
+    #     """
+    #     with allure.step("点击标签筛选-写字楼"):
+    #         self.steps("../../page_object/sellhouse/sellhouselist.yaml")
+    #     self.tsleep(2)
+    #     return self
 
     def goto_sellhouse_detail(self):
         """

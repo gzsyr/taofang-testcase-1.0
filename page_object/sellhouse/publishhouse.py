@@ -179,8 +179,8 @@ class PublishHouse(BasePage):
         self.tsleep(2)
         return PublishMore(self._driver)
 
-    def goto_next_all(self, house_type="住宅",  name="万科红郡住宅", dong='8', danyuan='1', shi='502',
-                      price='450', area='120', house_ownership='产权房', seller='365公司'):
+    def goto_next_all(self, house_type="住宅",  name="测试正式小区2", dong='8', danyuan='1', shi='502',
+                      price='180', area='120', house_ownership='产权房', seller='365公司'):
         """
         输入出售房源信息
         :return:
