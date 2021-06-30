@@ -1,1 +1,53 @@
 # 独栋公寓列表页
+
+#筛选项
+click_singleapartmentlist_filter:
+  - by: xpath
+    locator: '//*[@text="${single_filter}"]'
+    action: click
+
+#品牌
+click_singleapartmentlist_brand:
+  - by: id
+    locator: "com.house365.newhouse:id/brand"
+    action: click
+
+#区域
+click_singleapartmentlist_location:
+  - by: id
+    locator: "com.house365.newhouse:id/weizhi"
+    action: click
+
+#租金
+click_singleapartmentlist_rent:
+  - by: id
+    locator: "com.house365.newhouse:id/rent"
+    action: click
+
+#面积
+click_singleapartmentlist_area:
+  - by: id
+    locator: "com.house365.newhouse:id/area"
+    action: click
+
+#确定
+click_singleapartmentlist_confirm:
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+#清空
+click_singleapartmentlist_empty:
+  - by: xpath
+    locator: '//*[@text="清空"]'
+    action: click
+
+#列表一个房源
+click_singleapartmentlist_house:
+  - by: id
+    locator: "com.house365.newhouse:id/m_img"
+    action: click
+
+
+
+

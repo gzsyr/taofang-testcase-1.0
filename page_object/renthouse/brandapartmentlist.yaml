@@ -1,1 +1,69 @@
 # 品牌公寓页面
+
+#筛选
+click_brandapartmentlist_filter:
+  - by: xpath
+    locator: '//*[@text="${filter}"]'
+    action: click
+
+#类型
+click_brandapartmentlist_type:
+  - by: id
+    locator: "com.house365.newhouse:id/mb_filter_1"
+    action: click
+
+#位置
+click_brandapartmentlist_location:
+  - by: id
+    locator: "com.house365.newhouse:id/mb_filter_2"
+    action: click
+
+#租金
+click_brandapartmentlist_price:
+  - by: id
+    locator: "com.house365.newhouse:id/mb_filter_3"
+    action: click
+
+#筛选
+click_brandapartmentlist_selected:
+  - by: id
+    locator: "com.house365.newhouse:id/mb_filter_4"
+    action: click
+
+#排序
+click_brandapartmentlist_order:
+  - by: id
+    locator: "com.house365.newhouse:id/iv_order"
+    action: click
+
+
+#确定
+click_brandapartmentlist_confirm:
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+#重置
+click_brandapartmentlist_reset:
+  - by: xpath
+    locator: '//*[@text="重置"]'
+    action: click
+
+#列表第一个房源
+click_brandapartmentlist_house:
+  - by: id
+    locator: "com.house365.newhouse:id/iv_image"
+    action: click
+
+
+brandapartmentlist_swipe:
+  - action: swipe
+    value: '${pos_text}'
+
+#搜索
+click_brandapartmentlist_search:
+  - by: id
+    locator: "com.house365.newhouse:id/search_layout"
+    action: click
+
+
