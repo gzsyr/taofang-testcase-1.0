@@ -1,6 +1,7 @@
 import allure
 
 from page_object.base_page.base_page import BasePage
+from page_object.renthouse.brandapartmentdetail import BrandApartmentDetail
 
 
 class BrandApartmentList(BasePage):
@@ -90,7 +91,7 @@ class BrandApartmentList(BasePage):
         with allure.step("列表页第一个房源"):
             self.steps("../../page_object/renthouse/brandapartmentlist.yaml")
         self.tsleep(1)
-        return self
+        return BrandApartmentDetail(self._driver)
 
     def click_brandapartmentlist_search(self):
         """

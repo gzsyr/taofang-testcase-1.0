@@ -55,7 +55,7 @@ click_brandapartmentlist_house:
     locator: "com.house365.newhouse:id/iv_image"
     action: click
 
-
+#滑动
 brandapartmentlist_swipe:
   - action: swipe
     value: '${pos_text}'

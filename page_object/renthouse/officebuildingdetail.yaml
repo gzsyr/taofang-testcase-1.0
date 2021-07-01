@@ -1,0 +1,152 @@
+#写字楼详情页
+#分享
+click_officebuilding_detail_share:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_bar_share'
+    action: click
+
+#收藏
+click_officebuilding_detail_collect:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_bar_collect'
+    action: click
+
+#消息
+click_officebuilding_detail_msg:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_bar_msg'
+    action: click
+
+#图片
+click_officebuilding_detail_pic:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_pic'
+    action: click
+
+
+#单价-im咨询入口
+click_officebuilding_detail_price_im:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_price_im'
+    action: click
+
+#小地图按钮
+click_officebuilding_detail_location:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_location'
+    action: click
+
+#房源概况-预约看房
+click_officebuilding_detail_info_im:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_base_info_im'
+    action: click
+
+#房源描述-电话
+click_officebuilding_detail_iv_call:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_call'
+    action: click
+
+#房源描述-im咨询
+click_officebuilding_detail_iv_im:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_im'
+    action: click
+
+
+#房源描述-展开
+click_officebuilding_detail_tv_more:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_more'
+    action: click
+
+#所属楼盘-查看详情
+click_officebuilding_detail_go_detail:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_go_detail'
+    action: click
+
+#大地图
+click_officebuilding_detail_map:
+  - by: id
+    locator: 'com.house365.newhouse:id/map_image'
+    action: click
+
+#地铁-咨询详情
+click_officebuilding_detail_tv_im:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_im'
+    action: click
+
+#地铁-共X条路线
+click_officebuilding_detail_tv_control:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_control'
+    action: click
+
+#举报
+click_officebuilding_detail_complaint:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_complaint'
+    action: click
+
+#附近写字楼-查看全部
+click_officebuilding_detail_list_more:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_home_list_more'
+    action: click
+
+#附近写字楼-第一个楼盘
+click_officebuilding_detail_list_house:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_house_image'
+    action: click
+
+#悬浮-提问
+click_officebuilding_detail_arrow:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_arrow'
+    action: click
+
+#底部-电话咨询
+click_officebuilding_detail_btn_call:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_call_business_novrdk'
+    action: click
+
+#底部-在线咨询
+click_officebuilding_detail_btn_im:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_im_business_novrdk'
+    action: click
+
+#点击底部经纪人信息
+click_officebuilding_detail_btn_person:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_person_name_business'
+    action: click
+
+#滑动
+officebuilding_swipe:
+  - action: swipe
+    value: '${pos_text}'
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+

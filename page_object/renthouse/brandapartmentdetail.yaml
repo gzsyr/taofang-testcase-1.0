@@ -1,0 +1,80 @@
+#品牌公寓详情页
+
+#收藏
+click_brandapartment_detail_collection:
+  - by: id
+    locator: "com.house365.newhouse:id/right21"
+    action: click
+
+#分享
+click_brandapartment_detail_share:
+  - by: id
+    locator: "com.house365.newhouse:id/right1"
+    action: click
+
+#图片
+click_brandapartment_detail_pic:
+  - by: id
+    locator: "com.house365.newhouse:id/pic_count"
+    action: click
+
+#单价-im咨询入口
+click_brandapartment_detail_price_im:
+  - by: id
+    locator: "com.house365.newhouse:id/iv_price_im"
+    action: click
+
+#投诉举报
+click_brandapartment_detail_complaint:
+  - by: xpath
+    locator: '//*[@text="投诉举报"]'
+    action: click
+
+#地图
+click_brandapartment_detail_map:
+  - by: id
+    locator: 'com.house365.newhouse:id/house_detail_map'
+    action: click
+
+#房源描述-咨询详情
+click_brandapartment_detail_tv_im:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_im'
+    action: click
+
+
+#找不到合适的房源？365租房顾问帮你忙！
+click_brandapartment_detail_zuboshi:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_zuboshi'
+    action: click
+
+
+#品牌公寓
+click_brandapartment_detail_brandname:
+  - by: id
+    locator: 'com.house365.newhouse:id/house_detail_apartment_brand_name'
+    action: click
+
+#悬浮提问
+click_brandapartment_detail_arrow:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_arrow'
+    action: click
+
+#联系电话
+click_brandapartment_detail_btn_call:
+  - by: xpath
+    locator: '//*[@text="联系电话"]'
+    action: click
+
+#预约看房
+click_brandapartment_detail_btn_im:
+  - by: xpath
+    locator: '//*[@text="预约看房"]'
+    action: click
+
+#滑动
+fun_swipe:
+  - action: swipe
+    value: '${pos_text}'

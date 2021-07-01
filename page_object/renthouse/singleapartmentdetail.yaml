@@ -1,0 +1,45 @@
+#独栋公寓详情页
+
+#房源图片
+click_singleapartment_detail_pic:
+  - by: id
+    locator: "com.house365.newhouse:id/iv_pic"
+    action: click
+
+#在租房型-第一个房型
+click_singleapartment_detail_house:
+  - by: xpath
+    locator: '//*[contains(@resource-id,"rv_rent_list")]/android.view.ViewGroup[1]'
+    action: click
+
+#公寓-查看全部
+click_singleapartment_detail_full_house:
+  - by: id
+    locator: "com.house365.newhouse:id/tv_full_house"
+    action: click
+
+#公寓位置右侧的“>”
+click_singleapartment_detail_location:
+  - by: id
+    locator: "com.house365.newhouse:id/iv_location"
+    action: click
+
+#地图
+click_singleapartment_detail_map:
+  - by: id
+    locator: "com.house365.newhouse:id/map_image"
+    action: click
+
+#联系公寓
+click_singleapartment_detail_contact:
+  - by: id
+    locator: "com.house365.newhouse:id/tv_contact_apartment"
+    action: click
+
+#滑动
+fun_swipe:
+  - action: swipe
+    value: '${pos_text}'
+
+
+

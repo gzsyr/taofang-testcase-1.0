@@ -1,6 +1,7 @@
 import allure
 
 from page_object.base_page.base_page import BasePage
+from page_object.renthouse.officebuildingdetail import OfficeBuildingDetail
 
 
 class OfficeBuildingList(BasePage):
@@ -77,7 +78,7 @@ class OfficeBuildingList(BasePage):
         with allure.step("点击推荐楼盘第一个楼盘，进入详情"):
             self.steps("../../page_object/renthouse/officebuildinglist.yaml")
         self.tsleep(2)
-        return self
+        return OfficeBuildingDetail(self._driver)
 
     def func_swipe(self, text):
         """
