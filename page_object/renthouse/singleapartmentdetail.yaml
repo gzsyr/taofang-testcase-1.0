@@ -3,7 +3,7 @@
 #房源图片
 click_singleapartment_detail_pic:
   - by: id
-    locator: "com.house365.newhouse:id/iv_pic"
+    locator: "com.house365.newhouse:id/rl_group_pic"
     action: click
 
 #在租房型-第一个房型

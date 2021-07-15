@@ -3,6 +3,7 @@ from page_object.base_page.base_page import BasePage
 from page_object.renthouse.brandapartmentlist import BrandApartmentList
 from page_object.renthouse.lookroommatelist import LookRoommateList
 from page_object.renthouse.officebuildinglist import OfficeBuildingList
+from page_object.renthouse.publishrentalindex import PublishRentalIndex
 from page_object.renthouse.rentfindhouse import RentFindHouse
 from page_object.renthouse.renthouselist import RentHouseList
 from page_object.renthouse.singleapartmentlist import SingleApartmentList
@@ -146,7 +147,7 @@ class RentHouse(BasePage):
             self.steps("../../page_object/renthouse/renthouse.yaml")
         self.tsleep(2)
 
-        return self
+        return PublishRentalIndex(self._driver)
 
     def rent_house_mine(self):
         """

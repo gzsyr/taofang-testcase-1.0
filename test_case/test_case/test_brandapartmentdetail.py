@@ -47,7 +47,7 @@ class TestBrandApartmentDetail(TestBase):
 
     @allure.description("品牌公寓详情页，点击公寓品牌名称")
     def test_click_brandapartment_detail_brandname(self):
-        self.goto_brandapartmentdetail().fun_swipe().click_brandapartment_detail_brandname().screenshot()
+        self.goto_brandapartmentdetail().fun_swipe("buttom").click_brandapartment_detail_brandname().screenshot()
 
     @allure.description("品牌公寓详情页，点击悬浮-提问")
     def test_click_brandapartment_detail_arrow(self):
@@ -58,7 +58,7 @@ class TestBrandApartmentDetail(TestBase):
         self.goto_brandapartmentdetail().click_brandapartment_detail_btn_call().screenshot()
 
 
-    @allure.description("品牌公寓详情页，点击底部-联系电话")
+    @allure.description("品牌公寓详情页，点击底部-预约看房")
     def test_click_brandapartment_detail_btn_im(self):
         self.goto_brandapartmentdetail().click_brandapartment_detail_btn_im().screenshot()
 

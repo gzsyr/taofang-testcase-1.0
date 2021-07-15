@@ -23,12 +23,12 @@ class TestSingleApartmentDetail(TestBase):
 
     @allure.description("独栋公寓详情页,点击公寓品牌右侧“查看全部”")
     def test_click_singleapartment_detail_full_house(self):
-        self.goto_singleapartmentdetail().fun_swipe().\
+        self.goto_singleapartmentdetail().fun_swipe("buttom").\
             click_singleapartment_detail_full_house().screenshot()
 
     @allure.description("独栋公寓详情页,点击公寓位置-地图")
     def test_click_singleapartment_detail_map(self):
-        self.goto_singleapartmentdetail().fun_swipe().\
+        self.goto_singleapartmentdetail().fun_swipe("buttom").\
             click_singleapartment_detail_map().screenshot()
 
     @allure.description("独栋公寓详情页,点击“联系公寓”按钮")

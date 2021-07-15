@@ -1,0 +1,63 @@
+#图片添加页面
+
+#图片或者视频-添加图片按钮
+click_publishrentalpic_picadd:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_add'
+    action: click
+
+#图片或者视频-添加视频
+click_publishrentalpic_vedio:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_no_video'
+    action: click
+
+fun_para:
+  - by: xpath
+    locator: '//*[@text="${paramenter}"]'
+    action: click
+
+#图片或者视频-添加图片
+click_publishrentalpic_selected:
+  - by: id
+    locator: 'com.house365.newhouse:id/isselected'
+    action: click
+
+#图片或者视频-上传按钮
+click_publishrentalpic_hand:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_hand'
+    action: click
+
+#图片或者视频-添加图片页左上角返回按钮
+click_publishrentalpic_back:
+  - by: id
+    locator: 'com.house365.newhouse:id/view_title_back'
+    action: click
+
+#图片或者视频-完成按钮
+click_publishrentalpic_complete:
+  - by: xpath
+    locator: '//*[@text="完成"]'
+    action: click
+
+#图片或者视频-不需要
+click_publishrentalpic_noneed:
+  - by: xpath
+    locator: '//*[@text="不需要"]'
+    action: click
+
+#图片或者视频-再传几张
+click_publishrentalpic_upload:
+  - by: xpath
+    locator: '//*[@text="再传几张"]'
+    action: click
+
+
+
+
+
+
+
+
+

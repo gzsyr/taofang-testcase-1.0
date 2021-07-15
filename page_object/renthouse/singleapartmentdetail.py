@@ -17,7 +17,7 @@ class SingleApartmentDetail(BasePage):
         """
         self._params["pos_text"] = pos_text
         with allure.step("滑动到" + self._params["pos_text"]):
-            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml.yaml", replace=True)
+            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml", replace=True)
         self.tsleep(1)
         return self
 
@@ -26,7 +26,7 @@ class SingleApartmentDetail(BasePage):
         点击房源图片
         """
         with allure.step("点击房源图片"):
-            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml.yaml")
+            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml")
         self.tsleep(1)
         return self
 
@@ -35,7 +35,7 @@ class SingleApartmentDetail(BasePage):
         点击在租房型-第一个房型
         """
         with allure.step("点击在租房型-第一个房型"):
-            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml.yaml")
+            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml")
         self.tsleep(1)
         return self
 
@@ -44,7 +44,7 @@ class SingleApartmentDetail(BasePage):
         点击公寓-查看全部
         """
         with allure.step("点击公寓-查看全部"):
-            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml.yaml")
+            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml")
         self.tsleep(1)
         return self
 
@@ -53,7 +53,7 @@ class SingleApartmentDetail(BasePage):
         点击公寓位置右侧的“>”
         """
         with allure.step("点击公寓位置右侧的“>”"):
-            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml.yaml")
+            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml")
         self.tsleep(1)
         return self
 
@@ -62,7 +62,7 @@ class SingleApartmentDetail(BasePage):
         点击地图
         """
         with allure.step("点击地图"):
-            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml.yaml")
+            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml")
         self.tsleep(1)
         return self
 
@@ -71,7 +71,7 @@ class SingleApartmentDetail(BasePage):
         点击联系公寓
         """
         with allure.step("点击联系公寓"):
-            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml.yaml")
+            self.steps("../../page_object/renthouse/singleapartmentdetail.yaml")
         self.tsleep(1)
         return self
 

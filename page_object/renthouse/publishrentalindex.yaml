@@ -1,0 +1,39 @@
+#发布租房首页
+#租房发布页面，选择类型
+click_publishrentindex_type:
+  - by: xpath
+    locator: '//*[@text="${tv_type}"]'
+    action: click
+
+#立即认证
+click_publishrentindex_authentication:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_authentication'
+    action: click
+
+#发布规则按钮
+click_publishrentindex_rules:
+  - by: xpath
+    locator: '//*[@text="发布规则"]'
+    action: click
+
+#发布规则-“我知道了”按钮
+click_publishrentindex_know:
+  - by: xpath
+    locator: '//*[@text="我知道了"]'
+    action: click
+
+#我已阅读并同意勾选框
+click_publishrentindex_agreement:
+  - by: id
+    locator: 'com.house365.newhouse:id/cb_agreement'
+    action: click
+
+#立即发布
+click_publishrentindex_publis:
+  - by: xpath
+    locator: '//*[@text="立即发布"]'
+    action: click
+
+
+

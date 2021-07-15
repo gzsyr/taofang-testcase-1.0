@@ -1,0 +1,156 @@
+#租房发布页面第一页
+
+#点击图片或视频
+click_publishrental_upload:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_upload_hint'
+    action: click
+
+#小区名称输入框
+click_publishrental_blockname:
+  - by: xpath
+    locator: '//*[@text="小区名称"]/..//*[contains(@resource-id,"tv_content_1")]'
+    action: click
+
+# 点击小区名称搜索框
+send_publishrental_name_search:
+  - by: id
+    locator: 'com.house365.newhouse:id/et_search'
+    action: send
+    value: "${house_name}"
+
+# 点击小区名称搜索结果
+select_publishrental_name_result:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_title'
+    action: click
+
+#户型输入框
+click_publishrental_unittype:
+  - by: xpath
+    locator: '//*[@text="户型"]/..//*[contains(@resource-id,"tv_content_1")]'
+    action: click
+
+#朝向输入框
+click_publishrental_towards:
+  - by: xpath
+    locator: '//*[@text="朝向"]/..//*[contains(@resource-id,"tv_content_2")]'
+    action: click
+
+#楼层输入框
+click_publishrental_floor:
+  - by: xpath
+    locator: '//*[@text="楼层"]/..//*[contains(@resource-id,"tv_content_3")]'
+    action: click
+
+
+fun_para:
+  - by: xpath
+    locator: '//*[@text="${parameter}"]'
+    action: click
+
+#楼栋号输入框
+click_publishrental_building_num:
+  - by: xpath
+    locator: '//*[@text="楼栋号"]/..//*[contains(@resource-id,"tv_content_1")]'
+    action: click
+
+#单元号输入框
+click_publishrental_unit_num:
+  - by: xpath
+    locator: '//*[@text="单元号"]/..//*[contains(@resource-id,"tv_content_2")]'
+    action: click
+
+#室号输入框
+click_publishrental_room_num:
+  - by: xpath
+    locator: '//*[@text="室号"]/..//*[contains(@resource-id,"tv_content_3")]'
+    action: click
+
+#面积
+click_publishrental_area:
+  - by: xpath
+    locator: '//*[@text="面积"]/..//*[contains(@resource-id,"tv_content")]'
+    action: click
+
+#租金
+click_publishrental_rent:
+  - by: xpath
+    locator: '//*[@text="租金"]/..//*[contains(@resource-id,"tv_content")]'
+    action: click
+
+
+#租金包含费用
+click_publishrental_rent_include:
+  - by: xpath
+    locator: '//*[@text="租金包含费用"]'
+    action: click
+
+
+#装修
+click_publishrental_decoratio:
+  - by: xpath
+    locator: '//*[@text="装修"]'
+    action: click
+
+#合租-租客性别
+click_publishrental_gender:
+  - by: xpath
+    locator: '//*[@text="租客性别"]'
+    action: click
+
+#确定按钮
+click_publishrental_confirm:
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+#重置
+click_publishrental_reset:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_reset'
+    action: click
+
+#下一步
+click_publishrental_next:
+  - by: xpath
+    locator: '//*[@text="下一步"]'
+    action: click
+
+
+
+#滑动
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

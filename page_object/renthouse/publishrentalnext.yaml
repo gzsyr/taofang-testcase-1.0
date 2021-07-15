@@ -1,0 +1,74 @@
+#出租发布第二页
+
+#点击看房时间
+click_publishrentalnext_viewing_time:
+  - by: xpath
+    locator: '//*[@text="看房时间"]/..//*[contains(@resource-id,"tv_content_1")]'
+    action: click
+
+#点击入驻时间
+click_publishrentalnext_settlement_time:
+  - by: xpath
+    locator: '//*[@text="入驻时间"]/..//*[contains(@resource-id,"tv_content_2")]'
+    action: click
+
+#点击房源标题
+click_publishrentalnext_title:
+  - by: id
+    locator: 'com.house365.newhouse:id/et_title'
+    value: "${title}"
+    action: send
+
+
+fun_nextpara:
+  - by: xpath
+    locator: '//*[@text="${parameter}"]'
+    action: click
+
+#房源描述
+send_publishrentalnext_description:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_house_description'
+    value: "${description}"
+    action: send
+
+#姓名输入
+send_publishrentalnext_name:
+  - by: id
+    locator: 'com.house365.newhouse:id/et_name'
+    value: "${name}"
+    action: send
+
+#点击手机号
+click_publishrentalnext_phone:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_phone'
+    action: click
+
+#点击确认发布
+click_publishrentalnext_publish:
+  - by: xpath
+    locator: '//*[@text="确认发布"]'
+    action: click
+
+#点击“重置”
+click_publishrentalnext_reset:
+  - by: xpath
+    locator: '//*[@text="重置"]'
+    action: click
+
+#确定按钮
+click_publishrentalnext_confirm:
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+
+
+
+
+#滑动
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'
+

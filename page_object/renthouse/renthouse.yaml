@@ -61,8 +61,8 @@ rent_house_office:
 
 # 租房首页发布房源
 rent_house_release_house:
-  - by: xpath
-    locator: '//*[@text="发房源"]'
+  - by: id
+    locator: 'com.house365.newhouse:id/include_tab_publish'
     action: click
 
 # 租房首页我的

@@ -64,14 +64,14 @@ click_brandapartment_detail_arrow:
 
 #联系电话
 click_brandapartment_detail_btn_call:
-  - by: xpath
-    locator: '//*[@text="联系电话"]'
+  - by: id
+    locator: 'com.house365.newhouse:id/connect_landlord_button'
     action: click
 
 #预约看房
 click_brandapartment_detail_btn_im:
-  - by: xpath
-    locator: '//*[@text="预约看房"]'
+  - by: id
+    locator: 'com.house365.newhouse:id/booking_house_button'
     action: click
 
 #滑动
