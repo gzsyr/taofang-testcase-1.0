@@ -1,6 +1,7 @@
 import allure
 
 from page_object.base_page.base_page import BasePage
+from page_object.business.shopmalllist import ShopMallList
 from page_object.indexpage.buyingtools import BuyingTools
 from page_object.indexpage.indexsearch import IndexSearch
 from page_object.indexpage.selectcity import SelectCity
@@ -72,16 +73,17 @@ class Main(BasePage):
         """
         self.goto_func_entrance_first("租房")
         return RentHouse(self._driver)
-    #
-    # def goto_func_entrance_spbg(self):
-    #     """
-    #     点击:功能入口-商铺办公
-    #     :return:
-    #     """
-    #     with allure.step("点击功能入口的商铺办公icon"):
-    #         self.steps("../../page_object/indexpage/main.yaml")
-    #     self.tsleep(2)
-    #     return self
+
+    def goto_func_entrance_spbg(self):
+        """
+        点击:功能入口-商铺办公
+        :return:
+        """
+        # with allure.step("点击功能入口的商铺办公icon"):
+        #     self.steps("../../page_object/indexpage/main.yaml")
+        # self.tsleep(2)
+        self.goto_func_entrance_first("商铺办公")
+        return ShopMallList(self._driver)
     #
     # def goto_func_entrance_fyfb(self):
     #     """
