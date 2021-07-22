@@ -1,0 +1,103 @@
+# 查房价页面
+
+#点击小区名称搜索框
+click_search_house:
+  - by: id
+    locator: 'com.house365.newhouse:id/search_text'
+    action: click
+
+#选择小区
+select_house:
+  - by: id
+    locator: 'com.house365.newhouse:id/block_select'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/keywords'
+    action: send
+    value: "${house_name}"
+  - by: xpath
+    locator: '//*[@text="${house_name}" and contains(@resource-id, "h_name")]'
+    action: click
+
+#输入面积
+send_area:
+  - by: id
+    locator: 'com.house365.newhouse:id/area_input'
+    action: send
+    value: "${area}"
+
+#点击快速评估
+quick_check_house_price:
+#选择小区
+  - by: id
+    locator: 'com.house365.newhouse:id/block_select'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/keywords'
+    action: send
+    value: "${house_name}"
+  - by: xpath
+    locator: '//*[@text="${house_name}" and contains(@resource-id, "h_name")]'
+    action: click
+#输入面积
+  - by: id
+    locator: 'com.house365.newhouse:id/area_input'
+    action: send
+    value: "${area}"
+#点击快速评估按钮
+  - by: id
+    locator: 'com.house365.newhouse:id/quick_assess'
+    action: click
+
+#查看附近房价按钮
+check_nearby_price:
+  - by: id
+    locator: 'com.house365.newhouse:id/nearby_textview'
+    action: click
+
+#查看附近房价按钮
+click_house_price_map:
+  - by: id
+    locator: 'com.house365.newhouse:id/mapview'
+    action: click
+
+#点击查看区属房价
+goto_district_house_price:
+  - by: xpath
+    locator: '//*[@text="${position}"]'
+    action: click
+
+#点击查看我的评估记录-更多
+click_more_record:
+  - by: id
+    locator: 'com.house365.newhouse:id/more_history'
+    action: click
+
+#点击查看我的评估记录-评估结果
+view_record_result:
+  - by: xpath
+    locator: '//*[@text="查看评估结果"]'
+    action: click
+
+#点击查看我的评估记录-小区详情
+view_record_house:
+  - by: xpath
+    locator: '//*[@text="查看小区详情"]'
+    action: click
+
+#点击查看我的评估记录-小区详情
+view_record_expert_evaluation:
+  - by: xpath
+    locator: '//*[@text="专家评估"]'
+    action: click
+
+#点击查看我的评估记录-小区详情
+goto_write_house_information:
+  - by: id
+    locator: 'com.house365.newhouse:id/assess_house'
+    action: click
+
+ #上滑页面
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'
