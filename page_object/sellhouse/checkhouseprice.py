@@ -48,7 +48,7 @@ class CheckHousePrice(BasePage):
         self._params["area"] = area
         with allure.step("输入房屋信息，快速评估房价：小区名称=" + house_name + "，面积=" + area):
             self.steps("../../page_object/sellhouse/checkhouseprice.yaml", replace=True)
-        self.tsleep(2)
+        self.tsleep(5)
         return self
 
     def check_nearby_price(self):
@@ -132,7 +132,7 @@ class CheckHousePrice(BasePage):
         self.tsleep(2)
         return self
 
-    def func_swipe(self, pos_text=None):
+    def func_swipe(self, pos_text='buttom'):
         """
         滑动到pos_text的位置，滑动
         :param pos_text: 1、写入页面存在的元素
@@ -141,7 +141,7 @@ class CheckHousePrice(BasePage):
         """
         self._params["pos_text"] = pos_text
         with allure.step("滑动到" + self._params["pos_text"]):
-            self.steps("../../page_object/sellhouse/sellhousedetail.yaml", replace=True)
+            self.steps("../../page_object/sellhouse/checkhouseprice.yaml", replace=True)
         self.tsleep(2)
         return self
 
