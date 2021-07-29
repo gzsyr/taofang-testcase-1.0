@@ -1,0 +1,71 @@
+#点击功能入口
+goto_officelist:
+  - by: xpath
+    locator: '//*[@text="${func_entry}" and contains(@resource-id,"tv_name")]'
+    action: click
+
+#点击最新商讯
+goto_newslist:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_message'
+    action: click
+
+#点击帮你找铺
+find_office:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_btn_search'
+    action: click
+
+#点击买商铺tab
+select_buy_shop:
+  - by: id
+    locator: 'com.house365.newhouse:id/rb_shop_shangpu'
+    action: click
+
+#点击租商铺tab
+select_rent_shop:
+  - by: id
+    locator: 'com.house365.newhouse:id/rb_rent_shangpu'
+    action: click
+
+#点击买写字楼tab
+select_buy_office:
+  - by: id
+    locator: 'com.house365.newhouse:id/rb_shop_xiezilou'
+    action: click
+
+#点击租写字楼tab
+select_rent_office:
+  - by: id
+    locator: 'com.house365.newhouse:id/rb_rent_xiezilou'
+    action: click
+
+#点击推荐房源列表筛选项
+select_filter_office:
+  - by: xpath
+    locator: '//*[@text="${menu}"]'
+    action: click
+
+#点击买商铺房源，进入详情
+goto_buy_officelist:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_name'
+    action: click
+
+#点击租商铺房源，进入详情
+goto_rent_shop_detial:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_title'
+    action: click
+
+#点击买写字楼房源，进入详情
+goto_buy_office_detial:
+  - by: id
+    locator: 'com.house365.newhouse:id/h_name'
+    action: click
+
+#点击租写字楼房源，进入详情
+goto_rent_office_detial:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_title'
+    action: click
