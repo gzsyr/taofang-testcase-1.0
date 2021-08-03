@@ -1,0 +1,65 @@
+# 房博士主页面
+goto_doctor_search:
+  - action: click
+    by: id
+    locator: 'com.house365.newhouse:id/search'
+
+# 点击“电话咨询”
+goto_doctor_call:
+  - action: click
+    by: id
+    locator: com.house365.newhouse:id/tv_fbs_tel
+
+# 点击“快速提问”
+goto_doctor_ask:
+  - action: click
+    by: id
+    locator: com.house365.newhouse:id/tv_fbs_ask
+
+# 点击购房百科的第一条
+goto_doctor_wiki_first:
+  - action: click
+    by: id
+    locator: com.house365.newhouse:id/tv_wiki_title
+
+# 点击购房百科的更多
+goto_doctor_wiki_more:
+  - action: click
+    by: id
+    locator: com.house365.newhouse:id/fbs_wiki_more
+
+# 点击房博士的更多
+goto_doctor_more:
+  - action: click
+    by: id
+    locator: com.house365.newhouse:id/fbs_more
+
+# 点击房博士第一个的头像
+goto_doctor_photo_first:
+  - action: click
+    by: id
+    locator: com.house365.newhouse:id/avatar
+
+# 点击房博士第一个的咨询我
+goto_doctor_consult_first:
+  - action: click
+    by: id
+    locator: com.house365.newhouse:id/consult
+
+# 点击热门问答的更多
+goto_doctor_hot_more:
+  - action: click
+    by: id
+    locator: com.house365.newhouse:id/fbs_more_hot_qa
+
+# 点击问答列表的第一个
+goto_doctor_question_first:
+  - action: click
+    by: id
+    locator: com.house365.newhouse:id/layout_content
+
+# 点击热门问答的第一个标签
+goto_doctor_tag_first:
+  - action: click
+    by: xpath
+    locator: "//*[@resource_id='com.house365.newhouse:id/layout_fbs_qa_tag']/*[@text='新房']"
