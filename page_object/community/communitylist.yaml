@@ -2,88 +2,94 @@
 #小区搜索框
 click_community_search:
   - by: id
-    locator: com.house365.newhouse:id/search_text
+    locator: 'com.house365.newhouse:id/search_text'
     action: click
 
-#地图按钮
+#地图
 click_community_map:
   - by: id
-    locator: com.house365.newhouse:id/iv_msg
+    locator: "com.house365.newhouse:id/m_map"
+    action: click
+
+#消息按钮
+click_community_msg:
+  - by: id
+    locator: "com.house365.newhouse:id/iv_msg"
     action: click
 
 #筛选项-位置
 click_community_location:
   - by: id
-    locator: com.house365.newhouse:id/view_search_bar_region_text
+    locator: 'com.house365.newhouse:id/view_search_bar_region_text'
     action: click
 
 #参数化方法
 fun_para:
   - by: xpath
-    locator: //*[@text="${para}"]
+    locator: '//*[@text="${para}"]'
     action: click
 
 #筛选项-均价
 click_community_price:
   - by: id
-    locator: com.house365.newhouse:id/view_search_bar_price_text
+    locator: 'com.house365.newhouse:id/view_search_bar_price_text'
     action: click
 
 
 #筛选项-房龄
 click_community_room_age:
   - by: id
-    locator: com.house365.newhouse:id/view_search_bar_room_text
+    locator: 'com.house365.newhouse:id/view_search_bar_room_text'
     action: click
 
 #筛选项-更多
 click_community_more:
   - by: id
-    locator: com.house365.newhouse:id/view_search_bar_filter_text
+    locator: 'com.house365.newhouse:id/view_search_bar_filter_text'
     action: click
 
 #筛选项-排序
 click_community_sort:
   - by: id
-    locator: com.house365.newhouse:id/view_search_bar_sort_image
+    locator: 'com.house365.newhouse:id/view_search_bar_sort_image'
     action: click
 
 #筛选清空按钮
 click_community_delete:
   - by: id
-    locator: com.house365.newhouse:id/search_bar_delete_condition
+    locator: 'com.house365.newhouse:id/search_bar_delete_condition'
     action: click
 
 #点击小区，进入小区详情页
-goto_community_detail:
+go_community_detail:
   - by: id
-    locator: com.house365.newhouse:id/drawee_view
+    locator: 'com.house365.newhouse:id/drawee_view'
     action: click
 
 #小区旁边的im消息入口
 click_community_im:
   - by: id
-    locator: com.house365.newhouse:id/experts_im
+    locator: 'com.house365.newhouse:id/experts_im'
     action: click
 
 #筛选-均价-自定义：最低价
 click_community_lowest_price:
   - by: xpath
-    locator: //*[@text="最低价"]
+    locator: '//*[@text="最低价"]'
     action: send
     value: "10000"
 
 #筛选-均价-自定义：最高价
 click_community_highest_price:
   - by: xpath
-    locator: //*[@text="最高价"]
+    locator: '//*[@text="最高价"]'
     action: send
     value: "50000"
 
 #确定按钮
 click_community_confirm:
   - by: xpath
-    locator: //*[@text="确定"]
+    locator: '//*[@text="确定"]'
     action: click
 
 

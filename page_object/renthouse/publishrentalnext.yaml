@@ -9,7 +9,7 @@ click_publishrentalnext_viewing_time:
 #点击入驻时间
 click_publishrentalnext_settlement_time:
   - by: xpath
-    locator: '//*[@text="入驻时间"]/..//*[contains(@resource-id,"tv_content_2")]'
+    locator: '//*[@text="入住时间"]/..//*[contains(@resource-id,"tv_content_2")]'
     action: click
 
 #点击房源标题
@@ -53,8 +53,8 @@ click_publishrentalnext_publish:
 
 #点击“重置”
 click_publishrentalnext_reset:
-  - by: xpath
-    locator: '//*[@text="重置"]'
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_reset'
     action: click
 
 #确定按钮
@@ -62,7 +62,6 @@ click_publishrentalnext_confirm:
   - by: xpath
     locator: '//*[@text="确定"]'
     action: click
-
 
 
 

@@ -3,6 +3,8 @@
 
 import allure
 from page_object.base_page.base_page import BasePage
+from page_object.community.communitydetail import CommunityDetail
+
 
 class CommunityList(BasePage):
     """
@@ -27,7 +29,7 @@ class CommunityList(BasePage):
         self.tsleep(1)
         return self
 
-    def click_community_location(self):
+    def click_community_msg(self):
         """
         点击小区搜索框旁的消息按钮
         """
@@ -36,7 +38,7 @@ class CommunityList(BasePage):
         self.tsleep(1)
         return self
 
-    def click_community_msg(self):
+    def click_community_location(self):
         """
         点击筛选项-位置
         """
@@ -90,14 +92,14 @@ class CommunityList(BasePage):
         self.tsleep(1)
         return self
 
-    def goto_community_detail(self):
+    def go_community_detail(self):
         """
         点击小区列表第一个小区
         """
         with allure.step("点击小区列表第一个小区"):
             self.steps("../../page_object/community/communitylist.yaml")
         self.tsleep(1)
-        return self
+        return CommunityDetail(self._driver)
 
     def click_community_im(self):
         """

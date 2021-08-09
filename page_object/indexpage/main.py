@@ -2,7 +2,8 @@ import allure
 
 from page_object.base_page.base_page import BasePage
 from page_object.business.shopmalllist import ShopMallList
-from page_object.housedoctor.housedoctormain import HouseDoctorMain
+from page_object.community.communitylist import CommunityList
+from page_object.housetour.housetour import HouseTour
 from page_object.indexpage.buyingtools import BuyingTools
 from page_object.indexpage.indexsearch import IndexSearch
 from page_object.indexpage.selectcity import SelectCity
@@ -49,7 +50,16 @@ class Main(BasePage):
         with allure.step("点击功能入口：" + self._params["func_entry"]):
             self.steps("../../page_object/indexpage/main.yaml", replace=True)
         self.tsleep(1)
-        return BuyingTools(self._driver)
+        if "找小区" == self._params["func_entry"]:
+            return CommunityList(self._driver)
+        if "购房工具" == self._params["func_entry"]:
+            return BuyingTools(self._driver)
+        if "新房" == self._params["func_entry"]:
+            return NewHouseList(self._driver)
+        if "看房团" == self._params["func_entry"]:
+            return HouseTour(self._driver)
+        else:
+            return self
 
     # 以下是功能入口 , 暂时合并第一屏的代码------by： zsy
     def goto_func_entrance_newhouse(self):
@@ -619,7 +629,7 @@ class Main(BasePage):
         with allure.step("点击首页房博士tab"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
-        return HouseDoctorMain
+        return self
 
     def goto_find(self):
         """

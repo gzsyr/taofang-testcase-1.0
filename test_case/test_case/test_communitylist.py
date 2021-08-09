@@ -37,7 +37,7 @@ class Test_CommunityList(TestBase):
 
     @allure.description("点击均价->下级选项(1.5-2万元/㎡)")
     def test_click_community_price(self):
-        self.goto_communitylist().click_community_price().fun_para("1.5-2万元/㎡").screenshot()
+        self.goto_communitylist().click_community_price().fun_para("1.5-2万元/ m²").screenshot()
 
     @allure.description("点击均价->自定义")
     def test_click_community_customize(self):
@@ -56,7 +56,7 @@ class Test_CommunityList(TestBase):
 
     @allure.description("点击排序->下级选项（涨幅从低到高）")
     def test_click_community_sort(self):
-        self.goto_communitylist().click_community_more(). \
+        self.goto_communitylist().click_community_sort(). \
             fun_para("涨幅从低到高").screenshot()
 
     @allure.description("选择房龄->2-5年，点击清空按钮")
@@ -71,7 +71,7 @@ class Test_CommunityList(TestBase):
 
     @allure.description("点击小区列表第一个小区")
     def test_goto_community_detail(self):
-        self.goto_communitylist().goto_community_detail().screenshot()
+        self.goto_communitylist().go_community_detail().screenshot()
 		
     @allure.description("点击小区旁边的im入口")
     def test_click_community_im(self):

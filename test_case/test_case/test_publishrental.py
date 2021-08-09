@@ -23,6 +23,9 @@ class Test_PublishRental(TestBase):
         return self.goto_rentindex().click_publishrentindex_type()
 
     def goto_rentnext(self):
+        """
+        发布页面，点击下一页
+        """
         return self.goto_publishrental().click_publishrental_next()
 
 
