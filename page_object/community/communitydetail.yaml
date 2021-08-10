@@ -1,0 +1,203 @@
+#分享
+click_community_detail_share:
+  - by: id
+    locator: "com.house365.newhouse:id/iv_share"
+    action: click
+
+#收藏
+click_community_detail_fav:
+  - by: id
+    locator: "com.house365.newhouse:id/iv_fav"
+    action: click
+
+#消息
+click_community_detail_msg:
+  - by: id
+    locator: "com.house365.newhouse:id/iv_msg"
+    action: click
+
+#图片
+click_community_detail_img:
+  - by: id
+    locator: "com.house365.newhouse:id/img_house"
+    action: click
+
+#小区名称
+click_community_detail_name:
+  - by: id
+    locator: "com.house365.newhouse:id/tv_block_name"
+    action: click
+
+#地图
+click_community_detail_smap:
+  - by: id
+    locator: "com.house365.newhouse:id/iv_map_entrance"
+    action: click
+
+#房贷计算器
+click_community_detail_mortgage:
+  - by: id
+    locator: "com.house365.newhouse:id/iv_desc_drawable_end"
+    action: click
+
+#在售房源
+click_community_detail_sell:
+  - by: xpath
+    locator: '//*[@text="在售房源"]'
+    action: click
+
+#在租房源
+click_community_detail_rent:
+  - by: xpath
+    locator: '//*[@text="在租房源"]'
+    action: click
+
+#我是业主-去估价按钮
+click_community_detail_evaluate:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_evaluate'
+    action: click
+
+#复制微信号
+click_community_detail_wechat:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_copy_wechat'
+    action: click
+
+#复制QQ号
+click_community_detail_qq:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_copy_qq'
+    action: click
+
+#基础信息右侧“查看更多”
+click_community_detail_base_more:
+  - by: xpath
+    locator: '//*[@text="基础信息"]/..//*[@text="查看更多"]'
+    action: click
+
+#周边配套-地图
+click_community_detail_bmap:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_map'
+    action: click
+
+#小区户型点击第一个户型
+click_community_detail_layout:
+  - by: id
+    locator: 'com.house365.newhouse:id/img_layout'
+    action: click
+
+#小区户型右侧“查看更多”
+click_community_detail_layout_more:
+  - by: xpath
+    locator: '//*[@text="小区户型"]/..//*[@text="查看更多"]'
+    action: click
+
+#小区解读右侧“查看更多”
+click_community_detail_block_more:
+  - by: xpath
+    locator: '//*[contains(@resource-id, "tv_title")/..//*[@text="查看更多"]'
+    action: click
+
+#小区解读-在线咨询按钮
+click_community_detail_block_ask:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_ask'
+    action: click
+
+#小区专家第一个im
+click_community_detail_iv_im:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_im'
+    action: click
+
+#小区专家第一个电话
+click_community_detail_iv_call:
+  - by: id
+    locator: 'com.house365.newhouse:id/iv_call'
+    action: click
+
+#小区专家-第一个小区专家
+click_community_detail_blockexpert:
+  - by: id
+    locator: 'com.house365.newhouse:id/img_avatar'
+    action: click
+
+#在售房源-第一个房源
+click_community_detail_sell_house:
+  - by: id
+    locator: 'com.house365.newhouse:id/img'
+    action: click
+
+#在售房源-第一个房源
+click_community_detail_sell_more:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_check_more'
+    action: click
+
+#在售房源-同小区在售房源按钮
+click_community_detail_near_block:
+  - by: id
+    locator: 'com.house365.newhouse:id/img'
+    action: click
+
+#周边小区-第一个小区
+click_community_detail_find_house:
+  - by: id
+    locator: 'com.house365.newhouse:id/ll_find_house'
+    action: click
+
+#马上找房
+click_community_detail_broker:
+  - by: id
+    locator: 'com.house365.newhouse:id/img_avatar'
+    action: click
+#底部-经纪人
+click_community_detail_tv_ask:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_ask'
+    action: click
+
+#底部-在线咨询按钮
+click_community_detail_tv_call:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_call'
+    action: click
+
+
+fun_para:
+  - by: xpath
+    locator: '//*[@text="${para}"]'
+    action: click
+
+#滑动
+fun_swipe:
+  - action: swipe
+    value: '${pos_text}'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
