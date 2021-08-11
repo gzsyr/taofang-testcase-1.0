@@ -23,3 +23,27 @@ click_filter_position_menu:
     locator: '//*[@text="${filter_postion}"]'
     action: click
 
+# 找室友列表点击房源的收藏按钮
+click_lookroom_collection:
+  - by: id
+    locator: "com.house365.newhouse:id/iv_collect"
+    action: click
+
+# 找室友列表点击房源的在线聊按钮
+click_lookroom_online:
+  - by: id
+    locator: "com.house365.newhouse:id/tv_chat"
+    action: click
+
+# 找室友列表点击第一个房源
+click_lookroom_fristroom:
+  - by: id
+    locator: "com.house365.newhouse:id/tv_collect_text"
+    action: click
+
+# 找室友列表点击发布
+click_lookroom_release:
+  - by: id
+    locator: "com.house365.newhouse:id/tv_publish"
+    action: click
+

@@ -1,0 +1,364 @@
+#发布找室友
+
+# 点击有房出租
+lookroommate_house_rent:
+  - by: xpath
+    locator: '//*[@text="有房出租"]'
+    action: click
+
+#找室友发布点击上传照片
+lookroommate_upload_photos:
+  - by: xpath
+    locator: '//*[@text="上传照片"]'
+    action: click
+
+#找室友发布图片上传页点击添加照片
+lookroommate_add_photos:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_img'
+    action: click
+
+# 图片添加页面，选择拍照
+lookroommatehouse_take_pictures:
+  - by: xpath
+    locator: '//*[@text="拍照"]'
+    action: click
+  - action: press
+    value: '27'
+# 华为mate9 com.huawei.camera:id/done_button
+  - by: id
+    locator: 'com.huawei.camera:id/done_button'
+    action: click
+  - action: delay
+    value: '3'
+
+#图片上传之后点击完成按钮
+click_take_picture_complete:
+  - by: xpath
+    locator: '//*[@text="完成"]'
+    action: click
+
+#图片上传之后点击完成点击二次确认的不需要按钮
+click_take_picture_need:
+  - by: xpath
+    locator: '//*[@text="不需要"]'
+    action: click
+
+# 图片添加页面，选择相册选择
+lookroommatehouse_choose_photos:
+  - by: xpath
+    locator: '//*[@text="相册选择"]'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/image'
+    action: click_pos
+    value: "${index}"
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_hand'
+    action: click
+  - action: delay
+    value: '3'
+
+#图片上传页点击小铃铛
+click_bell:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_right'
+    action: click
+
+#图片上传页点击小铃铛的关闭按钮
+click_bell_close:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_close'
+    action: click
+
+#图片添加页点击小技巧
+click_skills:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_tip'
+    action: click
+
+#图片添加页点击小技巧点击关闭
+click_skills_close:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_close'
+    action: click
+
+# 点击标题搜索框
+click_title:
+  - by: id
+    locator: 'com.house365.newhouse:id/et_title_content'
+    action: send
+    value: "${title_name}"
+
+#发布页点击小区名称
+click_village_name:
+  - by: xpath
+    locator: '//*[@text="小区名称"]'
+    action: click
+
+#点击小区名称搜索框
+click_name_search:
+  - by: xpath
+    locator: '//*[@text="请输入小区名称"]'
+    action: send
+    value: "${village_name}"
+
+#点击小区名称的搜索结果
+click_search_result:
+  - by: xpath
+    locator: '//*[@text="万科金域蓝湾"]'
+    action: click
+
+#发布页点击月租金
+click_month_rent:
+  - by: xpath
+    locator: '//*[@text="月租金"]'
+    action: click
+
+#输入月租金
+click_month_rent_price:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_num_2'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_num_3'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_num_1'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_num_5'
+    action: click
+
+#发布页输入月租金点击确定按钮
+click_month_rent_determine:
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+#点击户型
+click_door_model:
+  - by: xpath
+    locator: '//*[@text="户型"]'
+    action: click
+
+#选择户型，出租类型
+choose_door_model:
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="出租类型"]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+#滑动
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'
+
+#点击入住时间
+click_check_in_time:
+  - by: xpath
+    locator: '//*[@text="入住时间"]'
+    action: click
+
+#选择入住时间
+choose_check_in_time:
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="已入住情况"]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+#房屋亮点选择“有电梯”
+choose_have_elevator:
+  - by: xpath
+    locator: '//*[@text="有电梯"]'
+    action: click
+
+#选择房屋配置
+choose_housing_allocation:
+  - by: xpath
+    locator: '//*[@text="房屋配置"]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="床"]'
+    action: click
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+#点击下一步
+click_next_step:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_confirm'
+    action: click
+
+#室友性别选择限男生
+choose_roommate_gender:
+  - by: xpath
+    locator: '//*[@text="限男生"]'
+    action: click
+
+#室友期望选择一个人住
+choose_roommate_expectations:
+  - by: xpath
+    locator: '//*[@text="一个人住"]'
+    action: click
+
+#补充文本输入框输入补充要求
+click_added_text:
+  - by: id
+    locator: 'com.house365.newhouse:id/et_mask'
+    action: send
+    value: "${add_text}"
+
+#您的身份选择租户
+choose_identity:
+  - by: xpath
+    locator: '//*[@text="租户"]'
+    action: click
+
+#姓名输入框输入姓名
+click_enter_name:
+  - by: id
+    locator: 'com.house365.newhouse:id/et_name'
+    action: send
+    value: "${add_name}"
+
+#点击确认发布按钮
+click_confirm_release:
+  - by: xpath
+    locator: '//*[@text="确认发布"]'
+    action: click
+
+
+#找室友发布无房求租需求
+
+# 点击无房求租
+click_housing_price:
+  - by: xpath
+    locator: '//*[@text="无房求租"]'
+    action: click
+
+#点击标题输入框
+click_title_input_box:
+  - by: id
+    locator: 'com.house365.newhouse:id/et_title'
+    action: send
+    value: "${tit_name}"
+
+#点击期望地点
+click_expect_place:
+  - by: xpath
+    locator: '//*[@text="期望地点"]'
+    action: click
+
+#选择鼓楼区
+choose_gulou_district:
+  - by: xpath
+    locator: '//*[@text="鼓楼区"]'
+    action: click
+
+#选择鼓楼区点击确定按钮
+click_expect_place_determine:
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+#点击租金预算
+click_rent_budget:
+  - by: xpath
+    locator: '//*[@text="租金预算"]'
+    action: click
+
+#选择租金预算
+choose_rent_budget:
+  - by: id
+    locator: 'com.house365.newhouse:id/rsb_budget'
+    action: seekbar
+    value: '0.3'
+
+#选择租金后点击确定按钮
+choose_rent_budget_determine:
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+#点击入住时间
+click_check_time:
+  - by: xpath
+    locator: '//*[@text="入住时间"]'
+    action: click
+
+#点击入住时间确定按钮
+click_check_in_time_determine:
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+#点击我是几人住
+click_people_live:
+  - by: xpath
+    locator: '//*[@text="我是几人住"]'
+    action: click
+
+#点击我是几人住的确定按钮
+click_people_live_determine:
+  - by: xpath
+    locator: '//*[@text="确定"]'
+    action: click
+
+#点击对房子期望的有独卫
+click_expect_alone_toilet:
+  - by: xpath
+    locator: '//*[@text="有独卫"]'
+    action: click
+
+#点击下一步按钮
+click_the_next_step:
+  - by: xpath
+    locator: '//*[@text="下一步"]'
+    action: click
+
+#室友性别选择限男生
+choose_gender_boy:
+  - by: xpath
+    locator: '//*[@text="限男生"]'
+    action: click
+
+#室友期望选择一个人住
+choose_roommate_expectation_alone:
+  - by: xpath
+    locator: '//*[@text="一个人住"]'
+    action: click
+
+#点击补充说明文本框
+enter_supplementary_text:
+  - by: id
+    locator: 'com.house365.newhouse:id/et_mask'
+    action: send
+    value: "${int_text}"
+
+#点击姓名输入框
+enter_the_name:
+  - by: id
+    locator: 'com.house365.newhouse:id/et_name'
+    action: send
+    value: "${int_name}"
+
+
+#点击确认发布按钮
+click_confirm_the_release:
+  - by: xpath
+    locator: '//*[@text="确认发布"]'
+    action: click
+
+
