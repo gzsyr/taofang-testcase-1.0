@@ -1,0 +1,144 @@
+# 我的页面
+# 我的页面点击个人资料
+click_personal_data:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_nickname'
+    action: click
+
+#我的页面点击设置按钮
+click_set_up:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_setting'
+    action: click
+
+#我的页面点击消息入口
+click_minepage_message:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_msg'
+    action: click
+
+#我的页面点击淘房币
+click_house_money:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_coin'
+    action: click
+
+#我的页面点击邀请好友
+click_invite_friends:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_invite'
+    action: click
+
+#我的页面点击我的发布
+click_minepage_release:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_release_layout'
+    action: click
+
+#我的页面点击收藏
+click_minepage_collection:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_collection_layout'
+    action: click
+
+#我的页面点击订阅
+click_minepage_subscribe:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_subcribe_layout'
+    action: click
+
+#我的页面点击足迹
+click_minepage_footprint:
+  - by: id
+    locator: 'com.house365.newhouse:id/m_browser_layout'
+    action: click
+
+#我的页面功能入口-我的看房
+minepage_my_house:
+  - by: xpath
+    locator: '//*[@text="我的看房"]'
+    action: click
+
+#我的页面购房百科点击更多
+minepage_more:
+  - by: xpath
+    locator: '//*[@text="更多"]'
+    action: click
+
+#我的页面功能入口-我的点评
+minepage_my_comments:
+  - by: xpath
+    locator: '//*[@text="我的点评"]'
+    action: click
+
+#我的页面功能入口-我的优惠
+minepage_my_discount:
+  - by: xpath
+    locator: '//*[@text="我的优惠"]'
+    action: click
+
+#我的页面功能入口-我的问答
+minepage_my_question:
+  - by: xpath
+    locator: '//*[@text="我的问答"]'
+    action: click
+
+#我的页面功能入口-已购课程
+minepage_my_bought_course:
+  - by: xpath
+    locator: '//*[@text="已购课程"]'
+    action: click
+
+#我的页面功能入口-我的奖品
+minepage_my_prize:
+  - by: xpath
+    locator: '//*[@text="我的奖品"]'
+    action: click
+
+#我的页面功能入口-贷款查询
+minepage_loan_for:
+  - by: xpath
+    locator: '//*[@text="贷款查询"]'
+    action: click
+
+#我的页面功能入口-公寓预约
+minepage_apartment_reservation:
+  - by: xpath
+    locator: '//*[@text="公寓预约"]'
+    action: click
+
+#我的页面功能入口-意见反馈
+minepage_feedback:
+  - by: xpath
+    locator: '//*[@text="意见反馈"]'
+    action: click
+
+#我的页面功能入口-客服电话
+minepage_service_telephone:
+  - by: xpath
+    locator: '//*[@text="客服电话"]'
+    action: click
+
+#我的页面功能入口-保证金管理
+minepage_margin_management:
+  - by: xpath
+    locator: '//*[@text="保证金管理"]'
+    action: click
+
+#我的页面功能入口-帮你找房
+minepage_find_room:
+  - by: xpath
+    locator: '//*[@text="帮你找房"]'
+    action: click
+
+#我的页面功能入口-我的室友
+minepage_my_roommate:
+  - by: xpath
+    locator: '//*[@text="我的室友"]'
+    action: click
+
+#滑动
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'
+

@@ -13,6 +13,7 @@ from page_object.sellhouse.checkhouseprice import CheckHousePrice
 from page_object.sellhouse.publishindex import PublishIndex
 from page_object.sellhouse.buyinghouse import BuyingHouse
 from page_object.sellhouse.sellhouselist import SellHouseList
+from page_object.minepage.minepage import MinePage
 
 
 class Main(BasePage):
@@ -647,7 +648,7 @@ class Main(BasePage):
         with allure.step("点击首页我的tab"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
-        return self
+        return MinePage(self._driver)
 
     def goto_newhouse_tab(self):
         """
