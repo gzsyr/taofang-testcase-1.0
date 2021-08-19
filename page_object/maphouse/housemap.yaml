@@ -1,0 +1,71 @@
+#地图找房页-新房
+goto_search:
+    - by: id
+      locator: 'com.house365.newhouse:id/iv_search'
+      action: click
+    - by: id
+      locator: 'com.house365.newhouse:id/fragment_search_editText'
+      action: send
+      value: '${house_name}'
+    - by: xpath
+      locator: '//*[contains(@text, "${house_name}") and contains(@resource-id, "fragment_search_result_list_item_name")]'
+      action: click
+
+show_select:
+  - by: id
+    locator: 'com.house365.newhouse:id/button_filter'
+    action: click
+
+select_filter_item:
+  - by: xpath
+    locator: '//*[@text="${filter}"]'
+    action: click
+
+empty_filter:
+  - by: id
+    locator: 'com.house365.newhouse:id/slide_reset_btn'
+    action: click
+
+confirm_filter:
+  - by: id
+    locator: 'com.house365.newhouse:id/slide_confirm_btn'
+    action: click
+
+show_metro:
+  - by: id
+    locator: 'com.house365.newhouse:id/metro_search'
+    action: click
+
+show_filter_conditions:
+  - by: id
+    locator: 'com.house365.newhouse:id/filter_conditions'
+    action: click
+
+goto_housedetail:
+  - by: id
+    locator: 'com.house365.newhouse:id/has_data_layout'
+    action: click
+
+click_location:
+  - by: id
+    locator: 'com.house365.newhouse:id/relocation'
+    action: click
+
+goto_community:
+  - by: id
+    locator: 'com.house365.newhouse:id/image'
+    action: click
+
+select_housetab:
+  - by: xpath
+    locator: '//*[@text="${housetab}"]'
+    action: click
+
+goto_schoolmap:
+  - by: id
+    locator: 'com.house365.newhouse:id/school_search'
+    action: click
+
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'

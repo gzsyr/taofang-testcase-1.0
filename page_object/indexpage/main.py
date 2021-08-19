@@ -7,6 +7,7 @@ from page_object.housetour.housetour import HouseTour
 from page_object.indexpage.buyingtools import BuyingTools
 from page_object.indexpage.indexsearch import IndexSearch
 from page_object.indexpage.selectcity import SelectCity
+from page_object.maphouse.housemap import MapFindHouse
 from page_object.newhouse.newhouselist import NewHouseList
 from page_object.renthouse.renthouse import RentHouse
 from page_object.sellhouse.checkhouseprice import CheckHousePrice
@@ -409,7 +410,7 @@ class Main(BasePage):
         with allure.step("点击地图"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
-        return self
+        return MapFindHouse(self._driver)
 
     def goto_lpdt(self):
         """
