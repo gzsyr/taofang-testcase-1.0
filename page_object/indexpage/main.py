@@ -9,6 +9,7 @@ from page_object.indexpage.indexsearch import IndexSearch
 from page_object.indexpage.selectcity import SelectCity
 from page_object.maphouse.housemap import MapFindHouse
 from page_object.newhouse.newhouselist import NewHouseList
+from page_object.news.newslist import NewsList
 from page_object.renthouse.renthouse import RentHouse
 from page_object.sellhouse.checkhouseprice import CheckHousePrice
 from page_object.sellhouse.publishindex import PublishIndex
@@ -356,7 +357,7 @@ class Main(BasePage):
         with allure.step("点击淘房头条更多"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
-        return self
+        return NewsList(self._driver)
 
     def goto_news_live(self):
         """

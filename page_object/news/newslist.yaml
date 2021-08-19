@@ -1,0 +1,39 @@
+# 资讯列表页
+#切换TAB
+switch_newstab:
+  - by: xpath
+    locator: '//*[@text="${newstab}"]'
+    action: click
+
+#选择搜索结果
+select_search_result:
+  - by: xpath
+    locator: '//*[contains(@text, "${title_name}") and contains(@resource-id, "h_name")]'
+    action: click
+
+#输入搜索内容
+send_search_text:
+  - by: id
+    locator: 'com.house365.newhouse:id/btn_search'
+    action: click
+  - by: id
+    locator: 'com.house365.newhouse:id/keyword_text'
+    action: send
+    value: '${send_text}'
+
+#点击联版图片
+click_ad_pic:
+  - by: id
+    locator: 'com.house365.newhouse:id/pic'
+    action: click
+
+#点击精选栏目入口
+click_func_entry:
+  - by: xpath
+    locator: '//*[@text="${func_entry}" and contains(@resource-id, "tv_name")]'
+    action: click
+
+func_entrance_swipe_left:
+  - action: swipe_left
+    by: xpath
+    locator: '//*[@text="${pos_text}"]'
