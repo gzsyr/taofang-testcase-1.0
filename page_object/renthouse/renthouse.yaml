@@ -67,8 +67,8 @@ rent_house_release_house:
 
 # 租房首页我的
 rent_house_mine:
-  - by: xpath
-    locator: '//*[@text="我的"]'
+  - by: id
+    locator: 'com.house365.newhouse:id/include_tab_my'
     action: click
 
 # 租房首页租房顾问
