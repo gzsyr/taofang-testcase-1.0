@@ -15,9 +15,9 @@ class LookRoommateList(BasePage):
         """
         with allure.step("找室友列表点击我的找室友入口"):
             self.steps("../../page_object/renthouse/lookroommatelist.yaml")
-            self.tsleep(2)
+            self.tsleep(1)
 
-            return self
+        return self
 
     def lookroom_news(self):
         """
@@ -26,9 +26,9 @@ class LookRoommateList(BasePage):
         """
         with allure.step("找室友列表消息入口"):
             self.steps("../../page_object/renthouse/lookroommatelist.yaml")
-            self.tsleep(2)
+            self.tsleep(1)
 
-            return self
+        return self
 
     def click_filter_position(self):
         """
@@ -37,9 +37,9 @@ class LookRoommateList(BasePage):
         """
         with allure.step("点击筛选项的“全南京”"):
             self.steps("../../page_object/renthouse/lookroommatelist.yaml")
-            self.tsleep(2)
+            self.tsleep(1)
 
-            return self
+        return self
 
     def click_filter_position_menu(self, text="不限"):
         """
@@ -51,7 +51,7 @@ class LookRoommateList(BasePage):
         self._params["filter_postion"] = text
         with allure.step("点击筛选项的“全南京”的" + text):
             self.steps("../../page_object/renthouse/lookroommatelist.yaml", replace=True)
-        self.tsleep(2)
+        self.tsleep(1)
 
         return self
 
@@ -62,8 +62,8 @@ class LookRoommateList(BasePage):
         """
         with allure.step("房源列表点击收藏按钮"):
             self.steps("../../page_object/renthouse/lookroommatelist.yaml")
-            self.tsleep(2)
-            return self
+            self.tsleep(1)
+        return self
 
     def click_lookroom_online(self):
         """
@@ -72,8 +72,8 @@ class LookRoommateList(BasePage):
         """
         with allure.step("房源列表点击在线聊按钮"):
             self.steps("../../page_object/renthouse/lookroommatelist.yaml")
-            self.tsleep(2)
-            return self
+            self.tsleep(1)
+        return self
 
     def click_lookroom_fristroom(self):
         """
@@ -82,8 +82,8 @@ class LookRoommateList(BasePage):
         """
         with allure.step("房源列表点击第一条房源"):
             self.steps("../../page_object/renthouse/lookroommatelist.yaml")
-            self.tsleep(2)
-            return self
+            self.tsleep(1)
+        return self
 
     def click_lookroom_release(self):
         """
@@ -92,5 +92,5 @@ class LookRoommateList(BasePage):
         """
         with allure.step("房源列表点击发布入口"):
             self.steps("../../page_object/renthouse/lookroommatelist.yaml")
-            self.tsleep(2)
-            return LookRoommateRelease(self._driver)
+            self.tsleep(1)
+        return LookRoommateRelease(self._driver)

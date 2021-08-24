@@ -3,9 +3,10 @@ import allure
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 租房-找室友页面的测试")
 class TestLookRoommateList(TestBase):
     """
-    新房列表页面的所有用例
+    找室友用例
     """
     @allure.description("找室友列表点击我的找室友入口")
     def test_lookroom_mine(self):
