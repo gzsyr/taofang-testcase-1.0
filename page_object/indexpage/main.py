@@ -632,7 +632,7 @@ class Main(BasePage):
         with allure.step("点击首页房博士tab"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
-        return self
+        return HouseDoctorMain
 
     def goto_find(self):
         """
