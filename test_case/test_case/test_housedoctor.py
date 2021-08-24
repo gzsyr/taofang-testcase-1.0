@@ -77,7 +77,7 @@ class TestHouseDoctor(TestBase):
         点击热门问答的更多
         :return:
         """
-        self.shouye.goto_doctor().goto_doctor_hot_more().screenshot()
+        self.shouye.goto_doctor().swipe_to_buttom(text='com.house365.newhouse:id/new_good').goto_doctor_hot_more().screenshot()
 
     @allure.description("点击热门第一个问题")
     def test_goto_doctor_question_first(self):
@@ -85,7 +85,7 @@ class TestHouseDoctor(TestBase):
         点击热门第一个问题
         :return:
         """
-        self.shouye.goto_doctor().goto_doctor_question_first().screenshot()
+        self.shouye.goto_doctor().swipe_to_buttom(text='com.house365.newhouse:id/new_good').goto_doctor_question_first().screenshot()
 
     @allure.description("点击热门第一个标签")
     def test_goto_doctor_tag_first(self):

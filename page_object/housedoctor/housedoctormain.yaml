@@ -62,4 +62,4 @@ goto_doctor_question_first:
 goto_doctor_tag_first:
   - action: click
     by: xpath
-    locator: "//*[@resource_id='com.house365.newhouse:id/layout_fbs_qa_tag']/*[@text='新房']"
+    locator: "//*[@resource-id='com.house365.newhouse:id/id_flowlayout']/android.widget.FrameLayout[1]"
