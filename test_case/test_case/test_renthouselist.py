@@ -3,6 +3,7 @@ import allure
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 租房列表页面的测试")
 class TestRentHouseList(TestBase):
     """
     租房房源列表的所有用例
