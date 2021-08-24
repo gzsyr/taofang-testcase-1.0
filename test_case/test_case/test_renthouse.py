@@ -2,6 +2,8 @@ import allure
 import pytest
 from test_case.base_test.test_base import TestBase
 
+
+@allure.feature("淘房APP（android）: 租房首页的测试")
 class TestRentHouse(TestBase):
 
     """
@@ -39,16 +41,28 @@ class TestRentHouse(TestBase):
         """
         self.shouye.goto_func_entrance_zf().rent_house_news().screenshot()
 
-    @allure.description("租房首页点击功能入口")
-    @pytest.mark.parametrize("func_entry", ["整租", "合租", "找室友", "个人房源", "品牌公寓",
-                                            "商铺", "写字楼", "独栋公寓", "月租", "我要求租"])
-    def test_rent_house_function_entrance(self, func_entry):
-        self.shouye.goto_func_entrance_zf().rent_house_function_entrance(func_entry).screenshot()
+    # 以下合并处理---by zsy
+    # @allure.description("租房首页点击功能入口")
+    # @pytest.mark.parametrize("func_entry", ["整租", "合租", "找室友", "个人房源", "品牌公寓",
+    #                                         "商铺", "写字楼", "独栋公寓", "月租", "我要求租"])
+    # def test_rent_house_function_entrance(self, func_entry):
+    #     self.shouye.goto_func_entrance_zf().rent_house_function_entrance(func_entry).screenshot()
+    #
+    # @allure.description("租房首页点击功能入口")
+    # @pytest.mark.parametrize("pos_text, func_entry", [("品牌公寓", "厂房"), ("品牌公寓", "车位")])
+    # def test_rent_house_function_entrance(self, pos_text, func_entry):
+    #     self.shouye.goto_func_entrance_zf().func_entrance_swipe_left(pos_text).rent_house_function_entrance(func_entry).screenshot()
 
     @allure.description("租房首页点击功能入口")
-    @pytest.mark.parametrize("pos_text, func_entry", [("品牌公寓", "厂房"), ("品牌公寓", "车位")])
+    @pytest.mark.parametrize("pos_text, func_entry", [("-", "整租"), ("-", "合租"), ("-", "找室友"), ("-", "个人房源"), ("-", "品牌公寓"),
+                                                      ("-", "商铺"), ("-", "写字楼"), ("-", "独栋公寓"), ("-", "月租"), ("-", "我要求租"),
+                                                      ("品牌公寓", "厂房"), ("品牌公寓", "车位")])
     def test_rent_house_function_entrance(self, pos_text, func_entry):
-        self.shouye.goto_func_entrance_zf().func_entrance_swipe_left(pos_text).rent_house_function_entrance(func_entry).screenshot()
+        if "-" == pos_text:
+            self.shouye.goto_func_entrance_zf().rent_house_function_entrance(func_entry).screenshot()
+        else:
+            self.shouye.goto_func_entrance_zf(). \
+                func_entrance_swipe_left(pos_text).rent_house_function_entrance(func_entry).screenshot()
 
     @allure.description("租房首页点击附近tab")
     def test_rent_house_nearby(self):
