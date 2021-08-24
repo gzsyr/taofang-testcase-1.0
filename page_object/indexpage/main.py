@@ -3,6 +3,7 @@ import allure
 from page_object.base_page.base_page import BasePage
 from page_object.business.shopmalllist import ShopMallList
 from page_object.community.communitylist import CommunityList
+from page_object.housedoctor.housedoctormain import HouseDoctorMain
 from page_object.housetour.housetour import HouseTour
 from page_object.indexpage.buyingtools import BuyingTools
 from page_object.indexpage.indexsearch import IndexSearch
@@ -632,7 +633,7 @@ class Main(BasePage):
         with allure.step("点击首页房博士tab"):
             self.steps("../../page_object/indexpage/main.yaml")
         self.tsleep(2)
-        return HouseDoctorMain
+        return HouseDoctorMain(self._driver)
 
     def goto_find(self):
         """
