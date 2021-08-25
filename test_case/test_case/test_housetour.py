@@ -19,9 +19,9 @@ class Test_HouseTour(TestBase):
     def test_click_housetour_linebtn(self):
         self.goto_kft().click_housetour_linebtn().screenshot()
 
-    @allure.description("点击全部路线-8.28城北路线改善线")
+    @allure.description("点击第一条具体线路")
     def test_click_housetour_line(self):
-        self.goto_kft().click_housetour_linebtn().fun_line("8.28江北VIP专线").screenshot()
+        self.goto_kft().click_housetour_linebtn().fun_line().screenshot()
 
     @allure.description("点击看房团路线，进入详情页")
     def test_click_housetour_kft_title(self):

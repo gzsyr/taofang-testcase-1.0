@@ -27,10 +27,9 @@ class HouseTour(BasePage):
         self.tsleep(1)
         return self
 
-    def fun_line(self,text = None):
-        self._params["line"] = text
-        with allure.step("点击"+self._params["line"]):
-            self.steps("../../page_object/housetour/housetour.yaml", replace=True)
+    def fun_line(self):
+        with allure.step("点击第一条线路"):
+            self.steps("../../page_object/housetour/housetour.yaml")
         self.tsleep(1)
         return self
 

@@ -14,7 +14,7 @@ click_housetour_linebtn:
 
 fun_line:
   - by: xpath
-    locator: '//*[@text="${line}"]'
+    locator: "//*[@resource-id='com.house365.newhouse:id/grade_list']/android.widget.LinearLayout[2]"
     action: click
 
 #点击看房团专线，进入详情页
