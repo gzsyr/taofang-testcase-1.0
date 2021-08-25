@@ -1,9 +1,10 @@
+# -- by yfl
 import allure
-import pytest
 
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 查房价页面的测试")
 class TestCheckHousePrice(TestBase):
     """
     查房价首页测试用例

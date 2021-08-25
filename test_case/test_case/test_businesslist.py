@@ -1,9 +1,11 @@
+# --by yfl
 import allure
 import pytest
 
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 商业写字楼频道页面的测试")
 class TestBusinessList(TestBase):
     """
     商业写字楼频道

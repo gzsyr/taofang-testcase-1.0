@@ -1,8 +1,10 @@
+# -- by yfl
 import allure
 
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 地图找房页面的测试")
 class TestMapFindHouse(TestBase):
     """
     地图找房页面

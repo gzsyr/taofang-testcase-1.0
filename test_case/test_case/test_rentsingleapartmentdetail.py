@@ -1,10 +1,12 @@
 #!/usr/bin/env python 
-# -*- coding:utf-8 -*-
+# -*- coding:utf-8 -*- by zzh
 import allure
 import pytest
 
 from test_case.base_test.test_base import TestBase
 
+
+@allure.feature("淘房APP（android）: 租房-独栋公寓详情页面的测试")
 class TestSingleApartmentDetail(TestBase):
     """
     独栋公寓详情页

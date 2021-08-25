@@ -1,9 +1,10 @@
-# 新房详情页面
+# 新房详情页面 -- by hzc
 import allure
 
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 新房详情页面的测试")
 class TestNewHouseDetail(TestBase):
     """
     新房详情页用例，通过搜索的方式进入新房详情页

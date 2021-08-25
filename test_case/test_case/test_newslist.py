@@ -1,8 +1,10 @@
+# -- by yfl
 import allure
 
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 资讯列表页面的测试")
 class TestNewsList(TestBase):
     """
     资讯列表页测试用例

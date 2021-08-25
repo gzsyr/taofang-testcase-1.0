@@ -1,7 +1,10 @@
+# -- by hzc
 import allure
 
 from test_case.base_test.test_base import TestBase
 
+
+@allure.feature("淘房APP（android）: 我的页面的测试")
 class TestMinePage(TestBase):
     """
     我的页面测试用例

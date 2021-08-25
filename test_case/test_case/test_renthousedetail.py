@@ -1,8 +1,10 @@
+# -- by yfl
 import allure
 
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 租房房源详情页面的测试")
 class TestRentHouseDetail(TestBase):
     """
     租房房源详情用例

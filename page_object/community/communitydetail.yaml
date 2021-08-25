@@ -97,7 +97,7 @@ click_community_detail_layout_more:
 #小区解读右侧“查看更多”
 click_community_detail_block_more:
   - by: xpath
-    locator: '//*[contains(@resource-id, "tv_title")/..//*[@text="查看更多"]'
+    locator: '//*[@text="查看更多"]'
     action: click
 
 #小区解读-在线咨询按钮
@@ -168,7 +168,7 @@ click_community_detail_tv_call:
 
 fun_para:
   - by: xpath
-    locator: '//*[@text="${para}"]'
+    locator: "//androidx.appcompat.app.ActionBar.Tab[@content-desc='${para}']"
     action: click
 
 #滑动

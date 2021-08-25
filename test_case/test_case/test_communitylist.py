@@ -1,12 +1,16 @@
 #!/usr/bin/env python 
-# -*- coding:utf-8 -*-
+# -*- coding:utf-8 -*- by zzh
 import allure
 import pytest
 
 from test_case.base_test.test_base import TestBase
 
-class Test_CommunityList(TestBase):
 
+@allure.feature("淘房APP（android）: 找小区列表页面的测试")
+class Test_CommunityList(TestBase):
+    """
+    找小区列表页面
+    """
     def goto_communitylist(self):
         return self.shouye.goto_func_entrance_first("找小区")
 

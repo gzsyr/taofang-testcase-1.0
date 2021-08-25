@@ -1,9 +1,11 @@
+# -- by yfl
 import allure
 import pytest
 
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 租房-写字楼列表页面的测试")
 class TestOfficeBuildingList(TestBase):
     """
     写字楼页面

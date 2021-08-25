@@ -1,13 +1,17 @@
 #!/usr/bin/env python 
-# -*- coding:utf-8 -*-
+# -*- coding:utf-8 -*- by zzh
 
 import allure
 import pytest
 
 from test_case.base_test.test_base import TestBase
 
-class TestCommunityDetail(TestBase):
 
+@allure.feature("淘房APP（android）: 找小区详情页面的测试")
+class TestCommunityDetail(TestBase):
+    """
+    小区详情页
+    """
     def goto_community_detail(self):
         return self.shouye.goto_func_entrance_first("找小区").go_community_detail()
 
@@ -81,12 +85,12 @@ class TestCommunityDetail(TestBase):
         self.goto_community_detail().fun_swipe("周边配套").fun_para("小区解读"). \
             click_community_detail_block_ask().screenshot()
 
-    @allure.description("点击小区专家-im消息入口")
+    @allure.description("点击小区专家第一个-im消息入口")
     def test_click_community_detail_iv_im(self):
         self.goto_community_detail().fun_swipe("周边配套").fun_para("小区解读").\
             click_community_detail_iv_im().screenshot()
 
-    @allure.description("点击小区专家-电话按钮")
+    @allure.description("点击小区专家第一个-电话按钮")
     def test_click_community_detail_iv_call(self):
         self.goto_community_detail().fun_swipe("周边配套").fun_para("小区解读").\
             click_community_detail_iv_call().screenshot()
@@ -127,33 +131,3 @@ class TestCommunityDetail(TestBase):
     @allure.description("点击底部‘拨打电话’")
     def test_click_community_detail_tv_call(self):
         self.goto_community_detail().click_community_detail_tv_call().screenshot()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
