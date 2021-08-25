@@ -1,9 +1,10 @@
-# 搜索总文件，包括首页进入的搜索、新房进入的搜索、二手房进入的搜索
+# 搜索总文件，包括首页进入的搜索、新房进入的搜索、二手房进入的搜索 -- by zsy
 import allure
 
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 搜索页面的测试")
 class TestSearch(TestBase):
     """
     搜索相关测试用例

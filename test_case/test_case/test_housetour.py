@@ -1,5 +1,5 @@
 #!/usr/bin/env python 
-# -*- coding:utf-8 -*-
+# -*- coding:utf-8 -*- by zzh
 import allure
 import pytest
 from test_case.base_test.test_base import TestBase
@@ -7,7 +7,9 @@ from test_case.base_test.test_base import TestBase
 
 @allure.feature("淘房APP（android）: 看房团页面的测试")
 class Test_HouseTour(TestBase):
-
+    """
+    看房团页面测试用例
+    """
     def goto_kft(self):
         return self.shouye.goto_func_entrance_first("看房团")
 

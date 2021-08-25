@@ -1,9 +1,11 @@
+# -- by hzc
 import allure
 import pytest
 
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 二手房列表页面的测试")
 class TestSellHouseList(TestBase):
     """
     二手房列表页面的所有用例

@@ -4,10 +4,14 @@ import pytest
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 首页页面的测试")
 class TestMain(TestBase):
     """
     首页的用例
     """
+
+    def test_0001(self):
+        print(0)
 
     # 变更功能入口第一屏的用例方式，改成参数传递 by zsy
     @allure.description("点击功能入口")

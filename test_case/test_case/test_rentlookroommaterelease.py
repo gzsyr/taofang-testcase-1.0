@@ -1,9 +1,10 @@
+# -- by hzc
 import allure
-import pytest
 
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 租房-发布找室友页面的测试")
 class TestLookRoommateRelease(TestBase):
     """
     发布找室友房源相关用例

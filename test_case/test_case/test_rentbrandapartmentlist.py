@@ -1,10 +1,15 @@
 #!/usr/bin/env python 
-# -*- coding:utf-8 -*-
+# -*- coding:utf-8 -*- by zzh
 import allure
 
 from test_case.base_test.test_base import TestBase
 
+
+@allure.feature("淘房APP（android）: 租房-品牌公寓页面的测试")
 class TestBrandApartmentList(TestBase):
+    """
+    品牌公寓页面
+    """
 
     def goto_brandapartmentlist(self):
         return self.shouye.goto_func_entrance_zf().rent_house_function_entrance("品牌公寓")

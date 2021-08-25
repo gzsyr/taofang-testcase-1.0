@@ -1,9 +1,10 @@
+# -- by zzh
 import allure
 
-from page_object.newhouse.newhousedetail import NewHouseDetail
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 新房列表页面的测试")
 class TestNewHouseList(TestBase):
     """
     新房列表页面的所有用例

@@ -1,9 +1,11 @@
+# -- by zsy
 import allure
 
 from page_object.base_page.app import App
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 我要买房页面的测试")
 class TestBuyingHouse(TestBase):
     """
     我要买房页面测试用例

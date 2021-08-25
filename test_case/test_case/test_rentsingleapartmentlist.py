@@ -1,12 +1,16 @@
 #!/usr/bin/env python 
-# -*- coding:utf-8 -*-
+# -*- coding:utf-8 -*- by zzh
 
 import allure
 
 from test_case.base_test.test_base import TestBase
 
-class TestSingleApartmentList(TestBase):
 
+@allure.feature("淘房APP（android）: 租房-独栋公寓列表页面的测试")
+class TestSingleApartmentList(TestBase):
+    """
+    租房-独栋公寓列表页面
+    """
     def goto_singleapartmentlist(self):
         return self.shouye.goto_func_entrance_zf().rent_house_function_entrance("独栋公寓")
 
