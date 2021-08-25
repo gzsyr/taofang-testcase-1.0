@@ -4,6 +4,8 @@ import allure
 import pytest
 from test_case.base_test.test_base import TestBase
 
+
+@allure.feature("淘房APP（android）: 看房团页面的测试")
 class Test_HouseTour(TestBase):
 
     def goto_kft(self):
@@ -19,7 +21,7 @@ class Test_HouseTour(TestBase):
 
     @allure.description("点击全部路线-8.28城北路线改善线")
     def test_click_housetour_line(self):
-        self.goto_kft().click_housetour_linebtn().fun_line("8.28城北改善线").screenshot()
+        self.goto_kft().click_housetour_linebtn().fun_line("8.28江北VIP专线").screenshot()
 
     @allure.description("点击看房团路线，进入详情页")
     def test_click_housetour_kft_title(self):

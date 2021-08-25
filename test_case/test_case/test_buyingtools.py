@@ -4,6 +4,7 @@ import pytest
 from test_case.base_test.test_base import TestBase
 
 
+@allure.feature("淘房APP（android）: 购房工具箱页面的测试")
 class TestBuyingTools(TestBase):
     """
     购房工具箱页面测试用例

@@ -3,43 +3,40 @@
 #点击活动流程
 click_housetour_rightbtn:
   - by: id
-      locator: 'com.house365.newhouse:id/btn_right'
-      action: click
+    locator: 'com.house365.newhouse:id/btn_right'
+    action: click
 
 #点击全部路线右侧的向下箭头
 click_housetour_linebtn:
   - by: id
-      locator: 'com.house365.newhouse:id/show_more_line_btn'
-      action: click
+    locator: 'com.house365.newhouse:id/show_more_line_btn'
+    action: click
 
 fun_line:
   - by: xpath
-      locator: '//*[@text="${line}"]'
-      action: click
+    locator: '//*[@text="${line}"]'
+    action: click
 
 #点击看房团专线，进入详情页
 click_housetour_kft_title:
   - by: id
-      locator: 'com.house365.newhouse:id/kft_sign_title'
-      action: click
+    locator: 'com.house365.newhouse:id/kft_sign_title'
+    action: click
 
 #点击电话咨询
 click_housetour_call:
   - by: id
-      locator: 'com.house365.newhouse:id/btn_call'
-      action: click
+    locator: 'com.house365.newhouse:id/btn_call'
+    action: click
 
 #点击我要报名
 click_housetour_sighup:
   - by: id
-      locator: 'com.house365.newhouse:id/btn_signup'
-      action: click
+    locator: 'com.house365.newhouse:id/btn_signup'
+    action: click
 
 #填写看房需求
 click_housetour_sign_req:
   - by: id
-      locator: 'com.house365.newhouse:id/write_sign_req'
-      action: click
-
-
-
+    locator: 'com.house365.newhouse:id/write_sign_req'
+    action: click
