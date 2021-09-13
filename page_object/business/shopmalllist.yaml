@@ -46,8 +46,8 @@ select_filter_office:
     locator: '//*[@text="${menu}"]'
     action: click
 
-#点击买商铺房源，进入详情
-goto_buy_officelist:
+#点击买商铺房源，进入列表
+goto_buy_shop_list:
   - by: id
     locator: 'com.house365.newhouse:id/tv_name'
     action: click

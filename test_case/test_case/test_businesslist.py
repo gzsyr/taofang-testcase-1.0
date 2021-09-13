@@ -108,7 +108,7 @@ class TestBusinessList(TestBase):
         """
         点击买写字楼-10000到15000元/平米
         """
-        self.goto_shopmalllist().select_buy_office().select_filter_office("10000-15000元/m²").screenshot()
+        self.goto_shopmalllist().select_buy_office().select_filter_office("10000-15000元/㎡").screenshot()
 
     @allure.description("点击买写字楼-房源")
     def test_goto_buy_office(self):
