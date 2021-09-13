@@ -29,10 +29,13 @@ click_publishrentindex_agreement:
     locator: 'com.house365.newhouse:id/cb_agreement'
     action: click
 
-#立即发布
-click_publishrentindex_publis:
-  - by: xpath
-    locator: '//*[@text="立即发布"]'
+#立即发布 update by zsy
+click_publishrentindex_publish:
+  - by: id
+    locator: com.house365.newhouse:id/cb_agreement # 勾选同意
+    action: click
+  - by: id #xpath
+    locator: com.house365.newhouse:id/tv_publish #'//*[@text="立即发布"]'
     action: click
 
 

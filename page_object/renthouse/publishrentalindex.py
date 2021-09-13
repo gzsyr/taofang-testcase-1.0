@@ -22,6 +22,7 @@ class PublishRentalIndex(BasePage):
         if "找室友" == self._params["tv_type"]:
             return self   #后期有找室友发布页面这边再改成找室友发布页面
         else:
+            self.click_publishrentindex_publish()  # add by zsy
             return PublishRental(self._driver)
 
     def click_publishrentindex_authentication(self):
@@ -62,11 +63,11 @@ class PublishRentalIndex(BasePage):
 
     def click_publishrentindex_publish(self):
         """
-        发布页面，点击立即发布
+        发布页面，点击立即发布 update by zsy
         """
-        with allure.step("发布页面，点击立即发布"):
-            self.steps("../../page_object/renthouse/publishrentalindex.yaml")
-        self.tsleep(1)
+        if self.inPageSource("立即发布"):
+            with allure.step("发布页面，点击立即发布"):
+                self.steps("../../page_object/renthouse/publishrentalindex.yaml")
+            self.tsleep(1)
         return self
-
 
