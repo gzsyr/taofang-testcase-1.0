@@ -86,7 +86,7 @@ class TestOfficeBuildingDetail(TestBase):
             click_officebuilding_detail_list_more().screenshot()
 
     @allure.description("点击附近写字楼-第一个楼盘")
-    def test_click_officebuilding_detail_list_more(self):
+    def test_click_officebuilding_detail_list_house(self):
         self.goto_officebuildingdetail().officebuilding_swipe("附近写字楼"). \
             click_officebuilding_detail_list_house().screenshot()
 
