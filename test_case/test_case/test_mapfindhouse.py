@@ -130,7 +130,7 @@ class TestMapFindHouse(TestBase):
         """
         租房搜索返回
         """
-        self.shouye.goto_map().select_housetab('z租房').goto_search('万达江南明珠').screenshot()
+        self.shouye.goto_map().select_housetab('租房').goto_search('万达江南明珠').screenshot()
 
     @allure.description("租房筛选：1000-1500元、中介、合租、精装")
     def test_renthouse_filter(self):
