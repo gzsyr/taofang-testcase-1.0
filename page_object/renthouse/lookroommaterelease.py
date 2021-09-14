@@ -66,7 +66,7 @@ class LookRoommateRelease(BasePage):
         self.tsleep(2)
         return self
 
-    def lookroommatehouse_choose_photos(self, keyword=None):
+    def lookroommatehouse_choose_photos(self, keyword="1"):
         """
         更多资料页上传相册图片.默认上传第一张
         :return:

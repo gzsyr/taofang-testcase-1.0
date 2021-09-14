@@ -191,18 +191,13 @@ class TestLookRoommateRelease(TestBase):
         self.goto_lookroom_release().lookroommate_house_rent().click_next_step().func_swipe("先生").click_enter_name().screenshot()
 
     @allure.description("填写第一页数据和第二页数据点击确认发布按钮")
-    def test_chlick_enter_name(self):
+    def test_chlick_publish(self):
         """
         填写第一页数据和第二页数据点击确认发布按钮
         :return:
         """
         self.goto_second_page().choose_roommate_gender().choose_roommate_expectations().click_added_text().func_swipe("先生"). \
             choose_identity().click_enter_name().click_confirm_release().screenshot()
-
-
-        """
-        找室友发布无房求租
-        """
 
     @allure.description("找室友发布点击无房求租")
     def test_click_housing_price(self):

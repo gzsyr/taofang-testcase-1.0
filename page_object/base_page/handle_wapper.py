@@ -21,7 +21,8 @@ def handle_black(func):
             (MobileBy.ID, "com.house365.newhouse:id/iv_close"),  # 租房弹出的补贴广告
             (MobileBy.ID, "com.house365.newhouse:id/image_ad_close_btn"), # 新房详情页底部悬浮广告
             (MobileBy.XPATH, "//*[@text='取消']"), # 定位城市中切换城市提示的“取消”
-            # (MobileBy.XPATH, "//*[@text='确定']"),
+            (MobileBy.XPATH, "//*[@text='同意']"),  # 权限获取弹框的“同意”
+            (MobileBy.XPATH, "//*[@text='仅使用期间允许']"),  # 允许的权限“仅使用期间允许”
             (MobileBy.XPATH, "//*[@text='我知道了']"),
         ]
 
