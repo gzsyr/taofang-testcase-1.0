@@ -191,7 +191,7 @@ class TestLookRoommateRelease(TestBase):
         self.goto_lookroom_release().lookroommate_house_rent().click_next_step().func_swipe("先生").click_enter_name().screenshot()
 
     @allure.description("填写第一页数据和第二页数据点击确认发布按钮")
-    def test_chlick_publish(self):
+    def test_chlick_publish(self): #  更新用例名称 by zsy
         """
         填写第一页数据和第二页数据点击确认发布按钮
         :return:

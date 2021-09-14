@@ -68,6 +68,7 @@ class LookRoommateRelease(BasePage):
 
     def lookroommatehouse_choose_photos(self, keyword="1"):
         """
+        变更默认keyword的参数 by zsy
         更多资料页上传相册图片.默认上传第一张
         :return:
         """
