@@ -262,7 +262,7 @@ class PublishMore(BasePage):
         :return:
         """
         self._params["owner_identity"] = keyword
-        with allure.step("更多资料页点击户型"):
+        with allure.step("更多资料页-权属认证-输入身份证号"):
             self.steps("../../page_object/sellhouse/publishmore.yaml", replace=True)
         self.tsleep(2)
         return self

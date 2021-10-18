@@ -35,13 +35,23 @@ class TestSellHouseList(TestBase):
         """
         self.shouye.goto_func_entrance_esf().click_msg().screenshot()
 
-    @allure.description("点击列表功能入口-找小区")
-    def test_click_neighborhood(self):
+    # 以下直接数据驱动标签筛选 by yfl
+    @allure.description("点击二手房列表第一行功能入口")
+    @pytest.mark.parametrize("func_entry", ["找小区", "学校地图", "查房价", "我要卖方", "我要买房"])
+    def test_click_func_entry(self, func_entry):
         """
-        点击列表功能入口-找小区
+        点击二手房列表功能入口
         :return:
         """
-        self.shouye.goto_func_entrance_esf().click_neighborhood().screenshot()
+        self.shouye.goto_func_entrance_esf().click_func_entry(func_entry).screenshot()
+    #
+    # @allure.description("点击列表功能入口-找小区")
+    # def test_click_neighborhood(self):
+    #     """
+    #     点击列表功能入口-找小区
+    #     :return:
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_neighborhood().screenshot()
 
     @allure.description("点击二手房列表页第一个房源")
     def test_goto_sellhouse_detail(self):
@@ -52,7 +62,7 @@ class TestSellHouseList(TestBase):
 
     # 以下直接数据驱动标签筛选 by zsy
     @allure.description("点击二手房列表标签筛选")
-    @pytest.mark.parametrize("tips", ["VR看房", "中介", "个人", "南北通透"])
+    @pytest.mark.parametrize("tips", ["VR看房", "放心看", "个人", "写字楼"])
     def test_tips_filter(self, tips):
         """
         数据驱动测试用例执行二手房列表的标签筛选
@@ -121,69 +131,87 @@ class TestSellHouseList(TestBase):
             click_filter_position_menu("总价从低到高").\
             screenshot()
 
-    @allure.description("点击列表功能入口-个人房源")
-    def test_click_personal_housing(self):
+        # 以下直接数据驱动标签筛选 by yfl
+    @allure.description("点击二手房列表第二行功能入口")
+    @pytest.mark.parametrize("func_entry", ["个人房源", "写字楼", "商铺", "别墅", "楼市头条"])
+    def test_click_func_entry_second(self, func_entry):
         """
-        点击列表功能入口-个人房源
+        点击二手房列表功能入口
         :return:
         """
-        self.shouye.goto_func_entrance_esf().click_personal_housing().screenshot()
+        self.shouye.goto_func_entrance_esf().click_func_entry(func_entry).screenshot()
 
-    @allure.description("点击列表功能入口-学校地图")
-    def test_click_school_map(self):
-        """
-        点击列表功能入口-学校地图
-        :return:
-        """
-        self.shouye.goto_func_entrance_esf().click_school_map().screenshot()
+    # @allure.description("点击列表功能入口-个人房源")
+    # def test_click_personal_housing(self):
+    #     """
+    #     点击列表功能入口-个人房源
+    #     :return:
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_personal_housing().screenshot()
+    #
+    # @allure.description("点击列表功能入口-学校地图")
+    # def test_click_school_map(self):
+    #     """
+    #     点击列表功能入口-学校地图
+    #     :return:
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_school_map().screenshot()
+    #
+    # @allure.description("点击列表功能入口-查房价")
+    # def test_click_check_prices(self):
+    #     """
+    #     点击列表功能入口-查房价
+    #     :return:
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_check_prices().screenshot()
+    #
+    # @allure.description("点击列表功能入口-我要买房")
+    # def test_click_buy_house(self):
+    #     """
+    #     点击列表功能入口-我要买房
+    #     :return:
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_buy_house().screenshot()
 
-    @allure.description("点击列表功能入口-查房价")
-    def test_click_check_prices(self):
-        """
-        点击列表功能入口-查房价
-        :return:
-        """
-        self.shouye.goto_func_entrance_esf().click_check_prices().screenshot()
+    # @allure.description("点击列表-帮你找房icon")
+    # def test_click_find_room(self):
+    #     """
+    #     点击列表-帮你找房icon
+    #     :return:
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_find_room().screenshot()
+    #
+    # @allure.description("点击列表-快速卖房ICON")
+    # def test_click_fast_selling(self):
+    #     """
+    #     点击列表-快速卖房ICON
+    #     :return:
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_fast_selling().screenshot()
+    #
+    # @allure.description("点击列表-买房咨询师ICON")
+    # def test_click_consultant(self):
+    #     """
+    #     点击列表-买房咨询师ICON
+    #     :return:
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_consultant().screenshot()
+    #
+    # @allure.description("点击列表-楼市头条")
+    # def test_click_headlines(self):
+    #     """
+    #     点击列表-楼市头条
+    #     :return:
+    #     """
+    #     self.shouye.goto_func_entrance_esf().click_headlines().screenshot()
 
-    @allure.description("点击列表功能入口-我要买房")
-    def test_click_buy_house(self):
+    @allure.description("点击列表-房源H5推荐")
+    def test_click_recom_house(self):
         """
-        点击列表功能入口-我要买房
+        点击列表-房源推荐
         :return:
         """
-        self.shouye.goto_func_entrance_esf().click_buy_house().screenshot()
-
-    @allure.description("点击列表-帮你找房icon")
-    def test_click_find_room(self):
-        """
-        点击列表-帮你找房icon
-        :return:
-        """
-        self.shouye.goto_func_entrance_esf().click_find_room().screenshot()
-
-    @allure.description("点击列表-快速卖房ICON")
-    def test_click_fast_selling(self):
-        """
-        点击列表-快速卖房ICON
-        :return:
-        """
-        self.shouye.goto_func_entrance_esf().click_fast_selling().screenshot()
-
-    @allure.description("点击列表-买房咨询师ICON")
-    def test_click_consultant(self):
-        """
-        点击列表-买房咨询师ICON
-        :return:
-        """
-        self.shouye.goto_func_entrance_esf().click_consultant().screenshot()
-
-    @allure.description("点击列表-楼市头条")
-    def test_click_headlines(self):
-        """
-        点击列表-楼市头条
-        :return:
-        """
-        self.shouye.goto_func_entrance_esf().click_headlines().screenshot()
+        self.shouye.goto_func_entrance_esf().click_recom_house().screenshot()
 
     @allure.description("点击筛选项：位置-附近-1km")
     def test_click_screening_location_kilo(self):

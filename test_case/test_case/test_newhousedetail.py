@@ -11,12 +11,12 @@ class TestNewHouseDetail(TestBase):
     """
     _house = "长江时代1516"
 
-    def goto_housedetail(self):
+    def goto_housedetail(self, house="长江时代1516"):
         """
         进入新房详情页
         :return:
         """
-        return self.shouye.goto_search().action_search(self._house).select_search_result()
+        return self.shouye.goto_search().action_search(house).select_search_result()
 
     @allure.description("点击新房详情页图片")
     def test_click_newhouse_detail_picture(self):
@@ -98,13 +98,14 @@ class TestNewHouseDetail(TestBase):
         """
         self.goto_housedetail().func_swipe("开盘通知我").click_newhouse_detail_jjtz().screenshot()
 
-    @allure.description("新房详情页点击一键加群")
-    def test_click_newhouse_detail_key_group(self):
-        """
-        新房详情页点击一键加群
-        :return:
-        """
-        self.goto_housedetail().func_swipe("最新动态").click_newhouse_detail_key_group().screenshot()
+    # 一键加群V8.2.8版本后已去除
+    # @allure.description("新房详情页点击一键加群")
+    # def test_click_newhouse_detail_key_group(self):
+    #     """
+    #     新房详情页点击一键加群
+    #     :return:
+    #     """
+    #     self.goto_housedetail().func_swipe("最新动态").click_newhouse_detail_key_group().screenshot()
 
     @allure.description("新房详情页点击复制微信号")
     def test_click_newhouse_detail_cope_wechat(self):
@@ -184,7 +185,7 @@ class TestNewHouseDetail(TestBase):
         新房详情页点击楼盘动态内容下拉箭头
         :return:
         """
-        self.goto_housedetail().func_swipe("详细信息").click_newhouse_detail_more_ico().screenshot()
+        self.goto_housedetail('星河天赋').func_swipe("详细信息").click_newhouse_detail_more_ico().screenshot()
 
     @allure.description("新房详情页点击详细信息的“纠错”")
     def test_click_newhouse_detail_error_correction(self):

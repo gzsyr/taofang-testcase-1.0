@@ -60,8 +60,8 @@ goto_rent_shop_detial:
 
 #点击买写字楼房源，进入详情
 goto_buy_office_detial:
-  - by: id
-    locator: 'com.house365.newhouse:id/h_name'
+  - by: xpath
+    locator: '//*[contains(@resource-id,"h_name")]'
     action: click
 
 #点击租写字楼房源，进入详情
@@ -69,3 +69,8 @@ goto_rent_office_detial:
   - by: id
     locator: 'com.house365.newhouse:id/tv_title'
     action: click
+
+#滑动
+func_swipe:
+  - action: swipe
+    value: '${pos_text}'

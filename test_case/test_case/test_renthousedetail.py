@@ -71,8 +71,7 @@ class TestRentHouseDetail(TestBase):
         """
         点击租房房源详情预约看房IM
         """
-        self.goto_renthoustdetail().func_swipe("举报").click_renthouse_detail_im_lookhouse().\
-            click_renthouse_detail_im_lookhouse().screenshot()
+        self.goto_renthoustdetail().func_swipe("举报").click_renthouse_detail_im_lookhouse().screenshot()
 
     @allure.description("展开租房房源详情页房源描述")
     def test_show_renthouse_detail_desc_more(self):
@@ -86,8 +85,7 @@ class TestRentHouseDetail(TestBase):
         """
         点击租房房源详情咨询详情IM
         """
-        self.goto_renthoustdetail().func_swipe("举报").click_renthouse_detail_im_desc().\
-            click_renthouse_detail_im_desc().screenshot()
+        self.goto_renthoustdetail().func_swipe("举报").click_renthouse_detail_im_desc().screenshot()
 
     @allure.description("点击租房房源详情页举报按钮")
     def test_click_renthouse_detail_report(self):

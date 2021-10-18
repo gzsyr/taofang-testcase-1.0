@@ -2,14 +2,14 @@
 #点击二手房详情页分享按钮
 click_sellhouse_detail_action_share:
   - by: id
-    locator: "com.house365.newhouse:id/action_share"
+    locator: "com.house365.newhouse:id/iv_share"
     action: click
 
 
 #点击二手房详情页收藏按钮
 click_sellhouse_detail_action_fav:
   - by: id
-    locator: 'com.house365.newhouse:id/action_fav'
+    locator: 'com.house365.newhouse:id/iv_fav'
     action: click
 
 
@@ -23,112 +23,112 @@ click_sellhouse_detail_iv_msg:
 #点击二手房详情页相册按钮
 click_sellhouse_detail_numindicator:
   - by: id
-    locator: 'com.house365.newhouse:id/bannerContainer'
+    locator: 'com.house365.newhouse:id/banner'
     action: click
 
 #点击二手房详情页房贷计算器按钮
 click_sellhouse_detail_loan:
   - by: id
-    locator: 'com.house365.newhouse:id/detail_loan'
+    locator: 'com.house365.newhouse:id/tv_down_payment_monthly_supply'
     action: click
 
 
 #点击首付及月供咨询?
 click_sellhouse_detail_house_down_payment:
   - by: id
-    locator: 'com.house365.newhouse:id/house_down_payment'
+    locator: 'com.house365.newhouse:id/tv_ask_down_payment_monthly_supply'
     action: click
 
 
 #点击所属小区右侧箭头
 click_sellhouse_detail_image_view:
-  - by: xpath
-    locator: '//*[@text="所属小区"]/..//*[contains(@resource-id, "block_name")]'
-    action: click
-
-
-#点击学校
-click_sellhouse_detail_school:
   - by: id
-    locator: 'com.house365.newhouse:id/tv_xuequName'
+    locator: 'com.house365.newhouse:id/tv_block'
     action: click
 
 
-#点击二手房买卖有疑问右侧箭头
-click_sellhouse_detail_fang_bo_shi:
-  - by: id
-    locator: 'com.house365.newhouse:id/fang_bo_shi'
-    action: click
+##点击学校
+#click_sellhouse_detail_school:
+#  - by: id
+#    locator: 'com.house365.newhouse:id/tv_xuequName'
+#    action: click
+
+
+##点击二手房买卖有疑问右侧箭头
+#click_sellhouse_detail_fang_bo_shi:
+#  - by: id
+#    locator: 'com.house365.newhouse:id/fang_bo_shi'
+#    action: click
 
 
 #点击房源描述向下的箭头
 click_sellhouse_detail_fyms_bt_more_ico:
-  - by: xpath
-    locator: '//*[@text="房源描述"]/../..//*[contains(@resource-id, "bt_more_ico")]'
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_check_more'
     action: click
 
 #点击举报
 click_sellhouse_detail_report:
-  - by: xpath
-    locator: '//*[@text="举报"]'
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_report'
     action: click
 
 #点击房价评估
 click_sellhouse_detail_wanna_assess:
   - by: id
-    locator: 'com.house365.newhouse:id/wanna_assess'
+    locator: 'com.house365.newhouse:id/tv_evaluate_price'
     action: click
 
 
 #点击小区地址的地图
 click_sellhouse_detail_map_image:
   - by: id
-    locator: 'com.house365.newhouse:id/map_image'
+    locator: 'com.house365.newhouse:id/iv_map'
     action: click
 
 
-#点击小区地址地图下方的向下箭头
-click_sellhouse_detail_xqdzdt_more_ico:
-  - by: xpath
-    locator: '//*[@text="小区地址"]/../../..//*[contains(@resource-id, "bt_more_ico")]'
-    action: click
+##点击小区地址地图下方的向下箭头
+#click_sellhouse_detail_xqdzdt_more_ico:
+#  - by: xpath
+#    locator: '//*[@text="小区地址"]/../../..//*[contains(@resource-id, "bt_more_ico")]'
+#    action: click
 
 
-#点击同小区房源右边的“全部”
+#点击同小区房源底部的“全部”
 click_sellhouse_detail_house_sell_count:
   - by: id
-    locator: 'com.house365.newhouse:id/house_sell_count'
+    locator: 'com.house365.newhouse:id/tv_check_more_in_same_block'
     action: click
 
 
-#点击悬浮-预约看房
-click_sellhouse_detail_appointment:
-  - by: id
-    locator: 'com.house365.newhouse:id/btn_to_appointment'
-    action: click
+##点击悬浮-预约看房
+#click_sellhouse_detail_appointment:
+#  - by: id
+#    locator: 'com.house365.newhouse:id/btn_to_appointment'
+#    action: click
 
 #点击悬浮-提问
 click_sellhouse_detail_ll_arrow:
   - by: id
-    locator: 'com.house365.newhouse:id/ll_arrow'
+    locator: 'com.house365.newhouse:id/tv_ask_question'
     action: click
 
 #点击经纪人头像
 click_sellhouse_detail_person_photo:
   - by: id
-    locator: 'com.house365.newhouse:id/person_photo'
+    locator: 'com.house365.newhouse:id/img_avatar'
     action: click
 
 #点击电话咨询
 click_sellhouse_detail_call_business_novrdk:
   - by: id
-    locator: 'com.house365.newhouse:id/btn_call_business_novrdk'
+    locator: 'com.house365.newhouse:id/tv_call'
     action: click
 
 #点击在线咨询
 click_sellhouse_detail_im_business_novrdk:
   - by: id
-    locator: 'com.house365.newhouse:id/btn_im_business_novrdk'
+    locator: 'com.house365.newhouse:id/tv_ask'
     action: click
 
 
@@ -137,6 +137,95 @@ func_swipe:
   - action: swipe
     value: '${pos_text}'
 
+#点击楼层咨询
+click_sellhouse_detail_im_floor:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_ask_floor'
+    action: click
+
+#点击税费咨询
+click_sellhouse_detail_im_fee:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_ask_fee'
+    action: click
+
+#点击去出价
+click_sellhouse_detail_give_price:
+  - by: xpath
+    locator: '//*[@text="去出价"]'
+    action: click
+
+#点击房源描述咨询
+click_sellhouse_detail_im_house_detail:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_ask_house_detail'
+    action: click
+
+#点击热门咨询
+click_sellhouse_detail_im_hot_words:
+  - by: xpath
+    locator: '//*[@text="${hot_words}"]'
+    action: click
+
+#点击房卡一键更新
+click_sellhouse_detail_update_fk:
+  - by: id
+    locator: 'com.house365.newhouse:id/house_card_root'
+    action: click
+
+#点击房卡去查看
+click_sellhouse_detail_look_fk:
+  - by: id
+    locator: 'com.house365.newhouse:id/house_card_root'
+    action: click
+
+#点击查看小区详情
+click_sellhouse_block_detail:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_block_detail'
+    action: click
+
+#点击咨询最近成交数
+click_sellhouse_detail_im_transaction:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_ask_recently_transaction'
+    action: click
+
+#点击查看价格走势
+click_sellhouse_detail_price_trend_chart:
+  - by: id
+    locator: 'com.house365.newhouse:id/price_trend_chart'
+    action: click
+
+#点击查看价格走势
+click_sellhouse_detail_check_more_house:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_check_more_house'
+    action: click
+
+#点击查看地铁
+click_sellhouse_detail_subway:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_subway'
+    action: click
+
+#点击查看小学
+click_sellhouse_detail_primary_school:
+  - by: xpath
+    locator: '//*[contains(@resource-id,"tv_school") and contains(@text,"小学")]'
+    action: click
+
+#点击查看初中
+click_sellhouse_detail_junior_middle_school:
+  - by: xpath
+    locator: '//*[contains(@resource-id,"tv_school") and contains(@text,"初中")]'
+    action: click
+
+#咨询周边学校情况
+click_sellhouse_detail_im_school:
+  - by: id
+    locator: 'com.house365.newhouse:id/tv_ask_school'
+    action: click
 
 
 

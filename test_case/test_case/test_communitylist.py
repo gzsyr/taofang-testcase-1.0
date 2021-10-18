@@ -69,7 +69,7 @@ class Test_CommunityList(TestBase):
             fun_para("2-5年").click_community_delete().screenshot()
 
     @allure.description("点击筛选项（有VR、地铁盘、大型社区、小区解读）")
-    @pytest.mark.parametrize("text", ["有VR", "地铁盘", "大型社区", "小区解读"])
+    @pytest.mark.parametrize("text", ["有VR", "大型社区", "小区解读"])
     def test_click_community_filter(self, text):
         self.goto_communitylist().fun_para(text).screenshot()
 

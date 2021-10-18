@@ -18,8 +18,8 @@ class TestBusinessList(TestBase):
         return self.shouye.goto_func_entrance_spbg()
 
     @allure.description("点击功能入口")
-    @pytest.mark.parametrize("func_entry", ["买商铺", "租商铺", "买写字楼", "租写字楼",
-                                            "产业园区", "买二手商铺", "买二手写字楼", "买二手公寓"])
+    @pytest.mark.parametrize("func_entry", ["买商铺", "买写字楼", "商铺转让", "写字楼转让",
+                                            "产业园区", "租商铺", "租写字楼", "公寓转让"])
     def test_goto_officelist(self, func_entry):
         """
         点击功能入口
@@ -115,7 +115,7 @@ class TestBusinessList(TestBase):
         """
         点击买写字楼-房源
         """
-        self.goto_shopmalllist().select_buy_office().goto_buy_office_detial().screenshot()
+        self.goto_shopmalllist().select_buy_office().func_swipe('feature_tag_text').goto_buy_office_detial().screenshot()
 
     @allure.description("点击租写字楼-房源")
     def test_goto_rent_office(self):

@@ -17,6 +17,18 @@ click_msg:
     locator: 'com.house365.newhouse:id/iv_msg'
     action: click
 
+#功能入口
+click_func_entry:
+  - by: xpath
+    locator: '//*[@text="${func_entry}"]'
+    action: click
+
+#H5房源推荐
+click_recom_house:
+  - by: xpath
+    locator: '//*[contains(@resource-id,"ll_head1")]'
+    action: click
+
 # 点击二手房列表功能入口-找小区
 click_neighborhood:
   - by: xpath

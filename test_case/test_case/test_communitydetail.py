@@ -115,10 +115,11 @@ class TestCommunityDetail(TestBase):
         self.goto_community_detail().fun_swipe("周边配套").fun_para("相关推荐"). \
             click_community_detail_near_block().screenshot()
 
-    @allure.description("点击周边小区底部‘马上找房’")
-    def test_click_community_detail_find_house(self):
-        self.goto_community_detail().fun_swipe("基础信息").fun_para("相关推荐"). \
-            click_community_detail_find_house().screenshot()
+    # 改版周边小区底部无“马上找房”入口
+    # @allure.description("点击周边小区底部‘马上找房’")
+    # def test_click_community_detail_find_house(self):
+    #     self.goto_community_detail().fun_swipe("基础信息").fun_para("相关推荐"). \
+    #         click_community_detail_find_house().screenshot()
 
     @allure.description("点击底部经纪人信息")
     def test_click_community_detail_broker(self):

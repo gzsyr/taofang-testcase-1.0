@@ -41,6 +41,29 @@ class SellHouseList(BasePage):
 
         return self
 
+    def click_func_entry(self, func_entry):
+        """
+        点击列表页功能入口
+        :return:
+        """
+        self._params["func_entry"] = func_entry
+        with allure.step("点击功能入口：" + self._params["func_entry"]):
+            self.steps("../../page_object/sellhouse/sellhouselist.yaml", replace=True)
+        self.tsleep(2)
+
+        return self
+
+    def click_recom_house(self):
+        """
+        点击房源H5推荐页
+        :return:
+        """
+        with allure.step("点击房源H5推荐页入口"):
+            self.steps("../../page_object/sellhouse/sellhouselist.yaml")
+        self.tsleep(2)
+
+        return self
+
     def click_neighborhood(self):
         """
         点击列表页功能入口-找小区

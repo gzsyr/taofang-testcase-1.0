@@ -64,10 +64,10 @@ class PublishHouse(BasePage):
         self.tsleep(2)
         return self
 
-    def send_publishhouse_name_search(self, keyword="万科红郡住宅"):
+    def send_publishhouse_name_search(self, keyword="万科金域蓝湾"):
         """
         执行搜索
-        :param keyword: 输入搜索关键词，默认“万科红郡住宅”
+        :param keyword: 输入搜索关键词，默认“万科金域蓝湾”
         :return:
         """
         self._params["house_name"] = keyword

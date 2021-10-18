@@ -97,14 +97,14 @@ class TestPublishHouse(TestBase):
         self.goto_publish_sell().click_publishhouse_type().\
             select_pubilshhouse_type(house_item="物业类型", house_type="住宅").screenshot()
 
-    @allure.description("点击小区名称-搜索-万科红郡住宅")
+    @allure.description("点击小区名称-搜索-万科金域蓝湾")
     def test_publish_name(self):
         """
-        点击小区名称-搜索-万科红郡住宅
+        点击小区名称-搜索-万科金域蓝湾
         :return:
         """
         self.goto_publish_sell().\
-            click_publishhouse_name().send_publishhouse_name_search("万科红郡住宅").\
+            click_publishhouse_name().send_publishhouse_name_search("万科金域蓝湾").\
             select_publishhouse_name_result().screenshot()
 
     @allure.description("输入楼栋：5栋")
@@ -279,7 +279,7 @@ class TestPublishHouse(TestBase):
         :return:
         """
         self.goto_publish_more().click_publishhouse_ownership().\
-            send_publishhouse_owner_identity('32011155212456322').screenshot()
+        send_publishhouse_owner_identity('32011155212456322').screenshot()
 
     @allure.description("更多资料页完成权属认证填写")
     def test_publish_ownership(self):
