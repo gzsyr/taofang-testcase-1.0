@@ -15,7 +15,7 @@ class TestPublishHouse(TestBase):
         首页功能入口进入我要卖房页面
         :return:
         """
-        return self.shouye.func_entrance_swipe_left("找小区").goto_func_entrance_publish_sell()
+        return self.shouye.func_entrance_swipe_left("签到").goto_func_entrance_publish_sell()
 
     def goto_publish_sell(self):
         """

@@ -10,7 +10,7 @@ class TestCheckHousePrice(TestBase):
     查房价首页测试用例
     """
     def goto_check_house_price(self):
-        return self.shouye.goto_func_entrance_check_price()
+        return self.shouye.func_entrance_swipe_left("签到").goto_func_entrance_check_price()
 
     @allure.description("点击搜索框")
     def test_click_search_house(self):

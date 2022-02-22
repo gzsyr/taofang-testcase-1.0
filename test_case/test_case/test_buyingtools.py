@@ -17,4 +17,4 @@ class TestBuyingTools(TestBase):
                                       "开盘抢先知", "摇号查询", "贷款计算器",
                                       "公积金贷款额度计算", "税费计算器", "提前还款计算器"])
     def test_click_tools(self, tool):
-        self.shouye.goto_func_entrance_first("购房工具").goto_tools(tool)
+        self.shouye.func_entrance_swipe_left("签到").goto_func_entrance_first("购房工具").goto_tools(tool)

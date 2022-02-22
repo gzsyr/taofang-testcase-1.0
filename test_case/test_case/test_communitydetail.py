@@ -13,7 +13,7 @@ class TestCommunityDetail(TestBase):
     小区详情页
     """
     def goto_community_detail(self):
-        return self.shouye.goto_func_entrance_first("找小区").go_community_detail()
+        return self.shouye.func_entrance_swipe_left("签到").func_entrance_swipe_left("查房价").goto_func_entrance_first("找小区").go_community_detail()
 
     @allure.description("点击分享")
     def test_click_community_detail_share(self):

@@ -37,7 +37,7 @@ class TestSellHouseList(TestBase):
 
     # 以下直接数据驱动标签筛选 by yfl
     @allure.description("点击二手房列表第一行功能入口")
-    @pytest.mark.parametrize("func_entry", ["找小区", "学校地图", "查房价", "我要卖方", "我要买房"])
+    @pytest.mark.parametrize("func_entry", ["找小区", "学校地图", "查房价", "我要卖房", "我要买房"])
     def test_click_func_entry(self, func_entry):
         """
         点击二手房列表功能入口

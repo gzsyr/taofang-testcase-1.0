@@ -12,7 +12,7 @@ class Test_CommunityList(TestBase):
     找小区列表页面
     """
     def goto_communitylist(self):
-        return self.shouye.goto_func_entrance_first("找小区")
+        return self.shouye.func_entrance_swipe_left("签到").func_entrance_swipe_left("查房价").goto_func_entrance_first("找小区")
 
     @allure.description("点击搜索框")
     def test_click_community_search(self):

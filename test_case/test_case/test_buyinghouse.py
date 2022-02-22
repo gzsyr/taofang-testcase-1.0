@@ -11,7 +11,7 @@ class TestBuyingHouse(TestBase):
     我要买房页面测试用例
     """
     def setup_method(self):
-        self.shouye = self.app.openapp().main().func_entrance_swipe_left("找小区").goto_func_entrance_want_buy()
+        self.shouye = self.app.openapp().main().func_entrance_swipe_left("签到").func_entrance_swipe_left("查房价").goto_func_entrance_want_buy()
         if self.shouye.delete_in_page():  # 这个页面有“删除”，则先执行删除-是-开始生成
             print("该页面存在删除文字")
             self.shouye.show_buying_house_page()
